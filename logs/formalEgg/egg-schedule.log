@@ -183,3 +183,9 @@
 2019-07-19 11:14:55,778 INFO 11173 [egg-schedule]: register schedule /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/app/schedule/clean_tmpdir.js
 2019-07-19 11:14:55,778 INFO 11173 [egg-schedule]: register schedule /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/app/schedule/clean_log.js
 2019-07-19 11:14:55,778 INFO 11173 [egg-schedule]: register schedule /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/app/schedule/rotate_by_file.js
+2019-07-19 11:28:35,977 INFO 12554 [egg-schedule]: register schedule /Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/app/schedule/clean_tmpdir.js
+2019-07-19 11:28:35,977 INFO 12554 [egg-schedule]: register schedule /Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/app/schedule/clean_log.js
+2019-07-19 11:28:35,977 INFO 12554 [egg-schedule]: register schedule /Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/app/schedule/rotate_by_file.js
+2019-07-19 11:28:36,210 INFO 12549 [Timer] /Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 61283793ms at 2019-07-20 04:30:00.003
+2019-07-19 11:28:36,210 INFO 12549 [Timer] /Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/app/schedule/clean_log.js next time will execute after 45083790ms at 2019-07-20 00:00:00.000
+2019-07-19 11:28:36,210 INFO 12549 [Timer] /Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 45084790ms at 2019-07-20 00:00:01.000

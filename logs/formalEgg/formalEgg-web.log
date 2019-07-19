@@ -331,3 +331,7 @@ hostname: simple.local
 2019-07-19 11:14:55,992 INFO 11173 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2019-07-19 11:14:55,993 INFO 11173 [egg-sequelize](2ms) Executed (default): CREATE TABLE IF NOT EXISTS `admin` (`id` INTEGER NOT NULL auto_increment UNIQUE , `roleid` VARCHAR(255), `userid` VARCHAR(255) UNIQUE, `user_name` VARCHAR(255), `phone` VARCHAR(255), `password` VARCHAR(255), `real_name` VARCHAR(255), `is_locked` TINYINT(1), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `deleted_at` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
 2019-07-19 11:14:56,000 INFO 11173 [egg-sequelize](5ms) Executed (default): SHOW INDEX FROM `admin`
+2019-07-19 11:28:36,154 INFO 12554 swagger-ui url:http://127.0.0.1:7001/public/swagger/index.html
+2019-07-19 11:28:36,195 INFO 12554 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2019-07-19 11:28:36,196 INFO 12554 [egg-sequelize](2ms) Executed (default): CREATE TABLE IF NOT EXISTS `admin` (`id` INTEGER NOT NULL auto_increment UNIQUE , `roleid` VARCHAR(255), `userid` VARCHAR(255) UNIQUE, `user_name` VARCHAR(255), `phone` VARCHAR(255), `password` VARCHAR(255), `real_name` VARCHAR(255), `is_locked` TINYINT(1), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, `deleted_at` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2019-07-19 11:28:36,204 INFO 12554 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `admin`

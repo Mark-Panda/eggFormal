@@ -1,329 +1,329 @@
 {
   "swagger2": {
-    "enable": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
+    "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
     "base": {
       "info": {
-        "description": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-        "version": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-        "title": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
+        "description": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "version": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "title": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
         "contact": {
-          "email": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js"
+          "email": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
         },
         "license": {
-          "name": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-          "url": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js"
+          "name": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+          "url": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
         }
       },
-      "tags": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-      "definitions": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-      "securityDefinitions": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-      "schemes": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
-      "host": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
-      "basePath": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
-      "consumes": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
-      "produces": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js"
+      "tags": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+      "definitions": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+      "securityDefinitions": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+      "schemes": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
+      "host": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
+      "basePath": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
+      "consumes": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js",
+      "produces": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/config.default.js"
     }
   },
-  "keys": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-  "middleware": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
+  "keys": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+  "middleware": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
   "sequelize": {
-    "dialect": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-    "database": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-    "host": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-    "port": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-    "username": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-    "password": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js"
+    "dialect": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "database": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "host": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "port": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "username": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "password": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
   },
   "security": {
-    "ignore": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-    "domainWhiteList": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
+    "ignore": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "domainWhiteList": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
     "methodnoallow": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
     },
     "csrf": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/config/config.default.js",
-      "useSession": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "ignoreJSON": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "cookieName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "sessionName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "headerName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "bodyName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "queryName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+      "useSession": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "cookieName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "sessionName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "headerName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "bodyName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "queryName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
-    "protocolWhiteList": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-    "defaultMiddleware": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
     "xframe": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "value": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "value": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "hsts": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.local.js",
-      "maxAge": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "includeSubdomains": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.local.js",
+      "maxAge": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "dta": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "noopen": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "nosniff": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "referrerPolicy": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "value": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "value": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "xssProtection": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "value": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "value": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "csp": {
-      "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "policy": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "policy": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     },
     "ssrf": {
-      "ipBlackList": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
-      "checkAddress": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+      "ipBlackList": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
+      "checkAddress": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     }
   },
   "session": {
-    "maxAge": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
-    "key": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
-    "httpOnly": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
-    "encrypt": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js"
+    "maxAge": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "key": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "httpOnly": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "encrypt": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js"
   },
   "helper": {
-    "shtml": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
+    "shtml": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
   },
   "jsonp": {
-    "limit": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
-    "callback": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
-    "csrf": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js"
+    "limit": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "callback": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "csrf": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
-    "appErrorFilter": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
-    "templatePath": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js"
+    "errorPageUrl": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "templatePath": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js"
   },
   "i18n": {
-    "defaultLocale": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
-    "dirs": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
-    "queryField": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
-    "cookieField": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
-    "cookieDomain": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
-    "cookieMaxAge": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js"
+    "defaultLocale": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "dirs": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "queryField": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieField": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js"
   },
   "watcher": {
-    "type": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.local.js",
+    "type": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.local.js",
     "eventSources": {
-      "default": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js",
-      "development": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js"
+      "default": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js",
+      "development": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js"
     }
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js",
-      "file": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js"
+      "consoleLevel": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js",
+      "file": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js"
     }
   },
   "schedule": {
-    "directory": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js"
+    "directory": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js"
   },
   "multipart": {
-    "mode": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "autoFields": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "defaultCharset": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "fieldNameSize": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "fieldSize": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "fields": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "fileSize": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "files": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "fileExtensions": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "whitelist": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
-    "tmpdir": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "mode": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "autoFields": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fields": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fileSize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "files": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "whitelist": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js",
     "cleanSchedule": {
-      "cron": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js"
+      "cron": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/config.default.js"
     }
   },
   "development": {
-    "watchDirs": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
-    "ignoreDirs": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
-    "fastReady": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
-    "reloadOnDebug": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
-    "overrideDefault": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js"
+    "watchDirs": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "fastReady": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "overrideDefault": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
-    "hourDelimiter": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
-    "filesRotateBySize": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
-    "maxFileSize": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
-    "maxFiles": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
-    "rotateDuration": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
-    "maxDays": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js"
+    "filesRotateByHour": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js"
   },
   "static": {
-    "prefix": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
-    "dir": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
-    "dynamic": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
-    "preload": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
-    "buffer": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
-    "maxFiles": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js"
+    "prefix": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dir": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dynamic": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "preload": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "buffer": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "maxFiles": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js"
   },
   "view": {
-    "root": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
-    "cache": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.local.js",
-    "defaultExtension": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
-    "defaultViewEngine": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
-    "mapping": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js"
+    "root": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "cache": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.local.js",
+    "defaultExtension": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "mapping": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js"
   },
-  "cors": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-cors@2.2.0@egg-cors/config/config.default.js",
-  "env": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "name": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "proxy": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "maxProxyCount": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "protocolHeaders": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "ipHeaders": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "hostHeaders": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "cors": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-cors@2.2.0@egg-cors/config/config.default.js",
+  "env": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "name": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "proxy": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "maxProxyCount": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "protocolHeaders": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "ipHeaders": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "hostHeaders": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
   "pkg": {
-    "name": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "version": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "description": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "private": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "name": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "version": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "description": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "private": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
     "egg": {
-      "declarations": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "declarations": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "dependencies": {
-      "egg": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-cors": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-scripts": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-sequelize": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-swagger2": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "jsonwebtoken": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "mysql2": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "request-promise": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "urlsafe-base64": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "egg": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-cors": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-scripts": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-sequelize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-swagger2": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "jsonwebtoken": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "mysql2": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "request-promise": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "urlsafe-base64": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "devDependencies": {
-      "autod": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "autod-egg": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-bin": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-ci": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "egg-mock": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "eslint": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "eslint-config-egg": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "autod": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "autod-egg": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-bin": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-ci": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-mock": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "eslint": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "eslint-config-egg": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "engines": {
-      "node": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "node": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "scripts": {
-      "start": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "stop": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "dev": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "debug": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "test": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "test-local": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "cov": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "lint": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "ci": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "autod": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "start": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "stop": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "dev": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "debug": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "test": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "test-local": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "cov": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "lint": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "ci": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "autod": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "ci": {
-      "version": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "version": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "repository": {
-      "type": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "url": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "type": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "url": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
-    "author": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "license": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "author": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "license": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
-  "baseDir": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "HOME": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "rundir": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "baseDir": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "HOME": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "rundir": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
   "dump": {
-    "ignore": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "ignore": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "notFound": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "sitefile": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "middlewares": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "httpClient": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "bodyparser": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "notFound": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "sitefile": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "middlewares": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "httpClient": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
   "notfound": {
-    "pageUrl": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "pageUrl": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "/favicon.ico": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
   "bodyParser": {
-    "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "encoding": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "formLimit": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "jsonLimit": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "strict": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "encoding": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "formLimit": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "jsonLimit": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "strict": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
     "queryString": {
-      "arrayLimit": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "depth": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "parameterLimit": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "arrayLimit": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "depth": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "parameterLimit": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     }
   },
   "logger": {
-    "dir": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "encoding": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "env": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "level": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "consoleLevel": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "disableConsoleAfterReady": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "outputJSON": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "buffer": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "appLogName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "coreLogName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "agentLogName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "errorLogName": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "dir": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "encoding": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "env": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "level": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "consoleLevel": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "outputJSON": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "buffer": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "appLogName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "coreLogName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "agentLogName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "errorLogName": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
     "coreLogger": {
-      "consoleLevel": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.local.js"
+      "consoleLevel": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.local.js"
     },
-    "allowDebugAtProd": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "allowDebugAtProd": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "dnsCacheLookupInterval": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "dnsCacheMaxLength": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "enableDNSCache": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
     "request": {
-      "timeout": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "timeout": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "freeSocketTimeout": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "maxSockets": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "maxFreeSockets": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "keepAlive": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxSockets": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "freeSocketTimeout": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "maxSockets": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "maxFreeSockets": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "keepAlive": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxSockets": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     }
   },
   "meta": {
-    "enable": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "logging": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "enable": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "logging": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
-  "coreMiddleware": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "workerStartTimeout": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-  "serverTimeout": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "coreMiddleware": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "workerStartTimeout": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+  "serverTimeout": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
   "cluster": {
     "listen": {
-      "path": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "port": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "hostname": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "port": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "hostname": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     }
   },
   "clusterClient": {
-    "maxWaitTime": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-    "responseTimeout": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+    "maxWaitTime": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+    "responseTimeout": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
   },
-  "onClientError": "/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+  "onClientError": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
 }

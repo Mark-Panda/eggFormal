@@ -617,3 +617,16 @@
 2019-07-19 11:14:55,917 INFO 11173 [egg:core] dump config after load, 4ms
 2019-07-19 11:14:55,973 INFO 11173 [egg-watcher:application] watcher start success
 2019-07-19 11:14:55,999 INFO 11173 [egg:core] dump config after ready, 3ms
+2019-07-19 11:28:35,960 INFO 12554 [egg:logger] init all loggers with options: {"dir":"/Users/maxianfei/learnData/Egg/formalsEgg/logs/formalEgg","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"formalEgg-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-07-19 11:28:35,978 INFO 12554 [egg-multipart] stream mode enable
+2019-07-19 11:28:36,105 INFO 12554 [egg-static] starting static serve /public/ -> /Users/maxianfei/learnData/Egg/formalsEgg/app/public
+2019-07-19 11:28:36,106 WARN 12554 [egg-security] Please set `match` or `ignore` on sub config
+2019-07-19 11:28:36,108 INFO 12554 [egg-security] use noopen middleware
+2019-07-19 11:28:36,108 INFO 12554 [egg-security] use nosniff middleware
+2019-07-19 11:28:36,108 INFO 12554 [egg-security] use xssProtection middleware
+2019-07-19 11:28:36,108 INFO 12554 [egg-security] use xframe middleware
+2019-07-19 11:28:36,109 INFO 12554 [egg-security] use dta middleware
+2019-07-19 11:28:36,109 INFO 12554 [egg-security] compose 5 middlewares into one security middleware
+2019-07-19 11:28:36,121 INFO 12554 [egg:core] dump config after load, 4ms
+2019-07-19 11:28:36,184 INFO 12554 [egg-watcher:application] watcher start success
+2019-07-19 11:28:36,203 INFO 12554 [egg:core] dump config after ready, 4ms
