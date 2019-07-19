@@ -1,0 +1,197 @@
+2019-07-17 15:30:09,658 ERROR 6372 [-/127.0.0.1/-/11ms POST /login] nodejs.TypeError: this.ctx.model.Admin.find is not a function
+    at Admin.findWithJson (/Users/maxianfei/learnData/Egg/formalEgg/app/service/admin.js:9:50)
+    at AdminController.login (/Users/maxianfei/learnData/Egg/formalEgg/app/controller/admin.js:27:52)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 6372
+hostname: simple.local
+
+2019-07-17 15:40:11,547 ERROR 6589 [-/127.0.0.1/-/11ms POST /register] 注册异常:  TypeError: this.ctx.model.Admin.find is not a function
+    at Admin.findWithJson (/Users/maxianfei/learnData/Egg/formalEgg/app/service/admin.js:9:50)
+    at AdminController.register (/Users/maxianfei/learnData/Egg/formalEgg/app/controller/admin.js:29:53)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+2019-07-17 15:46:30,184 ERROR 6614 [-/127.0.0.1/-/11ms POST /register] 注册异常:  TypeError: this.ctx.helper.encrypt is not a function
+    at Admin.create (/Users/maxianfei/learnData/Egg/formalEgg/app/service/admin.js:19:46)
+    at AdminController.register (/Users/maxianfei/learnData/Egg/formalEgg/app/controller/admin.js:34:49)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+2019-07-17 16:03:20,119 ERROR 6842 [-/127.0.0.1/-/23ms POST /register] 注册异常:  ReferenceError: data is not defined
+    at AdminController.register (/Users/maxianfei/learnData/Egg/formalEgg/app/controller/admin.js:34:18)
+2019-07-17 16:04:25,599 ERROR 6851 [-/127.0.0.1/-/7ms POST /register] nodejs.SyntaxError: Identifier 'data' has already been declared
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xssProtection (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xssProtection.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at nosniff (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/nosniff.js:8:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at noopen (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/noopen.js:8:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:34:12
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 6851
+hostname: simple.local
+
+2019-07-17 16:04:44,959 ERROR 6852 [-/127.0.0.1/-/10ms POST /register] 注册异常:  TypeError: this.ctx.model.Admin.find is not a function
+    at Admin.findWithJson (/Users/maxianfei/learnData/Egg/formalEgg/app/service/admin.js:9:50)
+    at AdminController.register (/Users/maxianfei/learnData/Egg/formalEgg/app/controller/admin.js:29:53)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-core@4.17.3@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xssProtection (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/xssProtection.js:7:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at nosniff (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/nosniff.js:8:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at noopen (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_egg-security@2.5.0@egg-security/lib/middlewares/noopen.js:8:11)
+    at dispatch (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+2019-07-17 22:53:35,356 ERROR 9183 nodejs.ClusterClientNoResponseError: client no response in 292789ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 9183
+hostname: bogon
+
+2019-07-18 00:48:41,648 ERROR 9183 nodejs.ClusterClientNoResponseError: client no response in 6906290ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 9183
+hostname: bogon
+
+2019-07-18 02:36:48,447 ERROR 9183 nodejs.ClusterClientNoResponseError: client no response in 6466291ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 9183
+hostname: bogon
+
+2019-07-18 10:49:41,189 ERROR 9183 nodejs.ClusterClientNoResponseError: client no response in 29552646ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 9183
+hostname: bogon
+
+2019-07-18 22:45:02,292 ERROR 9183 nodejs.ClusterClientNoResponseError: client no response in 42901017ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 9183
+hostname: bogon
+
+2019-07-19 08:50:47,065 ERROR 9183 nodejs.ClusterClientNoResponseError: client no response in 36324615ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/maxianfei/learnData/Egg/formalEgg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 9183
+hostname: bogon
+

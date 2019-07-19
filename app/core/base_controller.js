@@ -1,0 +1,111 @@
+/**
+ * 参数验证中间件，用于验证并把参数处理成为指定的格式
+ * @description rule为参数规则，具体结构参见libs/validator文件
+ * @version 1.0.20180909
+ */
+'use strict';
+
+
+const _ = require('lodash');
+const validator  = require('../../libs/validator');  // 参数验证器
+const argsFilter = require('../../libs/argfilter'); // 参数过滤器
+const { Controller } = require('egg');
+
+class BaseController extends Controller {
+    success(msg, data) {
+        let args = argsFilter.getArguments(arguments, {
+            msg: {
+                type: 'string',
+                optional: true,
+                value: '请求成功'
+            },
+            data: {
+                type: 'any',
+                optional: true,
+                value: {}
+            }
+        });
+        args.status = 200;
+        args.code = 0;
+        this.ctx.body = args;
+        return;
+    }
+    fail(msg, status, data) {
+        let args = argsFilter.getArguments(arguments, {
+            msg: {
+                type: 'string',
+                optional: true,
+                value: '请求失败'
+            },
+            status: {
+                type: 'number',
+                optional: true,
+                value: 300,
+                integer: true
+            },
+            data: {
+                type: 'any',
+                optional: true,
+                value: {}
+            }
+        });
+        args.code = -1;
+        this.ctx.body = {
+            status: args.status,
+            msg: args.msg,
+            data: args.data
+        }
+    }
+    paramsValidate(rule) {
+        // let params = _.assign({}, this.ctx.request.body, this.ctx.query);
+        let params = _.assign({}, this.ctx.request.body, this.ctx.request.body.data, this.ctx.query);
+        let tmp = {};
+
+        console.log('rule ', rule);
+
+        for (let key in rule) {
+            let pKey = rule[key].mapKey ? rule[key].mapKey : key;
+            if (typeof params[pKey] !== 'undefined') {
+                tmp[key] = params[pKey];
+            }
+        }
+        params = tmp;
+        console.log('params ----- ', params);
+
+        // 验证并得到验证结果
+        let result = validator(params, rule);
+        console.log('result ---- ', result);
+        if (result.error) {
+            this.ctx.logger.error(`${this.ctx.url} paramsValidate error: ${result.error}`);
+            throw new Error(result.error);
+            return;
+        }
+
+        let paramsTmp = {};
+        let data = result.data;
+
+        for (var key in data) {
+            if (data.hasOwnProperty(key) && !_.isUndefined(data[key]) && !_.isNaN(data[key])) {
+                paramsTmp[key] = data[key];
+            }
+
+            // if need parse so this is a  object so check this object key
+            if (rule[key].needParse && paramsTmp[key] && rule[key].needKeys) {
+
+                for (let i = 0; i < rule[key].needKeys.length; i++) {
+                    let pkey = rule[key].needKeys[i];
+                    if (_.isUndefined(paramsTmp[key][pkey])) {
+                        this.ctx.logger.error(`${this.ctx.url} paramsValidate error: ${key} 参数没有包含必须的 ${pkey}`);
+                        throw new Error(`${this.ctx.url} paramsValidate error: ${key} 参数没有包含必须的 ${pkey}`);
+                    }
+                }
+
+            }
+
+        }
+
+        this.params = paramsTmp;
+    }
+}
+
+module.exports = BaseController;
