@@ -183,20 +183,7 @@
             "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
           }
         },
-        "tags": [
-          {
-            "name": "Admin",
-            "description": "Admin desc"
-          },
-          {
-            "name": "App",
-            "description": "APP desc"
-          },
-          {
-            "name": "Manage",
-            "description": "Manage desc"
-          }
-        ],
+        "tags": [],
         "definitions": {},
         "securityDefinitions": {}
       },
@@ -221,6 +208,7 @@
       "dependencies": {
         "egg": "^2.15.1",
         "egg-cors": "^2.2.0",
+        "egg-router-plus": "^1.3.1",
         "egg-scripts": "^2.11.0",
         "egg-sequelize": "^5.2.0",
         "egg-swagger2": "^1.0.4",

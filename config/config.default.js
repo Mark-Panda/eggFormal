@@ -72,18 +72,7 @@ module.exports = appInfo => {
         },
       },
       tags: [
-        {
-          name: 'Admin',
-          description: 'Admin desc',
-        },
-        {
-          name: 'App',
-          description: 'APP desc',
-        },
-        {
-          name: 'Manage',
-          description: 'Manage desc',
-        },
+        
       ],
       definitions:{
       // model definitions

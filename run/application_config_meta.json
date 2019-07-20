@@ -196,6 +196,7 @@
     "dependencies": {
       "egg": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-cors": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-router-plus": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-scripts": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-sequelize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-swagger2": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",

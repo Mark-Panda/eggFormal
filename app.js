@@ -23,25 +23,10 @@ module.exports = app => {
 
 
     // 加载接口 配置
-    /* app.apiConfigList = {}
-    let checkMap = {};
-
-    app.loadApiConfig = function(apiConfig) {
-
-        if (!app.apiConfigList[apiConfig.namespace]) {
-            app.apiConfigList[apiConfig.namespace] = {}
-        }
-        apiConfig.middlewares = apiConfig.middlewares ? apiConfig.middlewares : [];
-        if (checkMap[apiConfig.name]) {
-            throw new Error(`${apiConfig.name} api 命名重复`)
-        } else {
-            checkMap[apiConfig.name] = true
-        }
-        app.apiConfigList[apiConfig.namespace][apiConfig.name] = apiConfig
-    }
-
+    app.apiConfigList = {}
+    
     app.loadApiswagger = function(swaggeConfig){
-
-    } */
+        app.apiConfigList = swaggeConfig
+    }
 
 };
