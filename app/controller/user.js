@@ -98,6 +98,23 @@ module.exports = app => {
                     url: '',
                     method: 'forgetPassword'
                 }
+            },
+            logOut: {
+                param: {
+                    userId: {type: 'string'},
+                    token: {type: 'string'},
+                },
+                ginseng: {
+                    msg: {type: 'string'},
+                    data: {type: 'object'},
+                    status: {type: 'int'},
+                    code: {type: 'int'},
+                },
+                rule: {
+                    desc: '用户忘记密码接口',
+                    url: '',
+                    method: 'logOut'
+                }
             }
         }
         
@@ -172,8 +189,8 @@ module.exports = app => {
                 data.userName = user.userName;
                 data.phone = user.phone;
                 this.success('登陆成功', data);
-            } catch (error) {
-                console.log(error);
+            } catch (e) {
+                console.log(e);
                 this.ctx.logger.error('login error: ', e);
                 this.fail('登陆失败')
             }
@@ -182,9 +199,16 @@ module.exports = app => {
 
         // logout 注销登录
         async logOut() {
-            let userInfo = this.ctx.userInfo;
-            await this.ctx.service.userRedis.delUser(userInfo); // delete data in redis  userInfo包括userId , token
-            this.success('登出成功');
+            let userInfo = this.ctx.request.body;
+            console.log('--userInfo--',this.ctx.request.body);
+            try {
+                await this.ctx.service.userRedis.delUser(userInfo); // delete data in redis  userInfo包括userId , token
+                this.success('登出成功');
+            } catch (e) {
+                this.ctx.logger.error('login error: ', e);
+                this.fail('注销失败')
+            }
+            
         };
 
         // update password  修改密码

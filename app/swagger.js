@@ -4,11 +4,10 @@
  * @first 所属分组
  * @param 入参对象
  * @ends  出参对象
+ * @desc  接口描述
  */
 
  function swaggerConfig(first, param, ends, desc){
-    //  console.log('入参',param);
-    //  console.log('出参',ends);
      let swagConfig = {
         tags: [
           
@@ -35,10 +34,6 @@
             schema: {
               type: 'object',
               properties: {
-                // status: {
-                //   type: 'string',
-                //   description: 'status',
-                // },
                 data: {
                   type: 'object',
                   description: 'data',
@@ -50,7 +45,6 @@
           },
         },
       }
-      console.log('---param--',param);
       swagConfig.tags[0] = first
       swagConfig.summary = desc
       swagConfig.description = desc

@@ -9,7 +9,7 @@ let nameSpaceList = {
     // allPreuri: '/api/v1',
     lists: {
         admin: {
-            method: ['register','login','updatePassword','forgetPassword']
+            method: ['register','login','updatePassword','forgetPassword','logOut']
         },
 
     }
@@ -26,9 +26,9 @@ module.exports = app => {
         console.log('nameSpaceList' + key + '接口');
         if (allLists.hasOwnProperty(key) && controller.hasOwnProperty(key)){
             let configInfo = app.apiConfigList
-            console.log('-------接口配置信息-----',configInfo);
+            // console.log('-------接口配置信息-----',configInfo);
             for (let item of allLists[key].method) {
-                console.log('----接口细项---', configInfo.topLogo[item]);
+                // console.log('----接口细项---', item);
                 let swaggerUrl = '/' + item;
                 let swaggerInfo = configInfo.topLogo[item].param;
                 let swaggerGinseng = configInfo.topLogo[item].ginseng;
