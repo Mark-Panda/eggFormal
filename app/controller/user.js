@@ -111,7 +111,7 @@ module.exports = app => {
                     code: {type: 'int'},
                 },
                 rule: {
-                    desc: '用户忘记密码接口',
+                    desc: '注销登录',
                     url: '',
                     method: 'logOut'
                 }
