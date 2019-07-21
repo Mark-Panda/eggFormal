@@ -3,9 +3,13 @@
 
 import 'egg';
 import ExportAdmin = require('../../../app/service/admin');
+import ExportUser = require('../../../app/service/user');
+import ExportUserRedis = require('../../../app/service/userRedis');
 
 declare module 'egg' {
   interface IService {
     admin: ExportAdmin;
+    user: ExportUser;
+    userRedis: ExportUserRedis;
   }
 }

@@ -2,7 +2,7 @@
 
 /**
  *
- * @param {管理员表} app
+ * @param {用户表} app
  */
 module.exports = app => {
     const {
@@ -15,7 +15,7 @@ module.exports = app => {
         UUID
     } = app.Sequelize;
 
-    const Admin = app.model.define('admin', {
+    const Admin = app.model.define('user', {
         id: {
             type: INTEGER,
             field: 'id',
@@ -24,7 +24,7 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
-        roleid: STRING, //角色 ID
+        roleid: STRING, //角色 ID  用户设为1  管理员设置为2
         userid: {
             type: STRING, //用户ID
             unique: true //唯一
@@ -39,7 +39,7 @@ module.exports = app => {
 
     }, {
         freezeTableName: true,// Model 对应的表名将与model名相同
-        tableName: 'admin',
+        tableName: 'user',
         timestamps: true,
         // 同时需要设置paranoid为true（此种模式下，删除数据时不会进行物理删除，而是设置deletedAt为当前时间
         paranoid: true

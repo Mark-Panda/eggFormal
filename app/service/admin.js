@@ -3,6 +3,11 @@
 const Service = require('egg').Service;
 
 class Admin extends Service {
+
+    /**
+     * 查找用户
+     * @param {查找条件} queryJson 
+     */
     async findWithJson(queryJson) {
         queryJson.raw = true;
         console.log('queryJson ---- ', queryJson);

@@ -15,10 +15,10 @@ module.exports = {
       enable: true,
       package: 'egg-sequelize',
   },
-  // redis: {
-  //     enable: true,
-  //     package: 'egg-redis',
-  // },
+  redis: {
+      enable: true,
+      package: 'egg-redis',
+  },
   // routerPlus: {
   //     enable: true,
   //     package: 'egg-router-plus',

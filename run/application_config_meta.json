@@ -34,6 +34,32 @@
     "username": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
     "password": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
   },
+  "redis": {
+    "clients": {
+      "user": {
+        "port": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "host": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "password": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "db": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
+      },
+      "main": {
+        "port": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "host": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "password": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "db": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
+      },
+      "check": {
+        "port": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "host": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "password": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+        "db": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
+      }
+    },
+    "default": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-redis@2.4.0@egg-redis/config/config.default.js",
+    "app": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-redis@2.4.0@egg-redis/config/config.default.js",
+    "agent": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-redis@2.4.0@egg-redis/config/config.default.js",
+    "supportTimeCommand": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-redis@2.4.0@egg-redis/config/config.default.js"
+  },
   "security": {
     "ignore": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
     "domainWhiteList": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
@@ -86,6 +112,10 @@
       "ipBlackList": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js",
       "checkAddress": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/config.default.js"
     }
+  },
+  "userInfo": {
+    "userTokenTimeLimit": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js",
+    "redis": "/Users/maxianfei/learnData/Egg/formalsEgg/config/config.default.js"
   },
   "session": {
     "maxAge": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
@@ -196,6 +226,7 @@
     "dependencies": {
       "egg": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-cors": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "egg-redis": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-router-plus": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-scripts": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "egg-sequelize": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",

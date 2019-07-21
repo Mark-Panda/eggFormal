@@ -6,15 +6,15 @@
  * @ends  出参对象
  */
 
- function swaggerConfig(first, param, ends){
+ function swaggerConfig(first, param, ends, desc){
     //  console.log('入参',param);
     //  console.log('出参',ends);
      let swagConfig = {
         tags: [
           
         ],
-        summary: '用户 login',
-        description: '登录接口',
+        summary: '',
+        description: '',
         parameters: [
           {
             in: 'body',
@@ -50,8 +50,10 @@
           },
         },
       }
+      console.log('---param--',param);
       swagConfig.tags[0] = first
-      
+      swagConfig.summary = desc
+      swagConfig.description = desc
       param.forEach(element => {
           swagConfig.parameters[0].schema.properties[element] = {
               type : 'string',

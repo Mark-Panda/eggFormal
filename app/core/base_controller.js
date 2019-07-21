@@ -58,6 +58,7 @@ class BaseController extends Controller {
     }
     paramsValidate(rule) {
         // let params = _.assign({}, this.ctx.request.body, this.ctx.query);
+        console.log('--- 请求内容 ---',this.ctx.request.body);
         let params = _.assign({}, this.ctx.request.body, this.ctx.request.body.data, this.ctx.query);
         let tmp = {};
 
@@ -88,7 +89,6 @@ class BaseController extends Controller {
             if (data.hasOwnProperty(key) && !_.isUndefined(data[key]) && !_.isNaN(data[key])) {
                 paramsTmp[key] = data[key];
             }
-
             // if need parse so this is a  object so check this object key
             if (rule[key].needParse && paramsTmp[key] && rule[key].needKeys) {
 

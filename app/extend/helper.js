@@ -18,11 +18,20 @@ module.exports = {
         if (!string) return string;
         return parseInt(string) || 0;
     },
-    encrypt(password) {
+    /**
+     * 
+     * @param {密码加密} password 
+     */
+    encrypt(password) {  
         const hash = crypto.createHmac('sha256', secretKey).update(password).digest('hex');
         return hash;
     },
-    comparePassord(plain, hash) {
+    /**
+     * 密码对比
+     * @param {输入密码} plain 
+     * @param {数据库的密码} hash 
+     */
+    comparePassord(plain, hash) {  
         return hash === this.encrypt(plain);
     },
     safeParse(obj) {
@@ -34,10 +43,18 @@ module.exports = {
         }
         return json;
     },
+    /**
+     * 
+     * @param {jwt生成token} userid 
+     */
     createToken(userid) {
         let token = jsonwebtoken.sign({ userid: userid }, secretKey);
         return token;
     },
+    /**
+     * 
+     * @param {jwt验证token} token 
+     */
     decodeToken(token) {
         let decoded = jsonwebtoken.verify(token, secretKey);
         return decoded;
