@@ -76,19 +76,6 @@ module.exports = appInfo => {
   const swagger2 = {
     enable:true, // 禁用swagger , 默认为true
     base: {
-      /* default config,support cover
-      schemes: [
-          'http',
-      ],
-      host: '127.0.0.1:7001',
-      basePath: '/',
-      consumes: [
-      'application/json',
-      ],
-      produces: [
-      'application/json',
-      ],
-      */
       info: {
         description: 'This is a test swagger-ui html',
         version: '1.0.0',
@@ -102,19 +89,14 @@ module.exports = appInfo => {
         },
       },
       tags: [
-        
       ],
       definitions:{
-      // model definitions
       },
       securityDefinitions:{
-      // security definitions
       }
     },
   };
 
-
-  // config.swaggerUrl = 'http://127.0.0.1:7001/';
 
   return {
     swagger2,
