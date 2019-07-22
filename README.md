@@ -74,4 +74,10 @@ let methodParm = {
 app.loadApiswagger(methodParm);   //将参数配置放到公共组件的扩展方法中
 ```
 - swagger.js是关于swagger文档格式的拼接方法，其在router.js文件中引入并配置
+### 注册、登录
+- 使用的插件为jsonwebtoken
+- 在登录时使用jsonwebtoken生成token，使用Redis存放用户个人信息和token信息
+- 注销登录就是删除Redis用户信息缓存
+- 在忘记密码接口中参数有code，但是没有做生成和验证验证码的模块，可以自己做。
+
 [egg]: https://eggjs.org
