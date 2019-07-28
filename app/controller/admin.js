@@ -18,7 +18,7 @@ module.exports = app => {
                     message: {type: 'string'}
                 },
                 rule: {
-                    desc: '',
+                    desc: '注册',
                     url: '',
                     method: 'register'
                 }
@@ -33,7 +33,7 @@ module.exports = app => {
                     message: {type: 'string'}
                 },
                 rule: {
-                    desc: '',
+                    desc: '登录',
                     url: '',
                     method: 'login'
                 }

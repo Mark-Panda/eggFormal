@@ -26,7 +26,10 @@ module.exports = app => {
     app.apiConfigList = {}
     
     app.loadApiswagger = function(swaggeConfig){
-        app.apiConfigList = swaggeConfig
+        // console.log('---加载一次----',swaggeConfig);
+        app.apiConfigList[swaggeConfig.topLogo.role] =  swaggeConfig
+        // app.apiConfigList.push(swaggeConfig)
+        // console.log('---最后的app---',app.apiConfigList);
     }
 
 };

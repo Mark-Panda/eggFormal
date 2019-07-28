@@ -234,7 +234,8 @@
       "jsonwebtoken": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "mysql2": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
       "request-promise": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
-      "urlsafe-base64": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
+      "urlsafe-base64": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",
+      "xml2json": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js"
     },
     "devDependencies": {
       "autod": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/config.default.js",

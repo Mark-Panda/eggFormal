@@ -9,9 +9,14 @@ let nameSpaceList = {
     // allPreuri: '/api/v1',
     lists: {
         admin: {
+            method: ['register','login']
+        },
+        user: {
             method: ['register','login','updatePassword','forgetPassword','logOut']
         },
-
+        weather: {
+            method: ['getWeather']
+        }
     }
 };
 
@@ -28,11 +33,12 @@ module.exports = app => {
             let configInfo = app.apiConfigList
             // console.log('-------接口配置信息-----',configInfo);
             for (let item of allLists[key].method) {
+                
                 // console.log('----接口细项---', item);
                 let swaggerUrl = '/' + item;
-                let swaggerInfo = configInfo.topLogo[item].param;
-                let swaggerGinseng = configInfo.topLogo[item].ginseng;
-                let swaggerDesc = configInfo.topLogo[item].rule.desc
+                let swaggerInfo = configInfo[key].topLogo[item].param;
+                let swaggerGinseng = configInfo[key].topLogo[item].ginseng;
+                let swaggerDesc = configInfo[key].topLogo[item].rule.desc
                 let swaggerInfoparm = []
                 let swaggerOutparm = []
                 for (let elem in swaggerInfo){
@@ -43,9 +49,9 @@ module.exports = app => {
                     // console.log('----出参参数----',elem);
                     swaggerOutparm.push(elem);
                 }
-                // console.log('-----',configInfo.topLogo.role);
-                router.all(swaggerUrl,controller[configInfo.topLogo.role][item]);
-                swagger.post(swaggerUrl, swaggerConfig(configInfo.topLogo.role,swaggerInfoparm,swaggerOutparm,swaggerDesc));
+                console.log('-----',swaggerUrl);
+                router.all(swaggerUrl,controller[configInfo[key].topLogo.role][item]);
+                swagger.post(swaggerUrl, swaggerConfig(configInfo[key].topLogo.role,swaggerInfoparm,swaggerOutparm,swaggerDesc));
             }
         }
     }
