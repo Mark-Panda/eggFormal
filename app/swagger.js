@@ -10,7 +10,6 @@
  function swaggerConfig(first, param, ends, desc){
      let swagConfig = {
         tags: [
-          
         ],
         summary: '',
         description: '',
@@ -60,6 +59,8 @@
             description : '接口出参参数' + element,
           }
       })
+
+      console.log('-----swagger长啥样----', swagConfig);
 
       return swagConfig
  }

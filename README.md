@@ -73,6 +73,7 @@ let methodParm = {
 }
 app.loadApiswagger(methodParm);   //将参数配置放到公共组件的扩展方法中
 ```
+- 目前该处理过程存在一点问题，controller下文件里的方法名不能重复，不然会被覆盖掉，同时router.js里的对应方法也应该对应修改掉
 - swagger.js是关于swagger文档格式的拼接方法，其在router.js文件中引入并配置
 ### 注册、登录
 - 使用的插件为jsonwebtoken

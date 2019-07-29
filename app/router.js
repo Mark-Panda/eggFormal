@@ -5,15 +5,17 @@
  */
 
 let swaggerConfig = require('./swagger');
+let _ = require('lodash');
 let nameSpaceList = {
     // allPreuri: '/api/v1',
     lists: {
-        admin: {
-            method: ['register','login']
-        },
         user: {
             method: ['register','login','updatePassword','forgetPassword','logOut']
         },
+        admins: {
+            method: ['registerAdmin','loginAdmin']
+        },
+        
         weather: {
             method: ['getWeather']
         }
@@ -34,11 +36,13 @@ module.exports = app => {
             // console.log('-------接口配置信息-----',configInfo);
             for (let item of allLists[key].method) {
                 
-                // console.log('----接口细项---', item);
+                console.log('----接口细项---', item);
+                
+                let configInfoNew = _.findIndex(configInfo,(item) => { return item.topLogo.role === key})
                 let swaggerUrl = '/' + item;
-                let swaggerInfo = configInfo[key].topLogo[item].param;
-                let swaggerGinseng = configInfo[key].topLogo[item].ginseng;
-                let swaggerDesc = configInfo[key].topLogo[item].rule.desc
+                let swaggerInfo = configInfo[configInfoNew].topLogo[item].param;
+                let swaggerGinseng = configInfo[configInfoNew].topLogo[item].ginseng;
+                let swaggerDesc = configInfo[configInfoNew].topLogo[item].rule.desc
                 let swaggerInfoparm = []
                 let swaggerOutparm = []
                 for (let elem in swaggerInfo){
@@ -50,8 +54,8 @@ module.exports = app => {
                     swaggerOutparm.push(elem);
                 }
                 console.log('-----',swaggerUrl);
-                router.all(swaggerUrl,controller[configInfo[key].topLogo.role][item]);
-                swagger.post(swaggerUrl, swaggerConfig(configInfo[key].topLogo.role,swaggerInfoparm,swaggerOutparm,swaggerDesc));
+                router.all(swaggerUrl,controller[configInfo[configInfoNew].topLogo.role][item]);
+                swagger.post(swaggerUrl, swaggerConfig(configInfo[configInfoNew].topLogo.role,swaggerInfoparm,swaggerOutparm,swaggerDesc));
             }
         }
     }

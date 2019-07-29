@@ -608,6 +608,130 @@
               }
             }
           },
+          "/registerAdmin": {
+            "post": {
+              "tags": [
+                "admins"
+              ],
+              "summary": "注册",
+              "description": "注册",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "userName": {
+                        "type": "string",
+                        "description": "admin 入参userName"
+                      },
+                      "phone": {
+                        "type": "string",
+                        "description": "admin 入参phone"
+                      },
+                      "password": {
+                        "type": "string",
+                        "description": "admin 入参password"
+                      },
+                      "realName": {
+                        "type": "string",
+                        "description": "admin 入参realName"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          },
+                          "message": {
+                            "type": "string",
+                            "description": "接口出参参数message"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/loginAdmin": {
+            "post": {
+              "tags": [
+                "admins"
+              ],
+              "summary": "登录",
+              "description": "登录",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "userName": {
+                        "type": "string",
+                        "description": "admin 入参userName"
+                      },
+                      "password": {
+                        "type": "string",
+                        "description": "admin 入参password"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          },
+                          "message": {
+                            "type": "string",
+                            "description": "接口出参参数message"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "/getWeather": {
             "post": {
               "tags": [
@@ -699,6 +823,7 @@
         "egg-sequelize": "^5.2.0",
         "egg-swagger2": "^1.0.4",
         "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.15",
         "mysql2": "^1.6.5",
         "request-promise": "^4.2.4",
         "urlsafe-base64": "^1.0.0",

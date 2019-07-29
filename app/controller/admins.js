@@ -5,8 +5,8 @@ const Controller = require('../core/base_controller');
 module.exports = app => {
     let methodParm = {
         topLogo: {
-            role: 'admin',
-            register: {
+            role: 'admins',
+            registerAdmin: {
                 param: {
                     userName: {type: 'string'},
                     phone: {type: 'string'},
@@ -23,7 +23,7 @@ module.exports = app => {
                     method: 'register'
                 }
             },
-            login: {
+            loginAdmin: {
                 param: {
                     userName: {type: 'string'},
                     password: {type: 'string'}
@@ -45,7 +45,7 @@ module.exports = app => {
     class AdminController extends Controller {
         
         // 注册
-        async register() {
+        async registerAdmin() {
             this.paramsValidate(methodParm.topLogo.register.param); //状态码  201 参数错误
     
             const userid=util.onlyId();
@@ -76,7 +76,7 @@ module.exports = app => {
         /**
          * login 登录
          */
-        async login() {
+        async loginAdmin() {
             console.log('进入login');
             this.paramsValidate(methodParm.topLogo.login.param);
             console.log(this.params);

@@ -2,13 +2,13 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportAdmin = require('../../../app/controller/admin');
+import ExportAdmins = require('../../../app/controller/admins');
 import ExportUser = require('../../../app/controller/user');
 import ExportWeather = require('../../../app/controller/weather');
 
 declare module 'egg' {
   interface IController {
-    admin: ExportAdmin;
+    admins: ExportAdmins;
     user: ExportUser;
     weather: ExportWeather;
   }
