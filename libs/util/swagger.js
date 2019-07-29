@@ -50,7 +50,7 @@
       param.forEach(element => {
           swagConfig.parameters[0].schema.properties[element] = {
               type : 'string',
-              description : 'admin 入参' + element,
+              description : ' 入参' + element,
           }
       });
       ends.forEach(element => {
@@ -59,8 +59,6 @@
             description : '接口出参参数' + element,
           }
       })
-
-      console.log('-----swagger长啥样----', swagConfig);
 
       return swagConfig
  }

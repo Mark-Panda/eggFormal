@@ -268,23 +268,23 @@
                     "properties": {
                       "userName": {
                         "type": "string",
-                        "description": "admin 入参userName"
+                        "description": " 入参userName"
                       },
                       "phone": {
                         "type": "string",
-                        "description": "admin 入参phone"
+                        "description": " 入参phone"
                       },
                       "password": {
                         "type": "string",
-                        "description": "admin 入参password"
+                        "description": " 入参password"
                       },
                       "realName": {
                         "type": "string",
-                        "description": "admin 入参realName"
+                        "description": " 入参realName"
                       },
                       "mechanismId": {
                         "type": "string",
-                        "description": "admin 入参mechanismId"
+                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -346,15 +346,15 @@
                     "properties": {
                       "userName": {
                         "type": "string",
-                        "description": "admin 入参userName"
+                        "description": " 入参userName"
                       },
                       "password": {
                         "type": "string",
-                        "description": "admin 入参password"
+                        "description": " 入参password"
                       },
                       "mechanismId": {
                         "type": "string",
-                        "description": "admin 入参mechanismId"
+                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -416,19 +416,19 @@
                     "properties": {
                       "phone": {
                         "type": "string",
-                        "description": "admin 入参phone"
+                        "description": " 入参phone"
                       },
                       "newPassword": {
                         "type": "string",
-                        "description": "admin 入参newPassword"
+                        "description": " 入参newPassword"
                       },
                       "oldPassword": {
                         "type": "string",
-                        "description": "admin 入参oldPassword"
+                        "description": " 入参oldPassword"
                       },
                       "mechanismId": {
                         "type": "string",
-                        "description": "admin 入参mechanismId"
+                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -490,19 +490,19 @@
                     "properties": {
                       "phone": {
                         "type": "string",
-                        "description": "admin 入参phone"
+                        "description": " 入参phone"
                       },
                       "newPassword": {
                         "type": "string",
-                        "description": "admin 入参newPassword"
+                        "description": " 入参newPassword"
                       },
                       "code": {
                         "type": "string",
-                        "description": "admin 入参code"
+                        "description": " 入参code"
                       },
                       "mechanismId": {
                         "type": "string",
-                        "description": "admin 入参mechanismId"
+                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -564,11 +564,11 @@
                     "properties": {
                       "userId": {
                         "type": "string",
-                        "description": "admin 入参userId"
+                        "description": " 入参userId"
                       },
                       "token": {
                         "type": "string",
-                        "description": "admin 入参token"
+                        "description": " 入参token"
                       }
                     }
                   }
@@ -630,19 +630,19 @@
                     "properties": {
                       "userName": {
                         "type": "string",
-                        "description": "admin 入参userName"
+                        "description": " 入参userName"
                       },
                       "phone": {
                         "type": "string",
-                        "description": "admin 入参phone"
+                        "description": " 入参phone"
                       },
                       "password": {
                         "type": "string",
-                        "description": "admin 入参password"
+                        "description": " 入参password"
                       },
                       "realName": {
                         "type": "string",
-                        "description": "admin 入参realName"
+                        "description": " 入参realName"
                       }
                     }
                   }
@@ -696,11 +696,11 @@
                     "properties": {
                       "userName": {
                         "type": "string",
-                        "description": "admin 入参userName"
+                        "description": " 入参userName"
                       },
                       "password": {
                         "type": "string",
-                        "description": "admin 入参password"
+                        "description": " 入参password"
                       }
                     }
                   }
@@ -754,7 +754,147 @@
                     "properties": {
                       "cityname": {
                         "type": "string",
-                        "description": "admin 入参cityname"
+                        "description": " 入参cityname"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/findArticle": {
+            "post": {
+              "tags": [
+                "article"
+              ],
+              "summary": "查询",
+              "description": "查询",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "article": {
+                        "type": "string",
+                        "description": " 入参article"
+                      },
+                      "classificationId": {
+                        "type": "string",
+                        "description": " 入参classificationId"
+                      },
+                      "author": {
+                        "type": "string",
+                        "description": " 入参author"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/findArticleByclass": {
+            "post": {
+              "tags": [
+                "article"
+              ],
+              "summary": "查询",
+              "description": "查询",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "classificationId": {
+                        "type": "string",
+                        "description": " 入参classificationId"
+                      },
+                      "page": {
+                        "type": "string",
+                        "description": " 入参page"
+                      },
+                      "skip": {
+                        "type": "string",
+                        "description": " 入参skip"
                       }
                     }
                   }
