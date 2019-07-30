@@ -12,7 +12,7 @@ module.exports = app => {
                     phone: {type: 'string'},
                     password: {type: 'string'},
                     realName: {type: 'string',optional: true},
-                    mechanismId: {type: 'string'}
+                    mechanismId: {type: 'string',optional: true}
                 },
                 ginseng: {
                     msg: {type: 'string'},
@@ -40,7 +40,7 @@ module.exports = app => {
                 param: {
                     userName: {type: 'string'},
                     password: {type: 'string'},
-                    mechanismId: {type: 'string'}
+                    mechanismId: {type: 'string',optional: true}
                 },
                 ginseng: {
                     msg: {type: 'string'},
