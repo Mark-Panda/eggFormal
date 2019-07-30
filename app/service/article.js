@@ -10,6 +10,7 @@ class Article extends Service {
     async findArticle(inputParam){
         console.log('----查询文章input---',inputParam);
         let articleInfo = await this.ctx.model.Article.findAll(inputParam);
+        // let articleInfo = await this.ctx.model.Article.findAll(inputParam);
         return articleInfo
     }
 
@@ -20,6 +21,17 @@ class Article extends Service {
     async findAllarticle(inputParam,page,skip){
         console.log('----查询文章input---',inputParam,page,skip);
         let articleInfo = await this.ctx.model.Article.findAll({where: inputParam, limit: 1 * skip, offset: skip * (page - 1)});
+        return articleInfo
+    }
+
+    /**
+     * 
+     * @param {查找文章数量} inputParam 
+     */
+    async findCount(inputParam){
+        console.log('----查询input---',inputParam);
+        let articleInfo = await this.ctx.model.Article.count({where: inputParam})
+        console.log('-----',articleInfo);
         return articleInfo
     }
 
