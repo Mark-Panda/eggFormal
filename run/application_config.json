@@ -87,29 +87,29 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/lib/onerror_page.mustache"
+      "templatePath": "/Users/simple/learn/eggFormal/node_modules/_egg-onerror@2.1.0@egg-onerror/lib/onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
       "dirs": [
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-sequelize@5.2.0@egg-sequelize/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-redis@2.4.0@egg-redis/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-cors@2.2.0@egg-cors/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/locales",
-        "/Users/maxianfei/learnData/Egg/formalsEgg/config/locales"
+        "/Users/simple/learn/eggFormal/node_modules/_egg-session@3.1.0@egg-session/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-security@2.5.0@egg-security/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-onerror@2.1.0@egg-onerror/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-i18n@2.1.1@egg-i18n/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-watcher@3.1.0@egg-watcher/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-schedule@3.6.4@egg-schedule/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-multipart@2.7.1@egg-multipart/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-development@2.4.3@egg-development/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-static@2.2.0@egg-static/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-view@2.1.2@egg-view/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-sequelize@5.2.0@egg-sequelize/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-redis@2.4.0@egg-redis/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-cors@2.2.0@egg-cors/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg-swagger2@1.0.4@egg-swagger2/config/locales",
+        "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/locales",
+        "/Users/simple/learn/eggFormal/config/locales"
       ],
       "queryField": "locale",
       "cookieField": "locale",
@@ -120,8 +120,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/lib/event-sources/default",
-        "development": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher/lib/event-sources/development"
+        "default": "/Users/simple/learn/eggFormal/node_modules/_egg-watcher@3.1.0@egg-watcher/lib/event-sources/default",
+        "development": "/Users/simple/learn/eggFormal/node_modules/_egg-watcher@3.1.0@egg-watcher/lib/event-sources/development"
       }
     },
     "customLogger": {
@@ -144,7 +144,7 @@
       "files": 10,
       "fileExtensions": [],
       "whitelist": null,
-      "tmpdir": "/var/folders/39/_26t9cb14rgd79d5p3jjzq0c0000gn/T/egg-multipart-tmp/formalEgg",
+      "tmpdir": "/var/folders/vm/wnv9yjpd2js3l_8h0t8zqc_00000gn/T/egg-multipart-tmp/formalEgg",
       "cleanSchedule": {
         "cron": "0 30 4 * * *"
       }
@@ -167,14 +167,14 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/maxianfei/learnData/Egg/formalsEgg/app/public",
+      "dir": "/Users/simple/learn/eggFormal/app/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "/Users/maxianfei/learnData/Egg/formalsEgg/app/view",
+      "root": "/Users/simple/learn/eggFormal/app/view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -182,7 +182,7 @@
     },
     "sequelize": {
       "dialect": "mysql",
-      "database": "graphql",
+      "database": "eggtext",
       "host": "localhost",
       "port": "3306",
       "username": "root",
@@ -869,8 +869,8 @@
               "tags": [
                 "article"
               ],
-              "summary": "查询",
-              "description": "查询",
+              "summary": "按分类查询文章",
+              "description": "按分类查询文章",
               "parameters": [
                 {
                   "in": "body",
@@ -895,6 +895,154 @@
                       "skip": {
                         "type": "string",
                         "description": " 入参skip"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/createArticle": {
+            "post": {
+              "tags": [
+                "article"
+              ],
+              "summary": "文章录入",
+              "description": "文章录入",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "classificationId": {
+                        "type": "string",
+                        "description": " 入参classificationId"
+                      },
+                      "article": {
+                        "type": "string",
+                        "description": " 入参article"
+                      },
+                      "message": {
+                        "type": "string",
+                        "description": " 入参message"
+                      },
+                      "author": {
+                        "type": "string",
+                        "description": " 入参author"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/updateArticle": {
+            "post": {
+              "tags": [
+                "article"
+              ],
+              "summary": "修改文章内容",
+              "description": "修改文章内容",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "articleId": {
+                        "type": "string",
+                        "description": " 入参articleId"
+                      },
+                      "classificationId": {
+                        "type": "string",
+                        "description": " 入参classificationId"
+                      },
+                      "message": {
+                        "type": "string",
+                        "description": " 入参message"
+                      },
+                      "author": {
+                        "type": "string",
+                        "description": " 入参author"
                       }
                     }
                   }
@@ -1003,9 +1151,9 @@
       "author": "simple",
       "license": "MIT"
     },
-    "baseDir": "/Users/maxianfei/learnData/Egg/formalsEgg",
-    "HOME": "/Users/maxianfei",
-    "rundir": "/Users/maxianfei/learnData/Egg/formalsEgg/run",
+    "baseDir": "/Users/simple/learn/eggFormal",
+    "HOME": "/Users/simple",
+    "rundir": "/Users/simple/learn/eggFormal/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -1036,7 +1184,7 @@
       "returnRawBody": true
     },
     "logger": {
-      "dir": "/Users/maxianfei/learnData/Egg/formalsEgg/logs/formalEgg",
+      "dir": "/Users/simple/learn/eggFormal/logs/formalEgg",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -1134,8 +1282,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-session@3.1.0@egg-session",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-session@3.1.0@egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -1147,8 +1295,8 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-security@2.5.0@egg-security",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-security@2.5.0@egg-security",
       "version": "2.5.0"
     },
     "jsonp": {
@@ -1160,8 +1308,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-jsonp@2.0.0@egg-jsonp",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-jsonp@2.0.0@egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -1173,8 +1321,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-onerror@2.1.0@egg-onerror",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-onerror@2.1.0@egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -1184,8 +1332,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-i18n@2.1.1@egg-i18n",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-i18n@2.1.1@egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -1195,8 +1343,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-watcher@3.1.0@egg-watcher",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-watcher@3.1.0@egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -1206,8 +1354,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-schedule@3.6.4@egg-schedule",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-schedule@3.6.4@egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -1219,8 +1367,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-multipart@2.7.1@egg-multipart",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-multipart@2.7.1@egg-multipart",
       "version": "2.7.1"
     },
     "development": {
@@ -1234,8 +1382,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-development@2.4.3@egg-development",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-development@2.4.3@egg-development",
       "version": "2.4.3"
     },
     "logrotator": {
@@ -1247,8 +1395,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-logrotator@3.1.0@egg-logrotator",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-logrotator@3.1.0@egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -1258,8 +1406,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-static@2.2.0@egg-static",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-static@2.2.0@egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -1269,8 +1417,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg@2.22.2@egg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-view@2.1.2@egg-view",
+      "from": "/Users/simple/learn/eggFormal/node_modules/_egg@2.23.0@egg/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-view@2.1.2@egg-view",
       "version": "2.1.2"
     },
     "sequelize": {
@@ -1280,8 +1428,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-sequelize@5.2.0@egg-sequelize",
+      "from": "/Users/simple/learn/eggFormal/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-sequelize@5.2.0@egg-sequelize",
       "version": "5.2.0"
     },
     "redis": {
@@ -1291,8 +1439,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-redis@2.4.0@egg-redis",
+      "from": "/Users/simple/learn/eggFormal/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-redis@2.4.0@egg-redis",
       "version": "2.4.0"
     },
     "cors": {
@@ -1302,8 +1450,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-cors@2.2.0@egg-cors",
+      "from": "/Users/simple/learn/eggFormal/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-cors@2.2.0@egg-cors",
       "version": "2.2.0"
     },
     "swagger2": {
@@ -1313,8 +1461,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/maxianfei/learnData/Egg/formalsEgg/config/plugin.js",
-      "path": "/Users/maxianfei/learnData/Egg/formalsEgg/node_modules/_egg-swagger2@1.0.4@egg-swagger2",
+      "from": "/Users/simple/learn/eggFormal/config/plugin.js",
+      "path": "/Users/simple/learn/eggFormal/node_modules/_egg-swagger2@1.0.4@egg-swagger2",
       "version": "1.0.4"
     }
   }

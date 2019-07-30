@@ -28,7 +28,9 @@ class Article extends Service {
      * @inputParam  入参
      */
     async createArticle(inputParam){
-
+        console.log('---录入文章input---',inputParam);
+        let data = await this.ctx.model.Article.create(inputParam);
+        return data;
     }
 
     /**
@@ -52,10 +54,15 @@ class Article extends Service {
 
     /**
      * 修改文章
-     * @articleId
+     * @articleId  文章ID
+     * @inputParam  修改内容
      */
-    async updateArticleById(articleId){
-
+    async updateArticleById(articleId,inputParam){
+        const articleInfo = await this.ctx.model.Article.findOne({id:articleId});
+        if (!articleInfo) {
+            this.ctx.throw(404, '没有该文章');
+        }
+        return articleInfo.update(inputParam);
     }
 }
 
