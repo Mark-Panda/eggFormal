@@ -1151,6 +1151,68 @@
                 }
               }
             }
+          },
+          "/destroyArticle": {
+            "post": {
+              "tags": [
+                "article"
+              ],
+              "summary": "删除文章",
+              "description": "删除文章",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "articleId": {
+                        "type": "string",
+                        "description": " 入参articleId"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },

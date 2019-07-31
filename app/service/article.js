@@ -84,7 +84,10 @@ class Article extends Service {
      * @articleId
      */
     async removeArticleById(articleId){
-
+        console.log('---文章ID--',articleId);
+        const articleInfo = await this.ctx.model.Article.destroy({where:{id:articleId},force : true});
+        console.log('---是否删除成功---',articleInfo);
+        return articleInfo;
     }
 
     /**

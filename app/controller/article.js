@@ -120,18 +120,23 @@ module.exports = app => {
                 ginseng: {
                     msg: {type: 'string'},
                     data: {
-                        id: {type: 'int'},
-                        commentId: {type: 'string'},
-                        thumbsupId: {type: 'string'},
-                        article: {type: 'string'},
-                        userid: {type: 'string'},
-                        classificationId: {type: 'string'},
-                        message: {type: 'string'},
-                        author: {type: 'string'},
-                        count: {type: 'string'},
-                        createdAt: {type: 'string'},
-                        updatedAt: {type: 'string'},
-                        deletedAt: {type: 'string'},
+                        count: {type: 'int'},
+                        rows: [
+                            {
+                                id: {type: 'int'},
+                                commentId: {type: 'string'},
+                                thumbsupId: {type: 'string'},
+                                article: {type: 'string'},
+                                userid: {type: 'string'},
+                                classificationId: {type: 'string'},
+                                message: {type: 'string'},
+                                author: {type: 'string'},
+                                count: {type: 'string'},
+                                createdAt: {type: 'string'},
+                                updatedAt: {type: 'string'},
+                                deletedAt: {type: 'string'},
+                            }
+                        ]
                     },
                     status: {type: 'int'},
                     code: {type: 'int'},
@@ -140,6 +145,22 @@ module.exports = app => {
                     desc: '查找文章数量',
                     url: '',
                     method: 'findArticleCount'
+                }
+            },
+            destroyArticle: {
+                param: {
+                    articleId: {type: 'string'}
+                },
+                ginseng: {
+                    msg: {type: 'string'},
+                    data: {type: 'int'},
+                    status: {type: 'int'},
+                    code: {type: 'int'},
+                },
+                rule: {
+                    desc: '删除文章',
+                    url: '',
+                    method: 'destroyArticle'
                 }
             }
         }
@@ -281,6 +302,24 @@ module.exports = app => {
                 console.log(error);
                 this.ctx.logger.error('update error: ', error);
                 this.fail('修改文章失败')
+            }
+        }
+
+        /**
+         * 删除文章
+         */
+        async destroyArticle(){
+            this.paramsValidate(methodParm.topLogo.destroyArticle.param)
+            try {
+                console.log('---- 删除文章ID ----',this.params);
+                let {articleId} = this.params
+                const destroyInfo = await this.ctx.service.article.removeArticleById(articleId);
+
+                this.success('删除成功', destroyInfo)
+            } catch (error) {
+                console.log(error);
+                this.ctx.logger.error('destroy error: ', error);
+                this.fail('删除文章失败')
             }
         }
     }
