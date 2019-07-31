@@ -110,6 +110,37 @@ module.exports = app => {
                     url: '',
                     method: 'updateArticle'
                 }
+            },
+            findArticleCount: {
+                param: {
+                    classificationId: {type: 'string',optional: true},
+                    page: {type: 'string',optional: true},
+                    skip: {type: 'string',optional: true},
+                },
+                ginseng: {
+                    msg: {type: 'string'},
+                    data: {
+                        id: {type: 'int'},
+                        commentId: {type: 'string'},
+                        thumbsupId: {type: 'string'},
+                        article: {type: 'string'},
+                        userid: {type: 'string'},
+                        classificationId: {type: 'string'},
+                        message: {type: 'string'},
+                        author: {type: 'string'},
+                        count: {type: 'string'},
+                        createdAt: {type: 'string'},
+                        updatedAt: {type: 'string'},
+                        deletedAt: {type: 'string'},
+                    },
+                    status: {type: 'int'},
+                    code: {type: 'int'},
+                },
+                rule: {
+                    desc: '查找文章数量',
+                    url: '',
+                    method: 'findArticleCount'
+                }
             }
         }
     }
@@ -153,6 +184,28 @@ module.exports = app => {
                 this.fail('查询失败')
             }
         }
+
+        /**
+         * 查询文章总数量并返回每个文章信息
+         */
+
+         async findArticleCount(){
+             this.paramsValidate(methodParm.topLogo.findArticleCount.param);
+             try {
+                console.log('--- 查询文章数量 ---',this.params);
+                let {classificationId , page , skip} = this.params
+                let findJson = {
+                    classificationId
+                }
+                 const articleCount = await this.ctx.service.article.findCountBy(classificationId, page, skip );
+                 console.log('---- server接受结果 ---',articleCount);
+                 this.success('查询成功',articleCount)
+             } catch (error) {
+                console.log(error);
+                this.ctx.logger.error('find error: ', error);
+                this.fail('查询失败')
+             }
+         }
 
         /**
          * 查询某一分类所有文章,分页

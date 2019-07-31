@@ -11,7 +11,7 @@ class Article extends Service {
         console.log('----查询文章input---',inputParam);
         let articleInfo = await this.ctx.model.Article.findAll(inputParam);
         // let articleInfo = await this.ctx.model.Article.findAll(inputParam);
-        return articleInfo
+        return articleInfo;
     }
 
     /**
@@ -21,7 +21,7 @@ class Article extends Service {
     async findAllarticle(inputParam,page,skip){
         console.log('----查询文章input---',inputParam,page,skip);
         let articleInfo = await this.ctx.model.Article.findAll({where: inputParam, limit: 1 * skip, offset: skip * (page - 1)});
-        return articleInfo
+        return articleInfo;
     }
 
     /**
@@ -30,10 +30,33 @@ class Article extends Service {
      */
     async findCount(inputParam){
         console.log('----查询input---',inputParam);
-        let articleInfo = await this.ctx.model.Article.count({where: inputParam})
+        let articleInfo = await this.ctx.model.Article.count({where: inputParam});
         console.log('-----',articleInfo);
-        return articleInfo
+        return articleInfo;
     }
+
+    /**
+     * 查找文章数量和信息
+     * @param {分类ID} inputParam 
+     * @page  {分页}   page
+     * @skip  {切片}   skip
+     */
+    async findCountBy(inputParam,page,skip){
+        console.log('----查询数量input----',inputParam);
+        let articleInfo
+        if(!inputParam){
+            articleInfo = await this.ctx.model.Article.findAndCountAll()
+        }else{
+            if(!page || !skip){
+                articleInfo = await this.ctx.model.Article.findAndCountAll({where:{classificationId:inputParam}})
+            }else{
+                articleInfo = await this.ctx.model.Article.findAndCountAll({where:{classificationId:inputParam}, limit:1 * skip ,offset: skip * (page - 1)})
+            }
+        }
+        // console.log('-----result----',articleInfo);
+        return articleInfo;
+    }
+
 
     /**
      * 录入文章
@@ -53,7 +76,7 @@ class Article extends Service {
         console.log('----查询文章---',articleId);
         let articleInfo = await this.ctx.model.Article.findOne(articleId);
         console.log('---- result ---',articleInfo);
-        return articleInfo
+        return articleInfo;
     }
 
     /**

@@ -28,7 +28,7 @@ module.exports = appInfo => {
     host: 'localhost',
     port: '3306',
     username: 'root',
-    password: '',
+    password: 'simple_95@mxf',
   };
 
   // redis config
@@ -37,19 +37,19 @@ module.exports = appInfo => {
         user: {                     // instanceName. See below
             port: 6379,             // Redis port
             host: '127.0.0.1',
-            password: '',
+            password: 'Founder123',
             db: 0,
         },
         main: {
             port: 6379,
             host: '127.0.0.1',
-            password: '',
+            password: 'Founder123',
             db: 1,
         },
         check: {
             port: 6379,
             host: '127.0.0.1',
-            password: '',
+            password: 'Founder123',
             db: 2,
         },
     }
