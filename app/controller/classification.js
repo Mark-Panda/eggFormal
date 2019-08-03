@@ -1,59 +1,86 @@
 'use strict';
-const util= require('../../libs/util');
+const util = require('../../libs/util');
 const Controller = require('../core/base_controller');
 
 
 module.exports = app => {
     let methodParm = {
-        topLogo:{
+        topLogo: {
             role: 'classification',
-            findAllclass:{
-                param: {
-                },
+            findAllclass: {
+                param: {},
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {type: 'int'},
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'int'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '查找所有分类',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'findAllclass'
                 }
             },
-            deleteClassById:{
+            deleteClassById: {
                 param: {
-                    classificationId: {type: 'string'},
+                    classificationId: {
+                        type: 'string'
+                    },
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {type: 'int'},
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'int'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '通过ID删除分类',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'deleteClassById'
                 }
             },
-            insertClass:{
+            insertClass: {
                 param: {
-                    classificationName: {type: 'string'},
+                    classificationName: {
+                        type: 'string'
+                    },
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {type: 'int'},
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'int'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '增加分类',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'insertClass'
                 }
             }
@@ -61,11 +88,11 @@ module.exports = app => {
     }
     app.loadApiswagger(methodParm);
 
-    class ClassificationController extends Controller{
-        async findAllclass(){
+    class ClassificationController extends Controller {
+        async findAllclass() {
             this.paramsValidate(methodParm.topLogo.findAllclass.param);
             try {
-                console.log('---- 查询分类 ----',this.params);
+                console.log('---- 查询分类 ----', this.params);
                 const classificationInfo = await this.ctx.service.classification.findAllclassification();
                 this.success('查询成功', classificationInfo)
             } catch (error) {
@@ -75,11 +102,13 @@ module.exports = app => {
             }
         }
 
-        async deleteClassById(){
+        async deleteClassById() {
             this.paramsValidate(methodParm.topLogo.deleteClassById.param);
             try {
-                console.log('---- 分类ID ----',this.params);
-                let {classificationId} = this.params;
+                console.log('---- 分类ID ----', this.params);
+                let {
+                    classificationId
+                } = this.params;
                 let classificationInfo = await this.ctx.service.classification.deleteClassification(classificationId);
                 this.success('删除成功', classificationInfo)
             } catch (error) {
@@ -89,10 +118,10 @@ module.exports = app => {
             }
         }
 
-        async insertClass(){
+        async insertClass() {
             this.paramsValidate(methodParm.topLogo.insertClass.param);
             try {
-                console.log('---- 分类 ----',this.params);
+                console.log('---- 分类 ----', this.params);
                 let classificationInfo = await this.ctx.service.classification.createClassification(this.params);
                 this.success('插入成功', classificationInfo)
             } catch (error) {

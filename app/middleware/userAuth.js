@@ -1,9 +1,9 @@
 'use strict'
 /**
-* 中间 获取 用户信息，可以传入 needLogin 选项 如果 是 true 那没有 token 就会报错，
-* 如果 有 token 存在于 body 或者 query 对象之中， 那就去 redis 取 userinfo 数据。
-* @version 1.0.20180909
-*/
+ * 中间 获取 用户信息，可以传入 needLogin 选项 如果 是 true 那没有 token 就会报错，
+ * 如果 有 token 存在于 body 或者 query 对象之中， 那就去 redis 取 userinfo 数据。
+ * @version 1.0.20180909
+ */
 const _ = require('lodash');
 
 module.exports = (options) => {
@@ -13,7 +13,7 @@ module.exports = (options) => {
         ctx.userInfo = {};
         ctx.hasUserInfo = false;
 
-        ctx.ownMidHandleError = function(status, msg, data) {
+        ctx.ownMidHandleError = function (status, msg, data) {
             ctx.body = {
                 status: status,
                 msg: msg,
@@ -45,5 +45,5 @@ module.exports = (options) => {
         }
 
         await next();
-  };
+    };
 };

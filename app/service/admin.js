@@ -23,7 +23,7 @@ class Admin extends Service {
         if (admin.password) {
             admin.password = this.ctx.helper.encrypt(admin.password)
         }
-        console.log('admin',admin);
+        console.log('admin', admin);
         let data = await this.ctx.model.Admin.create(admin);
         return data;
     }

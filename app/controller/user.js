@@ -1,5 +1,5 @@
 'use strict';
-const util= require('../../libs/util');
+const util = require('../../libs/util');
 const Controller = require('../core/base_controller');
 
 module.exports = app => {
@@ -8,142 +8,249 @@ module.exports = app => {
             role: 'user',
             register: {
                 param: {
-                    userName: {type: 'string'},
-                    phone: {type: 'string'},
-                    password: {type: 'string'},
-                    realName: {type: 'string',optional: true},
-                    mechanismId: {type: 'string',optional: true}
+                    userName: {
+                        type: 'string'
+                    },
+                    phone: {
+                        type: 'string'
+                    },
+                    password: {
+                        type: 'string'
+                    },
+                    realName: {
+                        type: 'string',
+                        optional: true
+                    },
+                    mechanismId: {
+                        type: 'string',
+                        optional: true
+                    }
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {
-                        id: {type: 'int'},
-                        userName: {type: 'string'},
-                        phone: {type: 'string'},
-                        password: {type: 'string'},
-                        realName: {type: 'string'},
-                        mechanismId: {type: 'string'},
-                        userid: {type: 'string'},
-                        updatedAt: {type: 'string'},
-                        createdAt: {type: 'string'},
+                    msg: {
+                        type: 'string'
                     },
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    data: {
+                        id: {
+                            type: 'int'
+                        },
+                        userName: {
+                            type: 'string'
+                        },
+                        phone: {
+                            type: 'string'
+                        },
+                        password: {
+                            type: 'string'
+                        },
+                        realName: {
+                            type: 'string'
+                        },
+                        mechanismId: {
+                            type: 'string'
+                        },
+                        userid: {
+                            type: 'string'
+                        },
+                        updatedAt: {
+                            type: 'string'
+                        },
+                        createdAt: {
+                            type: 'string'
+                        },
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '用户注册接口',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'register'
                 }
             },
             login: {
                 param: {
-                    userName: {type: 'string'},
-                    password: {type: 'string'},
-                    mechanismId: {type: 'string',optional: true}
+                    userName: {
+                        type: 'string'
+                    },
+                    password: {
+                        type: 'string'
+                    },
+                    mechanismId: {
+                        type: 'string',
+                        optional: true
+                    }
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {
-                        userId: {type: 'string'},
-                        token: {type: 'string'},
-                        ip: {type: 'string'},
-                        version: {type: 'int'},
-                        userName: {type: 'string'},
-                        phone: {type: 'string'},
+                    msg: {
+                        type: 'string'
                     },
-                    status: {type: 'string'},
-                    code: {type: 'int'}
+                    data: {
+                        userId: {
+                            type: 'string'
+                        },
+                        token: {
+                            type: 'string'
+                        },
+                        ip: {
+                            type: 'string'
+                        },
+                        version: {
+                            type: 'int'
+                        },
+                        userName: {
+                            type: 'string'
+                        },
+                        phone: {
+                            type: 'string'
+                        },
+                    },
+                    status: {
+                        type: 'string'
+                    },
+                    code: {
+                        type: 'int'
+                    }
                 },
                 rule: {
                     desc: '用户登录接口',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'login'
                 }
             },
             updatePassword: {
                 param: {
-                    phone: {type: 'string'},
-                    newPassword: {type: 'string'},
-                    oldPassword: {type: 'string'},
-                    mechanismId: { type: 'string', optional: true },
+                    phone: {
+                        type: 'string'
+                    },
+                    newPassword: {
+                        type: 'string'
+                    },
+                    oldPassword: {
+                        type: 'string'
+                    },
+                    mechanismId: {
+                        type: 'string',
+                        optional: true
+                    },
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {type: 'object'},
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'object'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '用户修改密码接口',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'updatePassword'
                 }
             },
             forgetPassword: {
                 param: {
-                    phone: {type: 'string'},
-                    newPassword: {type: 'string'},
-                    code: {type: 'string'},
-                    mechanismId: { type: 'string', optional: true },
+                    phone: {
+                        type: 'string'
+                    },
+                    newPassword: {
+                        type: 'string'
+                    },
+                    code: {
+                        type: 'string'
+                    },
+                    mechanismId: {
+                        type: 'string',
+                        optional: true
+                    },
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {type: 'object'},
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'object'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '用户忘记密码接口',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'forgetPassword'
                 }
             },
             logOut: {
                 param: {
-                    userId: {type: 'string'},
-                    token: {type: 'string'},
+                    userId: {
+                        type: 'string'
+                    },
+                    token: {
+                        type: 'string'
+                    },
                 },
                 ginseng: {
-                    msg: {type: 'string'},
-                    data: {type: 'object'},
-                    status: {type: 'int'},
-                    code: {type: 'int'},
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'object'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
                 },
                 rule: {
                     desc: '注销登录',
                     url: '',
-                    middwareMethod:'',
+                    middwareMethod: '',
                     method: 'logOut'
                 }
             }
         }
-        
+
     }
     app.loadApiswagger(methodParm);
     class UserController extends Controller {
-        
+
         // 注册
         async register() {
             this.paramsValidate(methodParm.topLogo.register.param); //状态码  201 参数错误
-    
-            const userid=util.onlyId();
-            this.params.userid=userid;
-    
+
+            const userid = util.onlyId();
+            this.params.userid = userid;
+
             try {
-                console.log('注册管理员入参:',this.params);
+                console.log('注册管理员入参:', this.params);
                 let findJson = {
                     where: {
                         userName: this.params.userName
                     }
                 }
-                console.log('findJson',findJson);
+                console.log('findJson', findJson);
                 let data = await this.ctx.service.user.findWithJson(findJson);
-                if(data){
+                if (data) {
                     this.fail('用户已存在', data);
                     return;
                 }
@@ -151,11 +258,11 @@ module.exports = app => {
                 this.success('注册成功', data);
             } catch (e) {
                 this.ctx.logger.error('注册异常: ', e);
-                this.fail('注册失败',e);
+                this.fail('注册失败', e);
             }
-    
+
         }
-    
+
         /**
          * login 登录
          */
@@ -164,30 +271,35 @@ module.exports = app => {
             this.paramsValidate(methodParm.topLogo.login.param);
             try {
                 console.log(this.params);
-                let { userName, password} = this.params;
-                let { ctx } = this;
-        
+                let {
+                    userName,
+                    password
+                } = this.params;
+                let {
+                    ctx
+                } = this;
+
                 let findJson = {
                     where: {
                         userName: userName
                     }
                 }
                 const user = await this.ctx.service.user.findWithJson(findJson);
-        
-                console.log('user',user);
+
+                console.log('user', user);
                 if (!user) {
                     this.fail('用户不存在');
                     return;
                 }
-        
+
                 let compareResult = ctx.helper.comparePassord(password, user.password);
-                console.log('compareResult',compareResult);
+                console.log('compareResult', compareResult);
                 if (!compareResult) {
                     this.fail('密码错误');
                     return;
                 }
                 console.log(user);
-                let data =await this.ctx.service.userRedis.addUser(user.userid); // add data to redis,有mechanismId还需要传mechanismId
+                let data = await this.ctx.service.userRedis.addUser(user.userid); // add data to redis,有mechanismId还需要传mechanismId
                 console.log(
                     'addUser ---- ', data
                 );
@@ -199,13 +311,13 @@ module.exports = app => {
                 this.ctx.logger.error('login error: ', e);
                 this.fail('登陆失败')
             }
-            
+
         }
 
         // logout 注销登录
         async logOut() {
             let userInfo = this.ctx.request.body;
-            console.log('--userInfo--',this.ctx.request.body);
+            console.log('--userInfo--', this.ctx.request.body);
             try {
                 await this.ctx.service.userRedis.delUser(userInfo); // delete data in redis  userInfo包括userId , token
                 this.success('登出成功');
@@ -213,7 +325,7 @@ module.exports = app => {
                 this.ctx.logger.error('login error: ', e);
                 this.fail('注销失败')
             }
-            
+
         };
 
         // update password  修改密码
@@ -223,8 +335,15 @@ module.exports = app => {
             try {
                 // this.params.mechanismId = this.ctx.mechanismId;
                 console.log('----this.params----', this.params);
-                let { phone, newPassword, mechanismId, oldPassword } = this.params;
-                let { ctx } = this;
+                let {
+                    phone,
+                    newPassword,
+                    mechanismId,
+                    oldPassword
+                } = this.params;
+                let {
+                    ctx
+                } = this;
 
                 const result = await this.ctx.service.user.checkUserExistWithPhoneAndMechId(phone, mechanismId);
                 if (result.code == 0) {
@@ -232,7 +351,9 @@ module.exports = app => {
                     return;
                 }
 
-                let { user } = result;
+                let {
+                    user
+                } = result;
                 let compareResult = ctx.helper.comparePassord(oldPassword, user.password);
                 if (!compareResult) {
                     this.fail('密码错误');
@@ -254,8 +375,14 @@ module.exports = app => {
             try {
                 // this.params.mechanismId = this.ctx.mechanismId;
 
-                let { phone, newPassword, mechanismId } = this.params;
-                let { ctx } = this;
+                let {
+                    phone,
+                    newPassword,
+                    mechanismId
+                } = this.params;
+                let {
+                    ctx
+                } = this;
 
                 const result = await this.ctx.service.user.checkUserExistWithPhoneAndMechId(phone, mechanismId);
                 if (result.code == 0) {
@@ -263,7 +390,9 @@ module.exports = app => {
                     return;
                 }
 
-                let { user } = result;
+                let {
+                    user
+                } = result;
 
                 const updateRes = await this.ctx.service.user.updatePass(user.id, newPassword);
 
@@ -274,8 +403,7 @@ module.exports = app => {
             }
         };
     }
-    
-    return UserController;
-    
-}
 
+    return UserController;
+
+}

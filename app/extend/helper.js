@@ -22,7 +22,7 @@ module.exports = {
      * 
      * @param {密码加密} password 
      */
-    encrypt(password) {  
+    encrypt(password) {
         const hash = crypto.createHmac('sha256', secretKey).update(password).digest('hex');
         return hash;
     },
@@ -31,15 +31,15 @@ module.exports = {
      * @param {输入密码} plain 
      * @param {数据库的密码} hash 
      */
-    comparePassord(plain, hash) {  
+    comparePassord(plain, hash) {
         return hash === this.encrypt(plain);
     },
     safeParse(obj) {
         let json = {};
         try {
-             json = JSON.parse(obj)
+            json = JSON.parse(obj)
         } catch (err) {
-             return err;
+            return err;
         }
         return json;
     },
@@ -48,7 +48,9 @@ module.exports = {
      * @param {jwt生成token} userid 
      */
     createToken(userid) {
-        let token = jsonwebtoken.sign({ userid: userid }, secretKey);
+        let token = jsonwebtoken.sign({
+            userid: userid
+        }, secretKey);
         return token;
     },
     /**
@@ -104,9 +106,9 @@ module.exports = {
         let bs = coder.join("");
 
         const buf = Buffer.from(bs, 'hex');
-    	let safeBs = URLSafeBase64.encode(buf);
+        let safeBs = URLSafeBase64.encode(buf);
         console.log('data, secretKey bs, safeBs', data, secretKey, bs, safeBs);
-    	return safeBs
+        return safeBs
     },
 
     /**
@@ -209,7 +211,7 @@ module.exports = {
             form: params,
             json: false, // Automatically stringifies the body to JSON
             headers: {
-                 'content-type': 'application/x-www-form-urlencoded'  // Is set automatically
+                'content-type': 'application/x-www-form-urlencoded' // Is set automatically
             }
         };
         try {
@@ -219,7 +221,7 @@ module.exports = {
             this._handleRequstError(e, options)
         }
     },
-     /**
+    /**
      * post - http xml 请求
      *
      * @param  {string} url    请求地址
@@ -227,27 +229,29 @@ module.exports = {
      * @return {Object}        接口返回值
      */
     async _postWithXml(url, params) {
-            let body;
-            if (params.needXml) {
-                body = buildXML({ xml: params })
-            } else {
-                body = buildXML(params)
+        let body;
+        if (params.needXml) {
+            body = buildXML({
+                xml: params
+            })
+        } else {
+            body = buildXML(params)
+        }
+        let options = {
+            method: 'POST',
+            url: url,
+            body,
+            json: false,
+            headers: {
+                'content-type': 'text/html'
             }
-            let options = {
-                method: 'POST',
-                url: url,
-                body,
-                json: false,
-                headers: {
-                    'content-type': 'text/html'
-                }
-            }
-            try {
-                let data = await rp(options);
-                return data;
-            } catch (e) {
-                this._handleRequstError(e, options)
-            }
+        }
+        try {
+            let data = await rp(options);
+            return data;
+        } catch (e) {
+            this._handleRequstError(e, options)
+        }
     },
 
     /**
@@ -274,17 +278,17 @@ module.exports = {
         let result;
         switch (type) {
             case 'json':
-                    result = await this._postWithJson(url, params);
-                    break;
+                result = await this._postWithJson(url, params);
+                break;
             case 'xml':
-                    result = await this._postWithXml(url, params);
-                    break;
+                result = await this._postWithXml(url, params);
+                break;
             case 'form':
-                    result = await this._postWithForm(url, params);
-                    default:
-                    break;
+                result = await this._postWithForm(url, params);
+            default:
+                break;
         }
-        console.log('result',result);
+        console.log('result', result);
         return result;
     },
 

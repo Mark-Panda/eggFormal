@@ -87,7 +87,7 @@ class User extends Service {
         };
     }
 
-    
+
 }
 
 module.exports = User;

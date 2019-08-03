@@ -24,23 +24,21 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
-        thumbsupId: {
-            type: STRING, //点赞ID
-            unique: true //唯一
-        },
         commentId: STRING,
         userid: STRING,
         articleId: STRING,
         count: INTEGER,
 
     }, {
-        freezeTableName: true,// Model 对应的表名将与model名相同
+        freezeTableName: true, // Model 对应的表名将与model名相同
         tableName: 'thumbsup',
         timestamps: true,
         // 同时需要设置paranoid为true（此种模式下，删除数据时不会进行物理删除，而是设置deletedAt为当前时间
         paranoid: true
     });
-    Admin.sync({ alert: true });
+    Admin.sync({
+        alert: true
+    });
 
     return Admin;
 };

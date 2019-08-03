@@ -19,7 +19,7 @@ module.exports = app => {
          * @param {key值为token，value存放用户信息，包括userId,token,IP ,mechanismId}  
          * @param {key值为userID，value存放对应的token信息} 
          */
-        
+
         /**
          * 获取用户数据
          * @param {参数为token} token 
@@ -60,7 +60,7 @@ module.exports = app => {
          * @param {参数为userId} userId 
          * @param {参数为mechanismId} mechanismId 
          */
-        async addUser(userId, mechanismId){
+        async addUser(userId, mechanismId) {
             // 获取用户的旧 token
             const oldToken = await redis.get(`u:${userId}`);
             // 创建用户数据的基本格式
@@ -77,7 +77,7 @@ module.exports = app => {
                 await redis.set(`t:${JSON.parse(oldToken)}`, JSON.stringify(info), 'EX', timeLimit);
             }
             // 获取新数据
-            info.token =  this.ctx.helper.createToken(userId); //创建新的token
+            info.token = this.ctx.helper.createToken(userId); //创建新的token
             info.userId = userId;
 
             let raw = info;
