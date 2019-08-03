@@ -26,6 +26,7 @@ module.exports = app => {
                 rule: {
                     desc: '查询',
                     url: '',
+                    middwareMethod:'',
                     method: 'findArticle'
                 }
             },
@@ -49,6 +50,7 @@ module.exports = app => {
                 rule: {
                     desc: '按分类查询文章',
                     url: '',
+                    middwareMethod:'',
                     method: 'findArticleByclass'
                 }
             },
@@ -76,6 +78,7 @@ module.exports = app => {
                 rule: {
                     desc: '文章录入',
                     url: '',
+                    middwareMethod:'',
                     method: 'createArticle'
                 }
             },
@@ -108,6 +111,7 @@ module.exports = app => {
                 rule: {
                     desc: '修改文章内容',
                     url: '',
+                    middwareMethod:'',
                     method: 'updateArticle'
                 }
             },
@@ -144,6 +148,7 @@ module.exports = app => {
                 rule: {
                     desc: '查找文章数量',
                     url: '',
+                    middwareMethod:'',
                     method: 'findArticleCount'
                 }
             },
@@ -160,6 +165,7 @@ module.exports = app => {
                 rule: {
                     desc: '删除文章',
                     url: '',
+                    middwareMethod:'',
                     method: 'destroyArticle'
                 }
             }

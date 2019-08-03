@@ -24,11 +24,11 @@ module.exports = appInfo => {
   };
   config.sequelize =  {
     dialect: 'mysql',
-    database: 'simple',
+    database: 'graphql',
     host: 'localhost',
     port: '3306',
     username: 'root',
-    password: 'simple_95@mxf',
+    password: '',
   };
 
   // redis config
@@ -37,19 +37,19 @@ module.exports = appInfo => {
         user: {                     // instanceName. See below
             port: 6379,             // Redis port
             host: '127.0.0.1',
-            password: 'Founder123',
+            password: '',
             db: 0,
         },
         main: {
             port: 6379,
             host: '127.0.0.1',
-            password: 'Founder123',
+            password: '',
             db: 1,
         },
         check: {
             port: 6379,
             host: '127.0.0.1',
-            password: 'Founder123',
+            password: '',
             db: 2,
         },
     }

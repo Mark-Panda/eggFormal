@@ -33,6 +33,7 @@ module.exports = app => {
                 rule: {
                     desc: '用户注册接口',
                     url: '',
+                    middwareMethod:'',
                     method: 'register'
                 }
             },
@@ -58,6 +59,7 @@ module.exports = app => {
                 rule: {
                     desc: '用户登录接口',
                     url: '',
+                    middwareMethod:'',
                     method: 'login'
                 }
             },
@@ -77,6 +79,7 @@ module.exports = app => {
                 rule: {
                     desc: '用户修改密码接口',
                     url: '',
+                    middwareMethod:'',
                     method: 'updatePassword'
                 }
             },
@@ -96,6 +99,7 @@ module.exports = app => {
                 rule: {
                     desc: '用户忘记密码接口',
                     url: '',
+                    middwareMethod:'',
                     method: 'forgetPassword'
                 }
             },
@@ -113,6 +117,7 @@ module.exports = app => {
                 rule: {
                     desc: '注销登录',
                     url: '',
+                    middwareMethod:'',
                     method: 'logOut'
                 }
             }
@@ -143,7 +148,7 @@ module.exports = app => {
                     return;
                 }
                 data = await this.ctx.service.user.createUser(this.params);
-                this.success('注册成功', data)
+                this.success('注册成功', data);
             } catch (e) {
                 this.ctx.logger.error('注册异常: ', e);
                 this.fail('注册失败',e);

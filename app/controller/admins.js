@@ -20,6 +20,7 @@ module.exports = app => {
                 rule: {
                     desc: '注册',
                     url: '',
+                    middwareMethod:'',
                     method: 'register'
                 }
             },
@@ -35,6 +36,7 @@ module.exports = app => {
                 rule: {
                     desc: '登录',
                     url: '',
+                    middwareMethod:'',
                     method: 'login'
                 }
             }

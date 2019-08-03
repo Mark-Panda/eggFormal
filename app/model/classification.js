@@ -24,10 +24,6 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
-        classificationId: {
-            type: STRING, //分类ID
-            unique: true //唯一
-        },
         classificationName: STRING, //分类名
 
     }, {

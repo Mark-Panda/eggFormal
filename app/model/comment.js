@@ -24,10 +24,6 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
-        commentId: {
-            type: STRING, //评论ID
-            unique: true //唯一
-        },
         userid: STRING,
         articleId: STRING,
         message: TEXT,  //评论内容

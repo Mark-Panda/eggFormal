@@ -19,6 +19,7 @@ module.exports = app => {
                 rule: {
                     desc: '获取城市天气',
                     url: '',
+                    middwareMethod:'',
                     method: 'getWeather'
                 }
             }

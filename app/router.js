@@ -21,12 +21,37 @@ let nameSpaceList = {
         },
         article: {
             method: ['findArticle','findArticleByclass','createArticle','updateArticle','findArticleCount','destroyArticle']
+        },
+        classification: {
+            method: ['findAllclass','deleteClassById','insertClass']
+        },
+        comment: {
+            method: ['insertComment', 'destryComment']
         }
     }
 };
 
 module.exports = app => {
     const { router, controller, swagger } = app;
+
+    /**
+     * 加载所有中间件中间件
+     */
+    const userAuthNeedLogin = app.middleware.userAuth({ needLogin: true });
+    const userAuthDontNeedLogin = app.middleware.userAuth({ needLogin: false });
+    // 中间件数组
+    let middlewareList = {
+        userAuthNeedLogin: userAuthNeedLogin,
+        userAuthDontNeedLogin: userAuthDontNeedLogin
+    };
+    /**
+     * 将middlewareList没有的中间件添加进去
+     * @param {controller中的中间件名称} mideleInfo 
+     */
+    function appendMiddleware(mideleInfo){
+        middlewareList[mideleInfo] = mideleInfo;
+        return middlewareList;
+    }
 
     /**
      * swagger配置化，统一进行加载
@@ -45,7 +70,10 @@ module.exports = app => {
                 let swaggerUrl = '/' + item;
                 let swaggerInfo = configInfo[configInfoNew].topLogo[item].param;
                 let swaggerGinseng = configInfo[configInfoNew].topLogo[item].ginseng;
-                let swaggerDesc = configInfo[configInfoNew].topLogo[item].rule.desc
+                let swaggerDesc = configInfo[configInfoNew].topLogo[item].rule.desc;
+                let middlewareInfo = configInfo[configInfoNew].topLogo[item].rule.middwareMethod;  //中间件方法
+                
+                
                 let swaggerInfoparm = []
                 let swaggerOutparm = []
                 for (let elem in swaggerInfo){
@@ -57,7 +85,14 @@ module.exports = app => {
                     swaggerOutparm.push(elem);
                 }
                 // console.log('-----',swaggerUrl);
-                router.all(swaggerUrl,controller[configInfo[configInfoNew].topLogo.role][item]);
+                if(middlewareInfo){
+                    if (!middlewareList.indexOf(middlewareInfo)){
+                        appendMiddleware(middlewareInfo)
+                    }
+                    router.all(swaggerUrl,middlewareList[middlewareInfo],controller[configInfo[configInfoNew].topLogo.role][item]);              
+                }else{
+                    router.all(swaggerUrl,controller[configInfo[configInfoNew].topLogo.role][item]);
+                }
                 swagger.post(swaggerUrl, swaggerConfig(configInfo[configInfoNew].topLogo.role,swaggerInfoparm,swaggerOutparm,swaggerDesc));
             }
         }
