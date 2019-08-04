@@ -6,6 +6,7 @@ import ExportAdmin = require('../../../app/service/admin');
 import ExportArticle = require('../../../app/service/article');
 import ExportClassification = require('../../../app/service/classification');
 import ExportComment = require('../../../app/service/comment');
+import ExportThumbsup = require('../../../app/service/thumbsup');
 import ExportUser = require('../../../app/service/user');
 import ExportUserRedis = require('../../../app/service/userRedis');
 
@@ -15,6 +16,7 @@ declare module 'egg' {
     article: ExportArticle;
     classification: ExportClassification;
     comment: ExportComment;
+    thumbsup: ExportThumbsup;
     user: ExportUser;
     userRedis: ExportUserRedis;
   }

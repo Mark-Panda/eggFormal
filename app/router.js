@@ -27,6 +27,9 @@ let nameSpaceList = {
         },
         comment: {
             method: ['insertComment', 'destryComment', 'selectComment']
+        },
+        thumbsup: {
+            method: ['articleThumbsup', 'articleNothumbsup']
         }
     }
 };

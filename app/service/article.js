@@ -91,7 +91,6 @@ class Article extends Service {
     async findArticleById(articleId) {
         console.log('----查询文章---', articleId);
         let articleInfo = await this.ctx.model.Article.findOne(articleId);
-        console.log('---- result ---', articleInfo);
         return articleInfo;
     }
 
@@ -124,6 +123,41 @@ class Article extends Service {
             this.ctx.throw(404, '没有该文章');
         }
         return articleInfo.update(inputParam);
+    }
+
+    /**
+     * 文章点赞数增加
+     */
+    async articleThumbinsert(articleId) {
+        const articleInfo = await this.ctx.model.Article.findOne({
+            id: articleId
+        });
+        if (!articleInfo) {
+            this.ctx.throw(404, '没有该文章');
+        }
+        articleInfo.dataValues.count += 1;
+        let result = await this.ctx.model.Article.update(articleInfo.dataValues,{where:{id: articleId}});
+        return result;
+    }
+
+    /**
+     * 文章点赞数减少
+     */
+    async articleThumbdel(articleId){
+        const articleInfo = await this.ctx.model.Article.findOne({
+            id: articleId
+        });
+        if (!articleInfo) {
+            this.ctx.throw(404, '没有该文章');
+        }
+        let result = 0;
+        if(articleInfo.dataValues.count > 0){
+            articleInfo.dataValues.count -= 1;
+            result = await this.ctx.model.Article.update(articleInfo.dataValues,{where:{id: articleId}});
+        }
+        
+        
+        return result;
     }
 }
 

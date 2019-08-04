@@ -25,9 +25,9 @@ module.exports = app => {
             autoIncrement: true
         },
         commentId: STRING,
-        userid: STRING,
+        userId: STRING,
         articleId: STRING,
-        count: INTEGER,
+        status: BOOLEAN,
 
     }, {
         freezeTableName: true, // Model 对应的表名将与model名相同

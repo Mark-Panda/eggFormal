@@ -31,7 +31,7 @@ module.exports = app => {
         classificationId: STRING, //分类ID
         message: TEXT, //文章内容
         author: STRING, //作者
-        count: INTEGER, //查询次数
+        count: INTEGER, //点赞次数
 
     }, {
         freezeTableName: true, // Model 对应的表名将与model名相同
