@@ -21,26 +21,11 @@ module.exports = app => {
                         type: 'string'
                     },
                     data: {
-                        id: {
-                            type: 'int'
-                        },
-                        userId: {
-                            type: 'string'
-                        },
-                        articleId: {
-                            type: 'string'
-                        },
-                        commentId: {
-                            type: 'string'
+                        status: {
+                            type: 'boolean'
                         },
                         count: {
-                            type: 'string'
-                        },
-                        updatedAt: {
-                            type: 'string'
-                        },
-                        deletedAt: {
-                            type: 'string'
+                            type: 'int'
                         },
                     },
                     status: {
@@ -72,26 +57,11 @@ module.exports = app => {
                         type: 'string'
                     },
                     data: {
-                        id: {
-                            type: 'int'
-                        },
-                        userId: {
-                            type: 'string'
-                        },
-                        articleId: {
-                            type: 'string'
-                        },
-                        commentId: {
-                            type: 'string'
+                        status: {
+                            type: 'boolean'
                         },
                         count: {
-                            type: 'string'
-                        },
-                        updatedAt: {
-                            type: 'string'
-                        },
-                        deletedAt: {
-                            type: 'string'
+                            type: 'int'
                         },
                     },
                     status: {
