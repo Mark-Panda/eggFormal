@@ -58,7 +58,8 @@ module.exports = appInfo => {
   config.security = {
     // ignore: "/api/",
     domainWhiteList: [
-      "http://127.0.0.1:8088"
+      "http://127.0.0.1:8088",
+      "http://127.0.0.1:7001",
     ],
     methodnoallow: {
       enable: false
@@ -67,6 +68,10 @@ module.exports = appInfo => {
       enable: false,
       // ignoreJSON: false // 默认为 false，当设置为 true 时，将会放过所有 content-type 为 `application/json` 的请求
     }
+  };
+  config.cors = {
+    origin:'*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
 
   // 用户 token 缓存设置
