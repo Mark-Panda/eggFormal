@@ -69,7 +69,7 @@ module.exports = app => {
 
         // 注册
         async registerAdmin() {
-            this.paramsValidate(methodParm.topLogo.register.param); //状态码  201 参数错误
+            this.paramsValidate(methodParm.topLogo.registerAdmin.param); //状态码  201 参数错误
 
             const userid = util.onlyId();
             this.params.userid = userid;
@@ -101,7 +101,7 @@ module.exports = app => {
          */
         async loginAdmin() {
             console.log('进入login');
-            this.paramsValidate(methodParm.topLogo.login.param);
+            this.paramsValidate(methodParm.topLogo.loginAdmin.param);
             console.log(this.params);
             let {
                 userName,
@@ -130,9 +130,10 @@ module.exports = app => {
                 this.fail('密码错误');
                 return;
             }
-            console.log(admin);
-            // let data =await this.ctx.service.adminData.addAdmin(admin.userid); // add data to redis
-
+            // console.log(admin);
+            let data =await this.ctx.service.userRedis.addUser(admin.userid); // add data to redis
+            data.userName = admin.userName;
+            data.phone = admin.phone;
             this.success('登陆成功', data);
         }
     }
