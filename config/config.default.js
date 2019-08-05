@@ -56,9 +56,9 @@ module.exports = appInfo => {
   }
 
   config.security = {
-    ignore: "/api/",
+    // ignore: "/api/",
     domainWhiteList: [
-      "http://127.0.0.1:7001"
+      "http://127.0.0.1:8088"
     ],
     methodnoallow: {
       enable: false
