@@ -88,7 +88,31 @@ module.exports = app => {
                     desc: '注销登录',
                     url: '',
                     middwareMethod: '',
-                    method: 'logOut'
+                    method: 'logOutAdmin'
+                }
+            },
+            getAdminInfo: {
+                param: {
+                    userName: {
+                        type: 'string'
+                    },
+                    userId: {
+                        type: 'string'
+                    }
+                },
+                ginseng: {
+                    code: {
+                        type: 'int'
+                    },
+                    message: {
+                        type: 'string'
+                    }
+                },
+                rule: {
+                    desc: '登录',
+                    url: '',
+                    middwareMethod: '',
+                    method: 'getAdminInfo'
                 }
             }
         }
@@ -165,7 +189,40 @@ module.exports = app => {
             data.userName = admin.userName;
             data.phone = admin.phone;
             data.currentAuthority = 'admin';
+            data.adminTrueId = admin.id
             this.success('登陆成功', data);
+        }
+
+        //获取当前用户信息
+        async getAdminInfo() {
+            console.log('----获取admin信息---');
+            this.paramsValidate(methodParm.topLogo.getAdminInfo.param);
+            console.log('----获取admin信息入参----',this.params);
+            let {
+                userName,
+                userId
+            } = this.params;
+
+            let findJson = {
+                where: {
+                    userName: userName
+                }
+            }
+            const admin = await this.ctx.service.admin.findWithJson(findJson);
+
+            console.log('--admin用户信息--', admin);
+            if (!admin) {
+                this.fail('用户不存在');
+                return;
+            }
+            let data =await this.ctx.service.userRedis.getToken(admin.userid); // add data to redis
+            console.log('redis数据信息',data);
+            let result;
+            if(data.userId === userId){
+                result.avatar = '',
+                result.name = admin.userName;
+            }
+            this.success('登陆成功', result);
         }
 
         // logout 注销登录

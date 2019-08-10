@@ -299,13 +299,14 @@ module.exports = app => {
                     return;
                 }
                 console.log(user);
-                let data = await this.ctx.service.userRedis.addUser(user.userid); // add data to redis,有mechanismId还需要传mechanismId
+                let data = await this.ctx.service.adminRedis.addUser(user.userid); // add data to redis,有mechanismId还需要传mechanismId
                 console.log(
                     'addUser ---- ', data
                 );
                 data.userName = user.userName;
                 data.phone = user.phone;
                 data.currentAuthority = 'admin';
+                data.userTrueId = user.id
                 this.success('登陆成功', data);
             } catch (e) {
                 console.log(e);
@@ -320,7 +321,7 @@ module.exports = app => {
             let userInfo = this.ctx.request.body;
             console.log('--userInfo--', this.ctx.request.body);
             try {
-                await this.ctx.service.userRedis.delUser(userInfo); // delete data in redis  userInfo包括userId , token
+                await this.ctx.service.adminRedis.delUser(userInfo); // delete data in redis  userInfo包括userId , token
                 this.success('登出成功');
             } catch (e) {
                 this.ctx.logger.error('login error: ', e);
