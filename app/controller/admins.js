@@ -93,12 +93,6 @@ module.exports = app => {
             },
             getAdminInfo: {
                 param: {
-                    userName: {
-                        type: 'string'
-                    },
-                    userId: {
-                        type: 'string'
-                    }
                 },
                 ginseng: {
                     code: {
@@ -109,7 +103,7 @@ module.exports = app => {
                     }
                 },
                 rule: {
-                    desc: '登录',
+                    desc: '获取当前用户信息',
                     url: '',
                     middwareMethod: '',
                     method: 'getAdminInfo'
@@ -196,33 +190,31 @@ module.exports = app => {
         //获取当前用户信息
         async getAdminInfo() {
             console.log('----获取admin信息---');
-            this.paramsValidate(methodParm.topLogo.getAdminInfo.param);
-            console.log('----获取admin信息入参----',this.params);
-            let {
-                userName,
-                userId
-            } = this.params;
-
-            let findJson = {
-                where: {
-                    userName: userName
+            console.log('--- 进入 ---',this.ctx.request.header.token);
+            if(this.ctx.request.header.token){
+                let token = this.ctx.request.header.token;
+                let data =await this.ctx.service.userRedis.getRaw(token); // add data to redis
+                console.log('当前用户信息',data);
+                let result = {};
+                if(data.userId){
+                    let findJson = {
+                        where: {
+                            userid: data.userId
+                        }
+                    }
+                    console.log('findJson', findJson);
+                    data = await this.ctx.service.admin.findWithJson(findJson);
+                    if(data){
+                        result = {
+                            avatar: '',
+                            name: data.userName
+                        }
+                    }
+                    
                 }
+                this.success('获取用户信息成功', result);
             }
-            const admin = await this.ctx.service.admin.findWithJson(findJson);
-
-            console.log('--admin用户信息--', admin);
-            if (!admin) {
-                this.fail('用户不存在');
-                return;
-            }
-            let data =await this.ctx.service.userRedis.getToken(admin.userid); // add data to redis
-            console.log('redis数据信息',data);
-            let result;
-            if(data.userId === userId){
-                result.avatar = '',
-                result.name = admin.userName;
-            }
-            this.success('登陆成功', result);
+            
         }
 
         // logout 注销登录

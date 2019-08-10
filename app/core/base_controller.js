@@ -58,8 +58,9 @@ class BaseController extends Controller {
     }
     paramsValidate(rule) {
         // let params = _.assign({}, this.ctx.request.body, this.ctx.query);
-        console.log('--- 请求内容 ---',this.ctx.request.body);
+        console.log('--- 请求内容 ---',this.ctx.request.header.token);
         let params = _.assign({}, this.ctx.request.body, this.ctx.request.body.data, this.ctx.query);
+        console.log('--- 请求内容 1111---',params);
         let tmp = {};
 
         console.log('rule ', rule);
