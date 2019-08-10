@@ -305,6 +305,7 @@ module.exports = app => {
                 );
                 data.userName = user.userName;
                 data.phone = user.phone;
+                data.currentAuthority = 'admin';
                 this.success('登陆成功', data);
             } catch (e) {
                 console.log(e);
