@@ -60,6 +60,36 @@ module.exports = app => {
                     middwareMethod: '',
                     method: 'login'
                 }
+            },
+            logOutAdmin:{
+                param: {
+                    userId: {
+                        type: 'string'
+                    },
+                    token: {
+                        type: 'string'
+                    },
+                },
+                ginseng: {
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'object'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
+                },
+                rule: {
+                    desc: '注销登录',
+                    url: '',
+                    middwareMethod: '',
+                    method: 'logOut'
+                }
             }
         }
 
@@ -134,8 +164,23 @@ module.exports = app => {
             let data =await this.ctx.service.userRedis.addUser(admin.userid); // add data to redis
             data.userName = admin.userName;
             data.phone = admin.phone;
+            data.currentAuthority = 'admin';
             this.success('登陆成功', data);
         }
+
+        // logout 注销登录
+        async logOutAdmin() {
+            let userInfo = this.ctx.request.body;
+            console.log('--userInfo--', this.ctx.request.body);
+            try {
+                await this.ctx.service.userRedis.delUser(userInfo); // delete data in redis  userInfo包括userId , token
+                this.success('登出成功');
+            } catch (e) {
+                this.ctx.logger.error('login error: ', e);
+                this.fail('注销失败')
+            }
+
+        };
     }
 
     return AdminController;

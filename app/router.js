@@ -13,7 +13,7 @@ let nameSpaceList = {
             method: ['register', 'login', 'updatePassword', 'forgetPassword', 'logOut']
         },
         admins: {
-            method: ['registerAdmin', 'loginAdmin']
+            method: ['registerAdmin', 'loginAdmin', 'logOutAdmin']
         },
 
         weather: {
