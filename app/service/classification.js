@@ -10,7 +10,7 @@ class Classification extends Service {
         console.log('----增加分类----', inputParam);
         let classInfo = await this.ctx.model.Classification.findOne({
             where: {
-                classificationName: inputParam
+                inputParam
             },
             force: true
         })
