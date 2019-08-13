@@ -269,6 +269,10 @@
                       "password"
                     ],
                     "properties": {
+                      "email": {
+                        "type": "string",
+                        "description": " 入参email"
+                      },
                       "userName": {
                         "type": "string",
                         "description": " 入参userName"
@@ -281,13 +285,13 @@
                         "type": "string",
                         "description": " 入参password"
                       },
-                      "realName": {
+                      "introduce": {
                         "type": "string",
-                        "description": " 入参realName"
+                        "description": " 入参introduce"
                       },
-                      "mechanismId": {
+                      "type": {
                         "type": "string",
-                        "description": " 入参mechanismId"
+                        "description": " 入参type"
                       }
                     }
                   }
@@ -354,10 +358,6 @@
                       "password": {
                         "type": "string",
                         "description": " 入参password"
-                      },
-                      "mechanismId": {
-                        "type": "string",
-                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -428,10 +428,6 @@
                       "oldPassword": {
                         "type": "string",
                         "description": " 入参oldPassword"
-                      },
-                      "mechanismId": {
-                        "type": "string",
-                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -502,10 +498,6 @@
                       "code": {
                         "type": "string",
                         "description": " 入参code"
-                      },
-                      "mechanismId": {
-                        "type": "string",
-                        "description": " 入参mechanismId"
                       }
                     }
                   }
@@ -932,9 +924,9 @@
                       "password"
                     ],
                     "properties": {
-                      "article": {
+                      "title": {
                         "type": "string",
-                        "description": " 入参article"
+                        "description": " 入参title"
                       },
                       "classificationId": {
                         "type": "string",
@@ -1076,17 +1068,37 @@
                         "type": "string",
                         "description": " 入参classificationId"
                       },
-                      "article": {
+                      "content": {
                         "type": "string",
-                        "description": " 入参article"
-                      },
-                      "message": {
-                        "type": "string",
-                        "description": " 入参message"
+                        "description": " 入参content"
                       },
                       "author": {
                         "type": "string",
                         "description": " 入参author"
+                      },
+                      "title": {
+                        "type": "string",
+                        "description": " 入参title"
+                      },
+                      "tags": {
+                        "type": "string",
+                        "description": " 入参tags"
+                      },
+                      "img_url": {
+                        "type": "string",
+                        "description": " 入参img_url"
+                      },
+                      "origin": {
+                        "type": "string",
+                        "description": " 入参origin"
+                      },
+                      "state": {
+                        "type": "string",
+                        "description": " 入参state"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": " 入参type"
                       }
                     }
                   }

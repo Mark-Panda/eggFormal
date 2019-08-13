@@ -60,7 +60,6 @@ class BaseController extends Controller {
         // let params = _.assign({}, this.ctx.request.body, this.ctx.query);
         console.log('--- 请求内容 ---',this.ctx.request.header.token);
         let params = _.assign({}, this.ctx.request.body, this.ctx.request.body.data, this.ctx.query);
-        console.log('--- 请求内容 1111---',params);
         let tmp = {};
 
         console.log('rule ', rule);
@@ -72,11 +71,9 @@ class BaseController extends Controller {
             }
         }
         params = tmp;
-        console.log('params ----- ', params);
 
         // 验证并得到验证结果
         let result = validator(params, rule);
-        console.log('result ---- ', result);
         if (result.error) {
             this.ctx.logger.error(`${this.ctx.url} paramsValidate error: ${result.error}`);
             throw new Error(result.error);

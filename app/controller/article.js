@@ -8,7 +8,7 @@ module.exports = app => {
             role: 'article',
             findArticle: {
                 param: {
-                    article: {
+                    title: {
                         type: 'string'
                     },
                     classificationId: {
@@ -102,15 +102,32 @@ module.exports = app => {
                     classificationId: {
                         type: 'string'
                     },
-                    article: {
-                        type: 'string'
-                    },
-                    message: {
+                    content: {
                         type: 'string'
                     },
                     author: {
                         type: 'string'
                     },
+                    title: {
+                        type: 'string'
+                    },
+                    tags: {
+                        type: 'any',
+                        optional: true
+                    },
+                    img_url: {
+                        type: 'string',
+                        optional: true
+                    },
+                    origin: {
+                        type: 'string'
+                    },
+                    state: {
+                        type: 'string'
+                    },
+                    type: {
+                        type: 'string'
+                    }
                 },
                 ginseng: {
                     msg: {
@@ -443,12 +460,12 @@ module.exports = app => {
          * 
          */
         async createArticle() {
+            
             this.paramsValidate(methodParm.topLogo.createArticle.param)
             try {
-                console.log('---- 文章录入 ----', this.params);
+                console.log('---- 文章录入 ----', this.params);   
                 const articleInfo = await this.ctx.service.article.createArticle(this.params);
-                console.log('----文章录入消息----', articleInfo.dataValues);
-                this.success('查询成功', articleInfo.dataValues)
+                this.success('文章录入成功', articleInfo.dataValues)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('create error: ', error);

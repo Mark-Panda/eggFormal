@@ -76,6 +76,7 @@ function validator(params, rules) {
         let rule = rules[key];
         //如果缺少参数并且有默认值则填充默认值，默认值不需要验证
         if (_.isUndefined(param)) {
+            console.log('走这里？');
             if (!_.isUndefined(rule.value)) {
                 fillResult(rule.value, key, rule, result, true);
             } else {
@@ -89,6 +90,7 @@ function validator(params, rules) {
             }
             //如果启用了autoArray参数，则需要保证param为数组
             if (rule.autoArray) {
+                console.log('33333',param);
                 rule.isArray = true;
                 if (!_.isArray(param)) {
                     param = [param];
@@ -98,7 +100,7 @@ function validator(params, rules) {
             if (!rule.needParse) {
                 param = typecast(param, rule);
             }
-
+            console.log('0000000',result);
             fillResult(param, key, rule, result);
         }
     };
@@ -115,6 +117,8 @@ function fillResult(param, key, rule, result, withoutCheck) {
         }
         //根据filed选项来确定过滤结果储存的位置
         let filed = rule.filed;
+        console.log('++++++',rule);
+        console.log('------',result);
         if (!filed) {
             result.data[save] = param;
         } else if (_.isString(filed)) {

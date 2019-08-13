@@ -5,15 +5,7 @@
  * @param {用户表} app
  */
 module.exports = app => {
-    const {
-        STRING,
-        BOOLEAN,
-        INTEGER,
-        TEXT,
-        FLOAT,
-        DATE,
-        UUID
-    } = app.Sequelize;
+    const { STRING, BOOLEAN, INTEGER, TEXT, FLOAT, DATE, UUID } = app.Sequelize;
 
     const Admin = app.model.define('user', {
         id: {
@@ -32,7 +24,7 @@ module.exports = app => {
         userName: STRING, //用户名
         phone: STRING, //手机号
         password: STRING, //密码
-        introduce: STRING, 
+        introduce: STRING,
         type: BOOLEAN, //角色 ID  用户设为1  管理员设置为2
 
     }, {

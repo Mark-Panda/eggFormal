@@ -80,6 +80,12 @@ class Article extends Service {
      */
     async createArticle(inputParam) {
         console.log('---录入文章input---', inputParam);
+        let resultTag;
+        if(Array.isArray(inputParam.tags)){
+            resultTag = inputParam.tags.toString()
+        }
+        inputParam.tags = resultTag
+        console.log('---- 文章录入11111 ----', inputParam);
         let data = await this.ctx.model.Article.create(inputParam);
         return data;
     }

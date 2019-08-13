@@ -5,15 +5,7 @@
  * @param {文章表} article
  */
 module.exports = app => {
-    const {
-        STRING,
-        BOOLEAN,
-        INTEGER,
-        TEXT,
-        FLOAT,
-        DATE,
-        UUID
-    } = app.Sequelize;
+    const { STRING, BOOLEAN, INTEGER, TEXT, FLOAT, DATE, UUID } = app.Sequelize;
 
     const Admin = app.model.define('article', {
         id: {
@@ -24,15 +16,19 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
+        title: STRING, //标题
+        content: TEXT, //文章内容
+        author: STRING, //作者
+        tags: STRING, //标签
+        img_url: STRING, //封面链接（后台上传一个链接，前端根据这个地址展示文章的封面）
+        origin: STRING, //创作模式   0 原创，1 转载，2 混合
+        state: STRING, //文章发布状态 => 0 草稿，1 已发布
+        type: STRING, // 文章类型 => 1: 普通文章，2: 简历，3: 管理员介绍
+        classificationId: STRING, //分类ID
+        count: INTEGER, //点赞次数
         commentId: STRING, //评论ID
         thumbsupId: STRING, //点赞ID
-        article: STRING, //文章名
         userid: STRING, //用户ID
-        classificationId: STRING, //分类ID
-        message: TEXT, //文章内容
-        author: STRING, //作者
-        count: INTEGER, //点赞次数
-
     }, {
         freezeTableName: true, // Model 对应的表名将与model名相同
         tableName: 'article',
@@ -46,3 +42,18 @@ module.exports = app => {
 
     return Admin;
 };
+/**
+ * {
+  title: '',//标题
+  author: '',//作者
+  keyword: '',//关键字
+  content: '',//文章内容
+  desc: '',//描述
+  img_url: '',//封面链接（后台上传一个链接，前端根据这个地址展示文章的封面）
+  origin: 0, // 0 原创，1 转载，2 混合
+  state: 1, // 文章发布状态 => 0 草稿，1 已发布
+  type: 1, // 文章类型 => 1: 普通文章，2: 简历，3: 管理员介绍
+  tags: '',//标签
+  category: '',//文章分类
+}
+ */

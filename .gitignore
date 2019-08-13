@@ -1,4 +1,6 @@
 node_modules
-logs/*
-run/*
-typings/*
+logs/
+
+run/
+
+typings/
