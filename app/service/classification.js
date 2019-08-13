@@ -9,9 +9,7 @@ class Classification extends Service {
     async createClassification(inputParam) {
         console.log('----增加分类----', inputParam);
         let classInfo = await this.ctx.model.Classification.findOne({
-            where: {
-                inputParam
-            },
+            where: inputParam,
             force: true
         })
         if (classInfo) {
