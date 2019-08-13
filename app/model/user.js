@@ -24,18 +24,16 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
-        roleid: STRING, //角色 ID  用户设为1  管理员设置为2
         userid: {
             type: STRING, //用户ID
             unique: true //唯一
         },
+        email: STRING, //邮箱
         userName: STRING, //用户名
         phone: STRING, //手机号
         password: STRING, //密码
-        realName: STRING, //昵称
-        isLocked: BOOLEAN, //是否锁定  0 锁定  1 正常
-        mechanismId: STRING, //二级机构ID
-        //last_sign_in_at: DATE, //最后登录时间
+        introduce: STRING, 
+        type: BOOLEAN, //角色 ID  用户设为1  管理员设置为2
 
     }, {
         freezeTableName: true, // Model 对应的表名将与model名相同

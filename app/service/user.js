@@ -68,11 +68,10 @@ class User extends Service {
     /**
      * check user is exist with phone
      */
-    async checkUserExistWithPhoneAndMechId(phone, mechanismId) {
+    async checkUserExistWithPhoneAndMechId(phone) {
         let findJson = {
             where: {
-                phone: phone,
-                mechanismId
+                phone
             }
         };
         let user = await this.findWithJson(findJson);

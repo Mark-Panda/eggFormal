@@ -8,22 +8,25 @@ module.exports = app => {
             role: 'user',
             register: {
                 param: {
+                    email: {
+                        type: 'string'
+                    },
                     userName: {
                         type: 'string'
                     },
                     phone: {
-                        type: 'string'
+                        type: 'string',
+                        optional: true
                     },
                     password: {
                         type: 'string'
                     },
-                    realName: {
+                    introduce: {
                         type: 'string',
                         optional: true
                     },
-                    mechanismId: {
+                    type: {
                         type: 'string',
-                        optional: true
                     }
                 },
                 ginseng: {
@@ -80,10 +83,6 @@ module.exports = app => {
                     },
                     password: {
                         type: 'string'
-                    },
-                    mechanismId: {
-                        type: 'string',
-                        optional: true
                     }
                 },
                 ginseng: {
@@ -135,10 +134,6 @@ module.exports = app => {
                     oldPassword: {
                         type: 'string'
                     },
-                    mechanismId: {
-                        type: 'string',
-                        optional: true
-                    },
                 },
                 ginseng: {
                     msg: {
@@ -170,12 +165,9 @@ module.exports = app => {
                         type: 'string'
                     },
                     code: {
-                        type: 'string'
-                    },
-                    mechanismId: {
                         type: 'string',
                         optional: true
-                    },
+                    }
                 },
                 ginseng: {
                     msg: {
@@ -299,13 +291,9 @@ module.exports = app => {
                     return;
                 }
                 console.log(user);
-                let data = await this.ctx.service.adminRedis.addUser(user.userid); // add data to redis,有mechanismId还需要传mechanismId
-                console.log(
-                    'addUser ---- ', data
-                );
+                let data = await this.ctx.service.adminRedis.addUser(user.userid); // add data to redis,
+                console.log('addUser ---- ', data);
                 data.userName = user.userName;
-                data.phone = user.phone;
-                data.currentAuthority = 'admin';
                 data.userTrueId = user.id
                 this.success('登陆成功', data);
             } catch (e) {
@@ -335,19 +323,17 @@ module.exports = app => {
             this.paramsValidate(methodParm.topLogo.updatePassword.param);
 
             try {
-                // this.params.mechanismId = this.ctx.mechanismId;
                 console.log('----this.params----', this.params);
                 let {
                     phone,
                     newPassword,
-                    mechanismId,
                     oldPassword
                 } = this.params;
                 let {
                     ctx
                 } = this;
 
-                const result = await this.ctx.service.user.checkUserExistWithPhoneAndMechId(phone, mechanismId);
+                const result = await this.ctx.service.user.checkUserExistWithPhoneAndMechId(phone);
                 if (result.code == 0) {
                     this.fail('用户不存在');
                     return;
@@ -362,7 +348,7 @@ module.exports = app => {
                     return;
                 }
                 const updateRes = await this.ctx.service.user.updatePass(user.id, newPassword);
-
+                console.log('-----更新密码成功---',updateRes);
                 this.success('成功');
             } catch (e) {
                 this.ctx.logger.error('修改密码失败 error: ', e);
@@ -379,14 +365,13 @@ module.exports = app => {
 
                 let {
                     phone,
-                    newPassword,
-                    mechanismId
+                    newPassword
                 } = this.params;
                 let {
                     ctx
                 } = this;
 
-                const result = await this.ctx.service.user.checkUserExistWithPhoneAndMechId(phone, mechanismId);
+                const result = await this.ctx.service.user.checkUserExistWithPhoneAndMechId(phone);
                 if (result.code == 0) {
                     this.fail('用户不经存在');
                     return;
@@ -397,7 +382,7 @@ module.exports = app => {
                 } = result;
 
                 const updateRes = await this.ctx.service.user.updatePass(user.id, newPassword);
-
+                console.log('----忘记密码修改成功----',updateRes);
                 this.success('成功');
             } catch (e) {
                 this.ctx.logger.error('重置密码失败 error: ', e);
