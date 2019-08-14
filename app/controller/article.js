@@ -9,10 +9,12 @@ module.exports = app => {
             findArticle: {
                 param: {
                     title: {
-                        type: 'string'
+                        type: 'string',
+                        optional: true
                     },
                     classificationId: {
-                        type: 'string'
+                        type: 'any',
+                        optional: true
                     },
                     author: {
                         type: 'string',
