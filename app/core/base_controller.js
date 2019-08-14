@@ -59,11 +59,13 @@ class BaseController extends Controller {
     paramsValidate(rule) {
         // let params = _.assign({}, this.ctx.request.body, this.ctx.query);
         // console.log('--- 请求内容 ---',this.ctx.request.header.token);
-        console.log('--- 请求内容post ---',this.ctx.request.body);
+        
         let params = _.assign({}, this.ctx.request.body, this.ctx.request.body.data, this.ctx.query);
+        console.log('--- 请求内容post ---',params);
         let tmp = {};
 
         console.log('rule ', rule);
+        
 
         for (let key in rule) {
             let pKey = rule[key].mapKey ? rule[key].mapKey : key;
@@ -72,7 +74,7 @@ class BaseController extends Controller {
             }
         }
         params = tmp;
-
+        console.log('------修改一次----',params);
         // 验证并得到验证结果
         let result = validator(params, rule);
         if (result.error) {

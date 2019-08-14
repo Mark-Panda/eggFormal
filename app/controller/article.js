@@ -56,7 +56,8 @@ module.exports = app => {
             findArticleByclass: {
                 param: {
                     classificationId: {
-                        type: 'string'
+                        type: 'any',
+                        optional: true
                     },
                     page: {
                         type: 'string',
