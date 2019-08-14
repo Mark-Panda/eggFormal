@@ -20,11 +20,11 @@ module.exports = app => {
                         type: 'string',
                         optional: true
                     },
-                    page: {
+                    pageSize: {
                         type: 'string',
                         optional: true
                     },
-                    skip: {
+                    pageNum: {
                         type: 'string',
                         optional: true
                     },
@@ -372,15 +372,15 @@ module.exports = app => {
             try {
                 console.log('---- 查询文章 ----', this.params);
 
-                // let { article, classificationId,author } = this.params;
+                // let { page, skip,author } = this.params;
 
-                let findJson = {
-                    where: {
-                        ...this.params
-                    }
-                }
+                // let findJson = {
+                //     where: {
+                //         ...this.params
+                //     }
+                // }
                 let result = []
-                const articleInfo = await this.ctx.service.article.findArticle(findJson);
+                const articleInfo = await this.ctx.service.article.findArticle(this.params);
                 // console.log('----文章消息----',articleInfo);
                 if (articleInfo instanceof Array) {
                     for (let item of articleInfo) {

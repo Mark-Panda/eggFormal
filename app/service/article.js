@@ -10,11 +10,10 @@ class Article extends Service {
     async findArticle(inputParam) {
         console.log('----查询文章input---', inputParam);
         // let articleInfo = await this.ctx.model.Article.findAll(inputParam);
-
+        let { pageSize, pageNum } = inputParam;
         let articleInfo = await this.ctx.model.Article.findAll({
-            inputParam,
-            limit: 1 * skip,
-            offset: skip * (page - 1)
+            limit: 1 * pageNum,
+            offset: pageNum * (pageSize - 1)
         });
         
         return articleInfo;

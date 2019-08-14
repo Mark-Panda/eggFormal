@@ -936,13 +936,13 @@
                         "type": "string",
                         "description": " 入参author"
                       },
-                      "page": {
+                      "pageSize": {
                         "type": "string",
-                        "description": " 入参page"
+                        "description": " 入参pageSize"
                       },
-                      "skip": {
+                      "pageNum": {
                         "type": "string",
-                        "description": " 入参skip"
+                        "description": " 入参pageNum"
                       }
                     }
                   }
