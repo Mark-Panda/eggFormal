@@ -20,6 +20,14 @@ module.exports = app => {
                         type: 'string',
                         optional: true
                     },
+                    page: {
+                        type: 'string',
+                        optional: true
+                    },
+                    skip: {
+                        type: 'string',
+                        optional: true
+                    },
                 },
                 ginseng: {
                     msg: {

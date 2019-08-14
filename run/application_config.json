@@ -935,6 +935,14 @@
                       "author": {
                         "type": "string",
                         "description": " 入参author"
+                      },
+                      "page": {
+                        "type": "string",
+                        "description": " 入参page"
+                      },
+                      "skip": {
+                        "type": "string",
+                        "description": " 入参skip"
                       }
                     }
                   }
