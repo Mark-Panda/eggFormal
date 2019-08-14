@@ -94,6 +94,7 @@ module.exports = app => {
             try {
                 console.log('---- 查询分类 ----', this.params);
                 const classificationInfo = await this.ctx.service.classification.findAllclassification();
+                console.log('----result----',classificationInfo);
                 this.success('查询成功', classificationInfo)
             } catch (error) {
                 console.log(error);
@@ -119,15 +120,16 @@ module.exports = app => {
         }
 
         async insertClass() {
-            this.paramsValidate(methodParm.topLogo.insertClass.param);
+            // this.paramsValidate(methodParm.topLogo.insertClass.param);
             try {
+                this.paramsValidate(methodParm.topLogo.insertClass.param);
                 console.log('---- 分类 ----', this.params);
                 let classificationInfo = await this.ctx.service.classification.createClassification(this.params);
                 this.success('插入成功', classificationInfo)
             } catch (error) {
-                console.log(error);
+                console.log('??????????????',error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('插入失败');
+                this.fail(error);
             }
         }
     }

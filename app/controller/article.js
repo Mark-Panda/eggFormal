@@ -472,15 +472,17 @@ module.exports = app => {
          */
         async createArticle() {
             
-            this.paramsValidate(methodParm.topLogo.createArticle.param)
+            // this.paramsValidate(methodParm.topLogo.createArticle.param)
+            
             try {
+                this.paramsValidate(methodParm.topLogo.createArticle.param)
                 console.log('---- 文章录入 ----', this.params);   
                 const articleInfo = await this.ctx.service.article.createArticle(this.params);
                 this.success('文章录入成功', articleInfo.dataValues)
             } catch (error) {
-                console.log(error);
+                console.log('******',error);
                 this.ctx.logger.error('create error: ', error);
-                this.fail('文章录入失败')
+                this.fail(error)
             }
         }
 

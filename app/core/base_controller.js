@@ -10,7 +10,7 @@ const _ = require('lodash');
 const validator  = require('../../libs/validator');  // 参数验证器
 const argsFilter = require('../../libs/argfilter'); // 参数过滤器
 const { Controller } = require('egg');
-
+const checkInput = require('../../libs/checkInput');
 class BaseController extends Controller {
     success(msg, data) {
         let args = argsFilter.getArguments(arguments, {
@@ -63,10 +63,11 @@ class BaseController extends Controller {
         let params = _.assign({}, this.ctx.request.body, this.ctx.request.body.data, this.ctx.query);
         console.log('--- 请求内容post ---',params);
         let tmp = {};
-
         console.log('rule ', rule);
-        
-
+        let inputResult = checkInput(rule, params)
+        if(inputResult){
+            this.ctx.throw(401, '操作失败，缺少参数:'+inputResult);
+        }
         for (let key in rule) {
             let pKey = rule[key].mapKey ? rule[key].mapKey : key;
             if (typeof params[pKey] !== 'undefined') {
@@ -74,7 +75,6 @@ class BaseController extends Controller {
             }
         }
         params = tmp;
-        console.log('------修改一次----',params);
         // 验证并得到验证结果
         let result = validator(params, rule);
         if (result.error) {

@@ -12,6 +12,7 @@ class Classification extends Service {
             where: inputParam,
             force: true
         })
+        console.log('+++++',classInfo);
         if (classInfo) {
             this.ctx.throw(404, '已有该分类');
         }
@@ -24,7 +25,7 @@ class Classification extends Service {
      */
     async findAllclassification() {
         console.log('----查询所有分类---');
-        let classificationInfo = await this.ctx.model.Classification.findAll();
+        let classificationInfo = await this.ctx.model.Classification.findAll({force: true});
         return classificationInfo;
     }
 
