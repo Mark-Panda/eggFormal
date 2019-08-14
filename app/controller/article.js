@@ -120,13 +120,13 @@ module.exports = app => {
                         optional: true
                     },
                     origin: {
-                        type: 'string'
+                        type: 'any'
                     },
                     state: {
-                        type: 'string'
+                        type: 'any'
                     },
                     type: {
-                        type: 'string'
+                        type: 'any'
                     }
                 },
                 ginseng: {
