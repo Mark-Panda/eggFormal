@@ -100,7 +100,7 @@ module.exports = app => {
             createArticle: {
                 param: {
                     classificationId: {
-                        type: 'string'
+                        type: 'any'
                     },
                     content: {
                         type: 'string'
