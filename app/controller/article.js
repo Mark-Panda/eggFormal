@@ -14,6 +14,10 @@ module.exports = app => {
                     pageNum: {
                         type: 'string'
                     },
+                    tags: {
+                        type: 'any',
+                        optional: true
+                    }
                 },
                 ginseng: {
                     msg: {
@@ -376,7 +380,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('查询失败')
+                this.fail(error)
             }
         }
 

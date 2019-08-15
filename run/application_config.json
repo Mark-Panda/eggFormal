@@ -931,6 +931,10 @@
                       "pageNum": {
                         "type": "string",
                         "description": " 入参pageNum"
+                      },
+                      "tags": {
+                        "type": "string",
+                        "description": " 入参tags"
                       }
                     }
                   }

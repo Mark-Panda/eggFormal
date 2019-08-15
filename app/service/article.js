@@ -1,6 +1,8 @@
 'use strict';
 
 const Service = require('egg').Service;
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 class Article extends Service {
     /**
@@ -10,13 +12,33 @@ class Article extends Service {
     async findArticle(inputParam) {
         console.log('----查询文章input---', inputParam);
         // let articleInfo = await this.ctx.model.Article.findAll(inputParam);
-        let { pageSize, pageNum } = inputParam;
-        let articleInfo = await this.ctx.model.Article.findAll({
-            limit: 1 * pageSize,
-            offset: pageSize * (pageNum - 1),
-            raw: true
-        });
-        console.log('======article====',articleInfo);
+        let { pageSize, pageNum, tags } = inputParam;
+        let articleInfo;
+        if(tags){
+            if(Array.isArray(tags)) tags = tags.toString()
+
+            articleInfo = await this.ctx.model.Article.findAll({
+                where:{
+                    tags:{
+                        [Op.like]:'%' +tags + '%'
+                        // [Op.regexp]:tags
+                    }
+                    
+                },
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                raw: true
+            })
+            console.log('======article====',articleInfo);
+        }else{
+            articleInfo = await this.ctx.model.Article.findAll({
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                raw: true
+            });
+            console.log('======article====',articleInfo);
+        }
+        
         return articleInfo;
     }
 
