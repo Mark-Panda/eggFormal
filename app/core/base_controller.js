@@ -65,9 +65,7 @@ class BaseController extends Controller {
         let tmp = {};
         console.log('rule ', rule);
         let inputResult = checkInput(rule, params)
-        console.log('------啥----',inputResult);
         if(inputResult && inputResult.length > 0){
-            console.log('+++++');
             this.ctx.throw(401, '操作失败，缺少参数:'+inputResult);
         }
         for (let key in rule) {

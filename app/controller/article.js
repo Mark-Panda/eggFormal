@@ -8,25 +8,11 @@ module.exports = app => {
             role: 'article',
             findArticle: {
                 param: {
-                    title: {
-                        type: 'string',
-                        optional: true
-                    },
-                    classificationId: {
-                        type: 'any',
-                        optional: true
-                    },
-                    author: {
-                        type: 'string',
-                        optional: true
-                    },
                     pageSize: {
-                        type: 'string',
-                        optional: true
+                        type: 'string'
                     },
                     pageNum: {
-                        type: 'string',
-                        optional: true
+                        type: 'string'
                     },
                 },
                 ginseng: {
@@ -55,7 +41,7 @@ module.exports = app => {
                     },
                 },
                 rule: {
-                    desc: '查询',
+                    desc: '分页查询所有文章',
                     url: '',
                     middwareMethod: '',
                     method: 'findArticle'
@@ -365,7 +351,7 @@ module.exports = app => {
     class ArticleController extends Controller {
 
         /**
-         * 查询
+         * 查询文章 分页查询
          */
         async findArticle() {
             this.paramsValidate(methodParm.topLogo.findArticle.param); //状态码  201 参数错误

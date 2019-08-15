@@ -909,8 +909,8 @@
               "tags": [
                 "article"
               ],
-              "summary": "查询",
-              "description": "查询",
+              "summary": "分页查询所有文章",
+              "description": "分页查询所有文章",
               "parameters": [
                 {
                   "in": "body",
@@ -924,18 +924,6 @@
                       "password"
                     ],
                     "properties": {
-                      "title": {
-                        "type": "string",
-                        "description": " 入参title"
-                      },
-                      "classificationId": {
-                        "type": "string",
-                        "description": " 入参classificationId"
-                      },
-                      "author": {
-                        "type": "string",
-                        "description": " 入参author"
-                      },
                       "pageSize": {
                         "type": "string",
                         "description": " 入参pageSize"

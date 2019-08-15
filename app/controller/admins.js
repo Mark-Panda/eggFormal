@@ -194,7 +194,6 @@ module.exports = app => {
             if(this.ctx.request.header.token){
                 let token = this.ctx.request.header.token;
                 let data =await this.ctx.service.userRedis.getRaw(token); // add data to redis
-                console.log('当前用户信息',data);
                 let result = {};
                 if(data.userId){
                     let findJson = {
@@ -202,12 +201,13 @@ module.exports = app => {
                             userid: data.userId
                         }
                     }
-                    console.log('findJson', findJson);
                     data = await this.ctx.service.admin.findWithJson(findJson);
                     if(data){
                         result = {
                             avatar: '',
-                            name: data.userName
+                            name: data.userName,
+                            phone: data.phone,
+                            userid: data.userid
                         }
                     }
                     

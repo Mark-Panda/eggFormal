@@ -13,9 +13,10 @@ class Article extends Service {
         let { pageSize, pageNum } = inputParam;
         let articleInfo = await this.ctx.model.Article.findAll({
             limit: 1 * pageNum,
-            offset: pageNum * (pageSize - 1)
+            offset: pageNum * (pageSize - 1),
+            raw: true
         });
-        
+        console.log('======article====',articleInfo);
         return articleInfo;
     }
 
@@ -28,7 +29,8 @@ class Article extends Service {
         let articleInfo = await this.ctx.model.Article.findAll({
             where: inputParam,
             limit: 1 * skip,
-            offset: skip * (page - 1)
+            offset: skip * (page - 1),
+            raw: true
         });
         return articleInfo;
     }
@@ -40,7 +42,8 @@ class Article extends Service {
     async findCount(inputParam) {
         console.log('----查询input---', inputParam);
         let articleInfo = await this.ctx.model.Article.count({
-            where: inputParam
+            where: inputParam,
+            raw: true
         });
         console.log('-----', articleInfo);
         return articleInfo;
@@ -62,7 +65,8 @@ class Article extends Service {
                 articleInfo = await this.ctx.model.Article.findAndCountAll({
                     where: {
                         classificationId: inputParam
-                    }
+                    },
+                    raw: true
                 })
             } else {
                 articleInfo = await this.ctx.model.Article.findAndCountAll({
@@ -70,7 +74,8 @@ class Article extends Service {
                         classificationId: inputParam
                     },
                     limit: 1 * skip,
-                    offset: skip * (page - 1)
+                    offset: skip * (page - 1),
+                    raw: true
                 })
             }
         }
@@ -120,7 +125,8 @@ class Article extends Service {
             where: {
                 id: articleId
             },
-            force: true
+            force: true,
+            raw: true
         });
         console.log('---是否删除成功---', articleInfo);
         return articleInfo;
@@ -133,7 +139,8 @@ class Article extends Service {
      */
     async updateArticleById(articleId, inputParam) {
         const articleInfo = await this.ctx.model.Article.findOne({
-            id: articleId
+            id: articleId,
+            raw: true
         });
         if (!articleInfo) {
             this.ctx.throw(404, '没有该文章');
@@ -146,7 +153,8 @@ class Article extends Service {
      */
     async articleThumbinsert(articleId) {
         const articleInfo = await this.ctx.model.Article.findOne({
-            id: articleId
+            id: articleId,
+            raw: true
         });
         if (!articleInfo) {
             this.ctx.throw(404, '没有该文章');
@@ -161,7 +169,8 @@ class Article extends Service {
      */
     async articleThumbdel(articleId){
         const articleInfo = await this.ctx.model.Article.findOne({
-            id: articleId
+            id: articleId,
+            raw: true
         });
         if (!articleInfo) {
             this.ctx.throw(404, '没有该文章');
