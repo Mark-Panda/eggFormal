@@ -354,17 +354,10 @@ module.exports = app => {
          * 查询文章 分页查询
          */
         async findArticle() {
-            this.paramsValidate(methodParm.topLogo.findArticle.param); //状态码  201 参数错误
+            
             try {
+                this.paramsValidate(methodParm.topLogo.findArticle.param); //状态码  201 参数错误
                 console.log('---- 查询文章 ----', this.params);
-
-                // let { page, skip,author } = this.params;
-
-                // let findJson = {
-                //     where: {
-                //         ...this.params
-                //     }
-                // }
                 let result = []
                 const articleInfo = await this.ctx.service.article.findArticle(this.params);
                 // console.log('----文章消息----',articleInfo);

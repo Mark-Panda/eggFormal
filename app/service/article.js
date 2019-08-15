@@ -12,8 +12,8 @@ class Article extends Service {
         // let articleInfo = await this.ctx.model.Article.findAll(inputParam);
         let { pageSize, pageNum } = inputParam;
         let articleInfo = await this.ctx.model.Article.findAll({
-            limit: 1 * pageNum,
-            offset: pageNum * (pageSize - 1),
+            limit: 1 * pageSize,
+            offset: pageSize * (pageNum - 1),
             raw: true
         });
         console.log('======article====',articleInfo);
