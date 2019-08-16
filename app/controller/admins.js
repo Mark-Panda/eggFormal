@@ -213,6 +213,8 @@ module.exports = app => {
                     
                 }
                 this.success('获取用户信息成功', result);
+            }else{
+                this.fail('你把我的token搞哪了')
             }
             
         }
