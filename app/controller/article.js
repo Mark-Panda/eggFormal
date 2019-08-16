@@ -365,12 +365,14 @@ module.exports = app => {
                 console.log('---- 查询文章 ----', this.params);
                 let result = []
                 const articleInfo = await this.ctx.service.article.findArticle(this.params);
+                console.log('----文章消息----',articleInfo);
                 const count = await this.ctx.service.article.findCount()
-                // console.log('----文章消息----',articleInfo);
+                
                 if (articleInfo instanceof Array) {
                     for (let item of articleInfo) {
                         let classificationInfo = []
                         let classificationId = _.split(item.classificationId,',')
+                        console.log('多少分类ID',classificationId);
                         for (const iter of classificationId) {
                             let Info = await this.ctx.service.classification.findOneById(iter)
                             classificationInfo.push(Info.classificationName)
@@ -384,6 +386,7 @@ module.exports = app => {
                     for (let item of articleInfo) {
                         let classificationInfo = []
                         let classificationId = _.split(item.classificationId,',')
+                        console.log('多少分类ID',classificationId);
                         for (const iter of classificationId) {
                             let Info = await this.ctx.service.classification.findOneById(iter);
                             classificationInfo.push(Info.classificationName)
