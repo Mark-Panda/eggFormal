@@ -1,6 +1,7 @@
 'use strict';
 const util = require('../../libs/util');
 const Controller = require('../core/base_controller');
+const _ = require("lodash");
 
 module.exports = app => {
     let methodParm = {
@@ -364,17 +365,35 @@ module.exports = app => {
                 console.log('---- 查询文章 ----', this.params);
                 let result = []
                 const articleInfo = await this.ctx.service.article.findArticle(this.params);
+                const count = await this.ctx.service.article.findCount()
                 // console.log('----文章消息----',articleInfo);
                 if (articleInfo instanceof Array) {
                     for (let item of articleInfo) {
+                        let classificationInfo = []
+                        let classificationId = _.split(item.classificationId,',')
+                        for (const iter of classificationId) {
+                            let Info = await this.ctx.service.classification.findOneById(iter)
+                            classificationInfo.push(Info.classificationName)
+                        }
+                        item['classificationInfo'] = classificationInfo
+                        item.count = count
                         result.push(item);
                     }
                 } else {
                     articleInfo = [articleInfo]
                     for (let item of articleInfo) {
+                        let classificationInfo = []
+                        let classificationId = _.split(item.classificationId,',')
+                        for (const iter of classificationId) {
+                            let Info = await this.ctx.service.classification.findOneById(iter);
+                            classificationInfo.push(Info.classificationName)
+                        }
+                        item['classificationInfo'] = classificationInfo
+                        item.count = count
                         result.push(item);
                     }
                 }
+                console.log('==== 文章 ====',result);
                 this.success('查询成功', result)
 
             } catch (error) {

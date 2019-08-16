@@ -29,14 +29,14 @@ class Article extends Service {
                 offset: pageSize * (pageNum - 1),
                 raw: true
             })
-            console.log('======article====',articleInfo);
+            // console.log('======article====',articleInfo);
         }else{
             articleInfo = await this.ctx.model.Article.findAll({
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
                 raw: true
             });
-            console.log('======article====',articleInfo);
+            // console.log('======article====',articleInfo);
         }
         
         return articleInfo;

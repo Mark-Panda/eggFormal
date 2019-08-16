@@ -30,6 +30,22 @@ class Classification extends Service {
     }
 
     /**
+     * 通过ID查分类
+     * @param {*} classificationId 
+     */
+    async findOneById(classificationId){
+        console.log('---分类ID---', classificationId);
+        let classInfo = await this.ctx.model.Classification.findOne({
+            where: {
+                id: classificationId
+            },
+            force: true,
+            raw: true
+        })
+        return classInfo;
+    }
+
+    /**
      * 删除分类
      * @classificationId   分类主键ID
      */
