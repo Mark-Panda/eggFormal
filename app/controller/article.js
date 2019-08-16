@@ -378,7 +378,6 @@ module.exports = app => {
                             classificationInfo.push(Info.classificationName)
                         }
                         item['classificationInfo'] = classificationInfo
-                        item.count = count
                         result.push(item);
                     }
                 } else {
@@ -392,12 +391,15 @@ module.exports = app => {
                             classificationInfo.push(Info.classificationName)
                         }
                         item['classificationInfo'] = classificationInfo
-                        item.count = count
                         result.push(item);
                     }
                 }
-                console.log('==== 文章 ====',result);
-                this.success('查询成功', result)
+                let articleInfos = {
+                    count,
+                    result
+                }
+                console.log('==== 文章 ====',articleInfos);
+                this.success('查询成功', articleInfos)
 
             } catch (error) {
                 console.log(error);
