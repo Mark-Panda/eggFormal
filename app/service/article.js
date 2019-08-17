@@ -21,13 +21,12 @@ class Article extends Service {
                 where:{
                     tags:{
                         [Op.like]:'%' +tags + '%'
-                        // [Op.regexp]:tags
                     }
                     
                 },
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
-                order: [Article, 'createdAt', 'DESC'],
+                order: Sequelize.literal('createdAt DESC'),
                 raw: true
             })
             // console.log('======article====',articleInfo);
@@ -35,6 +34,7 @@ class Article extends Service {
             articleInfo = await this.ctx.model.Article.findAll({
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
+                order: Sequelize.literal('createdAt DESC'),
                 raw: true
             });
             // console.log('======article====',articleInfo);
