@@ -27,6 +27,7 @@ class Article extends Service {
                 },
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
+                order: [Article, 'createdAt', 'DESC'],
                 raw: true
             })
             // console.log('======article====',articleInfo);
