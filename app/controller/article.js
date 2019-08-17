@@ -526,8 +526,9 @@ module.exports = app => {
          * 删除文章
          */
         async destroyArticle() {
-            this.paramsValidate(methodParm.topLogo.destroyArticle.param)
+           
             try {
+                this.paramsValidate(methodParm.topLogo.destroyArticle.param)
                 console.log('---- 删除文章ID ----', this.params);
                 let {
                     articleId
@@ -538,7 +539,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('destroy error: ', error);
-                this.fail('删除文章失败')
+                this.fail('删除文章失败',error)
             }
         }
     }
