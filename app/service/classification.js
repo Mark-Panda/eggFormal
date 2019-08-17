@@ -25,8 +25,18 @@ class Classification extends Service {
      * 查询所有分类
      */
     async findAllclassification() {
+
         console.log('----查询所有分类---');
-        let classificationInfo = await this.ctx.model.Classification.findAll({force: true,raw: true});
+        if(!inputParam){
+            let classificationInfo = await this.ctx.model.Classification.findAll({force: true,raw: true});
+            return classificationInfo;
+        }
+        let { pageSize, pageNum } = inputParam;
+        let classificationInfo = await this.ctx.model.Classification.findAll({
+            limit: 1 * pageSize,
+            offset: pageSize * (pageNum - 1),
+            raw: true
+        })
         return classificationInfo;
     }
 

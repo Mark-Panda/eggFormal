@@ -16,13 +16,18 @@ class Article extends Service {
         let articleInfo;
         if(tags){
             if(Array.isArray(tags)) tags = tags.toString()
-
+            let labelId = await this.ctx.model.Label.findOne({
+                where: {
+                    labelName: tags
+                },
+                raw: true
+            })
+            console.log('------',labelId);
             articleInfo = await this.ctx.model.Article.findAll({
                 where:{
                     tags:{
-                        [Op.like]:'%' +tags + '%'
+                        [Op.like]:'%' +labelId.id + '%'
                     }
-                    
                 },
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),

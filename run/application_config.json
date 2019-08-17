@@ -1363,7 +1363,16 @@
                       "username",
                       "password"
                     ],
-                    "properties": {}
+                    "properties": {
+                      "pageSize": {
+                        "type": "string",
+                        "description": " 入参pageSize"
+                      },
+                      "pageNum": {
+                        "type": "string",
+                        "description": " 入参pageNum"
+                      }
+                    }
                   }
                 }
               ],

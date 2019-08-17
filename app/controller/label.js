@@ -6,7 +6,7 @@ const Controller = require('../core/base_controller');
 module.exports = app => {
     let methodParm = {
         topLogo: {
-            role: 'classification',
+            role: 'label',
             findAllclass: {
                 param: {
                     pageSize: {
@@ -33,15 +33,15 @@ module.exports = app => {
                     },
                 },
                 rule: {
-                    desc: '查找所有分类',
+                    desc: '查找所有标签',
                     url: '',
                     middwareMethod: '',
-                    method: 'findAllclass'
+                    method: 'findAlllabel'
                 }
             },
-            deleteClassById: {
+            deleteLabelById: {
                 param: {
-                    classificationId: {
+                    labelId: {
                         type: 'any'
                     },
                 },
@@ -60,13 +60,13 @@ module.exports = app => {
                     },
                 },
                 rule: {
-                    desc: '通过ID删除分类',
+                    desc: '通过ID删除标签',
                     url: '',
                     middwareMethod: '',
-                    method: 'deleteClassById'
+                    method: 'deleteLabelById'
                 }
             },
-            insertClass: {
+            insertLabel: {
                 param: {
                     classificationName: {
                         type: 'string'
@@ -87,62 +87,61 @@ module.exports = app => {
                     },
                 },
                 rule: {
-                    desc: '增加分类',
+                    desc: '增加标签',
                     url: '',
                     middwareMethod: '',
-                    method: 'insertClass'
+                    method: 'insertLabel'
                 }
             }
         }
     }
     app.loadApiswagger(methodParm);
 
-    class ClassificationController extends Controller {
-        async findAllclass() {
+    class LabelController extends Controller {
+        async findAlllabel() {
             
             try {
-                this.paramsValidate(methodParm.topLogo.findAllclass.param);
-                console.log('---- 查询分类 ----', this.params);
-                const classificationInfo = await this.ctx.service.classification.findAllclassification(this.params);
-                console.log('----result----',classificationInfo);
-                this.success('查询成功', classificationInfo)
+                this.paramsValidate(methodParm.topLogo.findAlllabel.param);
+                console.log('---- 查询标签 ----', this.params);
+                const labelInfo = await this.ctx.service.label.findAllLabel(this.params);
+                console.log('----result----',labelInfo);
+                this.success('查询成功', labelInfo)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('查询失败',error)
+                this.fail('查询失败'+error)
             }
         }
 
-        async deleteClassById() {
+        async deleteLabelById() {
             
             try {
-                this.paramsValidate(methodParm.topLogo.deleteClassById.param);
-                console.log('---- 分类ID ----', this.params);
+                this.paramsValidate(methodParm.topLogo.deleteLabelById.param);
+                console.log('---- 标签ID ----', this.params);
                 let {
-                    classificationId
+                    labelId
                 } = this.params;
-                let classificationInfo = await this.ctx.service.classification.deleteClassification(classificationId);
-                this.success('删除成功', classificationInfo)
+                let labelInfo = await this.ctx.service.label.deleteLabel(labelId);
+                this.success('删除成功', labelInfo)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('删除失败',error);
+                this.fail('删除标签失败',error);
             }
         }
 
-        async insertClass() {
-            // this.paramsValidate(methodParm.topLogo.insertClass.param);
+        async insertLabel() {
             try {
-                this.paramsValidate(methodParm.topLogo.insertClass.param);
-                console.log('---- 分类 ----', this.params);
-                let classificationInfo = await this.ctx.service.classification.createClassification(this.params);
-                this.success('插入成功', classificationInfo)
+                this.paramsValidate(methodParm.topLogo.insertLabel.param);
+                console.log('---- 标签 ----', this.params);
+                let labelInfo = await this.ctx.service.label.createLabel(this.params);
+                this.success('插入标签成功', labelInfo)
             } catch (error) {
                 console.log('??????????????',error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('创建分类失败',error);
+                this.fail('添加标签失败',error);
             }
         }
     }
-    return ClassificationController
+    return LabelController
 }
