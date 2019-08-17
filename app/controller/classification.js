@@ -17,6 +17,10 @@ module.exports = app => {
                         type: 'any',
                         optional: true
                     },
+                    classificationName: {
+                        type: 'any',
+                        optional: true
+                    }
                 },
                 ginseng: {
                     msg: {
@@ -104,8 +108,14 @@ module.exports = app => {
                 this.paramsValidate(methodParm.topLogo.findAllclass.param);
                 console.log('---- 查询分类 ----', this.params);
                 const classificationInfo = await this.ctx.service.classification.findAllclassification(this.params);
+                const count = await this.ctx.service.classification.findCount();
                 console.log('----result----',classificationInfo);
-                this.success('查询成功', classificationInfo)
+                console.log('----resultNum----',count);
+                let result = {
+                    classificationInfo,
+                    count
+                }
+                this.success('查询成功', result)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

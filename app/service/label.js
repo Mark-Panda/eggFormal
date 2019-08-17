@@ -30,12 +30,36 @@ class Label extends Service {
             let labelInfo = await this.ctx.model.Label.findAll({force: true,raw: true});
             return labelInfo;
         }
-        let { pageSize, pageNum } = inputParam;
-        let labelInfo = await this.ctx.model.Label.findAll({
-            limit: 1 * pageSize,
-            offset: pageSize * (pageNum - 1),
+        let { pageSize, pageNum, labelName} = inputParam;
+        let labelInfo;
+        if(labelName){
+            labelInfo = await this.ctx.model.Label.findAll({
+                where: {
+                    labelName
+                },
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                raw: true
+            })
+        }else{
+            labelInfo = await this.ctx.model.Label.findAll({
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                raw: true
+            })
+        }
+        return labelInfo;
+    }
+
+    /**
+     * 
+     * @param {查找标签数量} inputParam 
+     */
+    async findCount() {
+        let labelInfo = await this.ctx.model.Label.count({
             raw: true
-        })
+        });
+        console.log('-----', labelInfo);
         return labelInfo;
     }
 

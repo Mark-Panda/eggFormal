@@ -31,12 +31,25 @@ class Classification extends Service {
             let classificationInfo = await this.ctx.model.Classification.findAll({force: true,raw: true});
             return classificationInfo;
         }
-        let { pageSize, pageNum } = inputParam;
-        let classificationInfo = await this.ctx.model.Classification.findAll({
-            limit: 1 * pageSize,
-            offset: pageSize * (pageNum - 1),
-            raw: true
-        })
+        let { pageSize, pageNum, classificationName} = inputParam;
+        let classificationInfo 
+        if(classificationName){
+            classificationInfo = await this.ctx.model.Classification.findAll({
+                where: {
+                    classificationName
+                },
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                raw: true
+            })
+        }else{
+            classificationInfo = await this.ctx.model.Classification.findAll({
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                raw: true
+            })
+        }
+        
         return classificationInfo;
     }
 
@@ -53,6 +66,19 @@ class Classification extends Service {
             force: true,
             raw: true
         })
+        return classInfo;
+    }
+
+
+    /**
+     * 
+     * @param {查找分类数量} inputParam 
+     */
+    async findCount() {
+        let classInfo = await this.ctx.model.Classification.count({
+            raw: true
+        });
+        console.log('-----', classInfo);
         return classInfo;
     }
 

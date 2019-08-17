@@ -30,6 +30,9 @@ let nameSpaceList = {
         },
         thumbsup: {
             method: ['articleThumbsup', 'articleNothumbsup']
+        },
+        label: {
+            method: ['findAlllabel', 'deleteLabelById', 'insertLabel']
         }
     }
 };

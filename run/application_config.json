@@ -1371,6 +1371,10 @@
                       "pageNum": {
                         "type": "string",
                         "description": " 入参pageNum"
+                      },
+                      "classificationName": {
+                        "type": "string",
+                        "description": " 入参classificationName"
                       }
                     }
                   }
@@ -1833,6 +1837,200 @@
                       "articleId": {
                         "type": "string",
                         "description": " 入参articleId"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/findAlllabel": {
+            "post": {
+              "tags": [
+                "label"
+              ],
+              "summary": "查找所有标签",
+              "description": "查找所有标签",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "pageSize": {
+                        "type": "string",
+                        "description": " 入参pageSize"
+                      },
+                      "pageNum": {
+                        "type": "string",
+                        "description": " 入参pageNum"
+                      },
+                      "labelName": {
+                        "type": "string",
+                        "description": " 入参labelName"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/deleteLabelById": {
+            "post": {
+              "tags": [
+                "label"
+              ],
+              "summary": "通过ID删除标签",
+              "description": "通过ID删除标签",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "labelId": {
+                        "type": "string",
+                        "description": " 入参labelId"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/insertLabel": {
+            "post": {
+              "tags": [
+                "label"
+              ],
+              "summary": "增加标签",
+              "description": "增加标签",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "classificationName": {
+                        "type": "string",
+                        "description": " 入参classificationName"
                       }
                     }
                   }
