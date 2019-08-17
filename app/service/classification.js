@@ -24,7 +24,7 @@ class Classification extends Service {
     /**
      * 查询所有分类
      */
-    async findAllclassification() {
+    async findAllclassification(inputParam) {
 
         console.log('----查询所有分类---');
         if(!inputParam){
