@@ -72,7 +72,7 @@ module.exports = app => {
             },
             insertLabel: {
                 param: {
-                    classificationName: {
+                    labelName: {
                         type: 'string'
                     },
                 },

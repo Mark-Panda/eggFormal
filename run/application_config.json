@@ -2028,9 +2028,9 @@
                       "password"
                     ],
                     "properties": {
-                      "classificationName": {
+                      "labelName": {
                         "type": "string",
-                        "description": " 入参classificationName"
+                        "description": " 入参labelName"
                       }
                     }
                   }
