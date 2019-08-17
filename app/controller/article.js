@@ -325,7 +325,7 @@ module.exports = app => {
             destroyArticle: {
                 param: {
                     articleId: {
-                        type: 'string'
+                        type: 'any'
                     }
                 },
                 ginseng: {
