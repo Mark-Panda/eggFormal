@@ -20,7 +20,7 @@ let nameSpaceList = {
             method: ['getWeather']
         },
         article: {
-            method: ['findArticle', 'findArticleByclass', 'createArticle', 'updateArticle', 'findArticleCount', 'destroyArticle']
+            method: ['findArticle', 'findArticleByclass', 'createArticle', 'updateArticle', 'findArticleCount', 'destroyArticle', 'findArticleById']
         },
         classification: {
             method: ['findAllclass', 'deleteClassById', 'insertClass']

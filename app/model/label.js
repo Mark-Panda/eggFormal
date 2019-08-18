@@ -24,7 +24,7 @@ module.exports = app => {
             allowNull: false,
             autoIncrement: true
         },
-        labelName: STRING, //标签名
+        labelName: {type:STRING.BINARY} , //标签名
 
     }, {
         freezeTableName: true, // Model 对应的表名将与model名相同

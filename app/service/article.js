@@ -139,7 +139,14 @@ class Article extends Service {
      */
     async findArticleById(articleId) {
         console.log('----查询文章---', articleId);
-        let articleInfo = await this.ctx.model.Article.findOne(articleId);
+        let articleInfo = await this.ctx.model.Article.findOne({
+            where: {
+                id: articleId.articleId
+            },
+            force: true,
+            raw: true
+        });
+        console.log('---- 文章详情 ----', articleInfo);
         return articleInfo;
     }
 
@@ -170,10 +177,12 @@ class Article extends Service {
             id: articleId,
             raw: true
         });
+        console.log('文章',articleInfo);
         if (!articleInfo) {
             this.ctx.throw(404, '没有该文章');
         }
-        return articleInfo.update(inputParam);
+        console.log('---修改内容---',inputParam);
+        return this.ctx.model.Article.update(inputParam,{where:{id: articleId}});
     }
 
     /**

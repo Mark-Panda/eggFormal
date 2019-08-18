@@ -175,20 +175,37 @@ module.exports = app => {
             updateArticle: {
                 param: {
                     articleId: {
-                        type: 'string'
+                        type: 'any'
                     },
                     classificationId: {
-                        type: 'string',
-                        optional: true
+                        type: 'any'
                     },
-                    message: {
-                        type: 'string',
-                        optional: true
+                    content: {
+                        type: 'string'
                     },
                     author: {
+                        type: 'string'
+                    },
+                    title: {
+                        type: 'string'
+                    },
+                    tags: {
+                        type: 'any',
+                        optional: true
+                    },
+                    img_url: {
                         type: 'string',
                         optional: true
                     },
+                    origin: {
+                        type: 'any'
+                    },
+                    state: {
+                        type: 'any'
+                    },
+                    type: {
+                        type: 'any'
+                    }
                 },
                 ginseng: {
                     msg: {
@@ -348,6 +365,33 @@ module.exports = app => {
                     middwareMethod: '',
                     method: 'destroyArticle'
                 }
+            },
+            findArticleById: {
+                param: {
+                    articleId: {
+                        type: 'any'
+                    }
+                },
+                ginseng: {
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'int'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
+                },
+                rule: {
+                    desc: '查询文章详情',
+                    url: '',
+                    middwareMethod: '',
+                    method: 'findArticleById'
+                }
             }
         }
     }
@@ -409,6 +453,22 @@ module.exports = app => {
         }
 
         /**
+         * 按文章ID查文章详情
+         */
+        async findArticleById() {
+            try {
+                this.paramsValidate(methodParm.topLogo.findArticleById.param); //状态码  201 参数错误
+                console.log('---- 文章ID ----',this.params);
+                const articleInfo = await this.ctx.service.article.findArticleById(this.params)
+                this.success('查询成功',articleInfo)
+            } catch (error) {
+                console.log(error);
+                this.ctx.logger.error('find error: ', error);
+                this.fail('查询失败',error)
+            }
+        }
+
+        /**
          * 查询文章总数量并返回每个文章信息
          */
 
@@ -438,8 +498,9 @@ module.exports = app => {
          * 查询某一分类所有文章,分页
          */
         async findArticleByclass() {
-            this.paramsValidate(methodParm.topLogo.findArticleByclass.param); //状态码  201 参数错误
+            
             try {
+                this.paramsValidate(methodParm.topLogo.findArticleByclass.param); //状态码  201 参数错误
                 console.log('---- 查询文章param----', this.params);
 
                 let {
@@ -496,29 +557,20 @@ module.exports = app => {
         /**
          * 修改文章
          */
-        async updateArticle() {
-            this.paramsValidate(methodParm.topLogo.updateArticle.param)
+        async updateArticle() { 
             try {
+                this.paramsValidate(methodParm.topLogo.updateArticle.param)
                 console.log('---- 修改文章所需信息 ----', this.params);
-                let {
-                    articleId,
-                    classificationId,
-                    message,
-                    author
-                } = this.params;
-                let updateInfo = {
-                    classificationId,
-                    message,
-                    author
-                }
+                let { articleId, classificationId, content, author, title, tags, img_url, origin, state, type} = this.params;
+                let updateInfo = {classificationId, content, author, title, tags, img_url, origin, state, type}
                 const updateArticleInfo = await this.ctx.service.article.updateArticleById(articleId, updateInfo);
-
-                this.success('查询成功', updateArticleInfo.dataValues)
+                console.log('--------',updateArticleInfo[0]);
+                this.success('修改成功', updateArticleInfo[0])
 
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('update error: ', error);
-                this.fail('修改文章失败')
+                this.fail('修改文章失败',error)
             }
         }
 
