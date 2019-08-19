@@ -40,7 +40,7 @@ class BaseController extends Controller {
             status: {
                 type: 'number',
                 optional: true,
-                value: 300,
+                value: 204,
                 integer: true
             },
             data: {
