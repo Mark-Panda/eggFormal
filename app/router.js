@@ -33,6 +33,9 @@ let nameSpaceList = {
         },
         label: {
             method: ['findAlllabel', 'deleteLabelById', 'insertLabel']
+        },
+        link: {
+            method: ['findAlllink', 'deleteLinkById', 'insertLink']
         }
     }
 };

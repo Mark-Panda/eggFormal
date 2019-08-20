@@ -8,6 +8,7 @@ import ExportArticle = require('../../../app/service/article');
 import ExportClassification = require('../../../app/service/classification');
 import ExportComment = require('../../../app/service/comment');
 import ExportLabel = require('../../../app/service/label');
+import ExportLink = require('../../../app/service/link');
 import ExportThumbsup = require('../../../app/service/thumbsup');
 import ExportUser = require('../../../app/service/user');
 import ExportUserRedis = require('../../../app/service/userRedis');
@@ -20,6 +21,7 @@ declare module 'egg' {
     classification: ExportClassification;
     comment: ExportComment;
     label: ExportLabel;
+    link: ExportLink;
     thumbsup: ExportThumbsup;
     user: ExportUser;
     userRedis: ExportUserRedis;

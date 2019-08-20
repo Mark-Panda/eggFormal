@@ -2155,6 +2155,212 @@
                 }
               }
             }
+          },
+          "/findAlllink": {
+            "post": {
+              "tags": [
+                "link"
+              ],
+              "summary": "查找所有链接",
+              "description": "查找所有链接",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "pageSize": {
+                        "type": "string",
+                        "description": " 入参pageSize"
+                      },
+                      "pageNum": {
+                        "type": "string",
+                        "description": " 入参pageNum"
+                      },
+                      "linkType": {
+                        "type": "string",
+                        "description": " 入参linkType"
+                      },
+                      "linkName": {
+                        "type": "string",
+                        "description": " 入参linkName"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/deleteLinkById": {
+            "post": {
+              "tags": [
+                "link"
+              ],
+              "summary": "通过ID删除链接",
+              "description": "通过ID删除链接",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "linkId": {
+                        "type": "string",
+                        "description": " 入参linkId"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "/insertLink": {
+            "post": {
+              "tags": [
+                "link"
+              ],
+              "summary": "增加链接",
+              "description": "增加链接",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "linkName": {
+                        "type": "string",
+                        "description": " 入参linkName"
+                      },
+                      "linkAddress": {
+                        "type": "string",
+                        "description": " 入参linkAddress"
+                      },
+                      "linkType": {
+                        "type": "string",
+                        "description": " 入参linkType"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },

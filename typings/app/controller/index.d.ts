@@ -7,6 +7,7 @@ import ExportArticle = require('../../../app/controller/article');
 import ExportClassification = require('../../../app/controller/classification');
 import ExportComment = require('../../../app/controller/comment');
 import ExportLabel = require('../../../app/controller/label');
+import ExportLink = require('../../../app/controller/link');
 import ExportThumbsup = require('../../../app/controller/thumbsup');
 import ExportUser = require('../../../app/controller/user');
 import ExportWeather = require('../../../app/controller/weather');
@@ -18,6 +19,7 @@ declare module 'egg' {
     classification: ExportClassification;
     comment: ExportComment;
     label: ExportLabel;
+    link: ExportLink;
     thumbsup: ExportThumbsup;
     user: ExportUser;
     weather: ExportWeather;
