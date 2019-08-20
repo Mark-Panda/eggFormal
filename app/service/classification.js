@@ -13,7 +13,7 @@ class Classification extends Service {
             force: true,
             raw: true
         })
-        console.log('+++++',classInfo);
+        // console.log('+++++',classInfo);
         if (classInfo) {
             this.ctx.throw(404, '已有该分类');
         }
@@ -58,7 +58,7 @@ class Classification extends Service {
      * @param {*} classificationId 
      */
     async findOneById(classificationId){
-        console.log('---分类ID---', classificationId);
+        // console.log('---分类ID---', classificationId);
         let classInfo = await this.ctx.model.Classification.findOne({
             where: {
                 id: classificationId

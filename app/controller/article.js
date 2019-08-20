@@ -415,26 +415,38 @@ module.exports = app => {
                 if (articleInfo instanceof Array) {
                     for (let item of articleInfo) {
                         let classificationInfo = []
+                        let tagsInfo = []
                         let classificationId = _.split(item.classificationId,',')
-                        console.log('多少分类ID',classificationId);
+                        let labelId = _.split(item.tags,',')
                         for (const iter of classificationId) {
                             let Info = await this.ctx.service.classification.findOneById(iter)
-                            classificationInfo.push(Info.classificationName)
+                            classificationInfo.push(Info)
+                        }
+                        for (const iter of labelId) {
+                            let Info = await this.ctx.service.label.findOneById(iter)
+                            tagsInfo.push(Info)
                         }
                         item['classificationInfo'] = classificationInfo
+                        item['tagsInfo'] = tagsInfo
                         result.push(item);
                     }
                 } else {
                     articleInfo = [articleInfo]
                     for (let item of articleInfo) {
                         let classificationInfo = []
+                        let tagsInfo = []
                         let classificationId = _.split(item.classificationId,',')
-                        console.log('多少分类ID',classificationId);
+                        let labelId = _.split(item.tags,',')
                         for (const iter of classificationId) {
                             let Info = await this.ctx.service.classification.findOneById(iter);
-                            classificationInfo.push(Info.classificationName)
+                            classificationInfo.push(Info)
+                        }
+                        for (const iter of labelId) {
+                            let Info = await this.ctx.service.label.findOneById(iter)
+                            tagsInfo.push(Info)
                         }
                         item['classificationInfo'] = classificationInfo
+                        item['tagsInfo'] = tagsInfo
                         result.push(item);
                     }
                 }

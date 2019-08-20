@@ -71,7 +71,7 @@ class Label extends Service {
      * @param {*} labelId 
      */
     async findOneById(labelId){
-        console.log('---分类ID---', labelId);
+        // console.log('---分类ID---', labelId);
         let labelInfo = await this.ctx.model.Label.findOne({
             where: {
                 id: labelId

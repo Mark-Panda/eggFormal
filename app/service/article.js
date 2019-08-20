@@ -10,7 +10,7 @@ class Article extends Service {
      * @inputParam  入参
      */
     async findArticle(inputParam) {
-        console.log('----查询文章input---', inputParam);
+        console.log('----查询文章inputserver---', inputParam);
         // let articleInfo = await this.ctx.model.Article.findAll(inputParam);
         let { pageSize, pageNum, tags } = inputParam;
         let articleInfo;
