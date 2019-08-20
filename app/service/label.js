@@ -37,7 +37,7 @@ class Label extends Service {
             labelInfo = await this.ctx.model.Label.findAll({
                 where: {
                     labelName: {
-                        [Op.regexp]:   `/.+?` + labelName + `.+?/gi`
+                        [Op.like]:'%' +labelName + '%'
                     }
                 },
                 limit: 1 * pageSize,

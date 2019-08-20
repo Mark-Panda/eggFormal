@@ -1,7 +1,8 @@
 'use strict';
 
 const Service = require('egg').Service;
-
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 class Classification extends Service {
     /**
      * 增加分类
@@ -32,11 +33,15 @@ class Classification extends Service {
             return classificationInfo;
         }
         let { pageSize, pageNum, classificationName} = inputParam;
+        console.log('++++++',classificationName);
         let classificationInfo 
         if(classificationName){
             classificationInfo = await this.ctx.model.Classification.findAll({
                 where: {
-                    classificationName
+                    classificationName: {
+                        [Op.like]:'%' +classificationName + '%'
+                    }
+                    
                 },
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
