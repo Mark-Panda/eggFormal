@@ -85,6 +85,14 @@ module.exports = app => {
                     linkType: {
                         type: 'string'
                     },
+                    desc: {
+                        type: 'string',
+                        optional: true
+                    },
+                    icro: {
+                        type: 'string',
+                        optional: true
+                    }
                 },
                 ginseng: {
                     msg: {
