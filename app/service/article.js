@@ -182,6 +182,8 @@ class Article extends Service {
             this.ctx.throw(404, '没有该文章');
         }
         console.log('---修改内容---',inputParam);
+        if(Array.isArray(inputParam.classificationId)) inputParam.classificationId = inputParam.classificationId.toString()
+        if(Array.isArray(inputParam.tags)) inputParam.tags = inputParam.tags.toString()
         return this.ctx.model.Article.update(inputParam,{where:{id: articleId}});
     }
 

@@ -7,7 +7,7 @@
 module.exports = app => {
     const { STRING, BOOLEAN, INTEGER, TEXT, FLOAT, DATE, UUID } = app.Sequelize;
 
-    const Admin = app.model.define('user', {
+    const User = app.model.define('user', {
         id: {
             type: INTEGER,
             field: 'id',
@@ -34,9 +34,14 @@ module.exports = app => {
         // 同时需要设置paranoid为true（此种模式下，删除数据时不会进行物理删除，而是设置deletedAt为当前时间
         paranoid: true
     });
-    Admin.sync({
+    User.sync({
         alert: true
     });
+    // User.prototype.associate = function() {
+    //     app.model.User.hasMany(app.model.Article, { as: 'userid' });  //外键关系
+    //     app.model.User.hasMany(app.model.Comment, { as: 'userId' });  //外键关系
+    //     app.model.User.hasMany(app.model.Thumbsup, { as: 'userId' });  //外键关系
+    // };
 
-    return Admin;
+    return User;
 };

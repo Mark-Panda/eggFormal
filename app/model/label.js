@@ -15,7 +15,7 @@ module.exports = app => {
         UUID
     } = app.Sequelize;
 
-    const Admin = app.model.define('label', {
+    const Label = app.model.define('label', {
         id: {
             type: INTEGER,
             field: 'id',
@@ -33,9 +33,9 @@ module.exports = app => {
         // 同时需要设置paranoid为true（此种模式下，删除数据时不会进行物理删除，而是设置deletedAt为当前时间
         paranoid: true
     });
-    Admin.sync({
+    Label.sync({
         alert: true
     });
 
-    return Admin;
+    return Label;
 };

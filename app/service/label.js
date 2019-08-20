@@ -1,7 +1,8 @@
 'use strict';
 
 const Service = require('egg').Service;
-
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 class Label extends Service {
     /**
      * 增加分类
@@ -35,7 +36,9 @@ class Label extends Service {
         if(labelName){
             labelInfo = await this.ctx.model.Label.findAll({
                 where: {
-                    labelName
+                    labelName: {
+                        [Op.regexp]:   `/.+?` + labelName + `.+?/gi`
+                    }
                 },
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
