@@ -29,14 +29,14 @@ class Classification extends Service {
 
         console.log('----查询所有分类---');
         if(!inputParam){
-            let classificationInfo = await this.ctx.model.Classification.findAll({force: true,raw: true});
+            let classificationInfo = await this.ctx.model.Classification.findAndCountAll({force: true,raw: true});
             return classificationInfo;
         }
         let { pageSize, pageNum, classificationName} = inputParam;
         console.log('++++++',classificationName);
         let classificationInfo 
         if(classificationName){
-            classificationInfo = await this.ctx.model.Classification.findAll({
+            classificationInfo = await this.ctx.model.Classification.findAndCountAll({
                 where: {
                     classificationName: {
                         [Op.like]:'%' +classificationName + '%'
@@ -48,7 +48,7 @@ class Classification extends Service {
                 raw: true
             })
         }else{
-            classificationInfo = await this.ctx.model.Classification.findAll({
+            classificationInfo = await this.ctx.model.Classification.findAndCountAll({
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
                 raw: true

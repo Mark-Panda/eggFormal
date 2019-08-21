@@ -28,13 +28,13 @@ class Label extends Service {
     async findAllLabel(inputParam) {
         console.log('----查询所有标签---');
         if(!inputParam){
-            let labelInfo = await this.ctx.model.Label.findAll({force: true,raw: true});
+            let labelInfo = await this.ctx.model.Label.findAndCountAll({force: true,raw: true});
             return labelInfo;
         }
         let { pageSize, pageNum, labelName} = inputParam;
         let labelInfo;
         if(labelName){
-            labelInfo = await this.ctx.model.Label.findAll({
+            labelInfo = await this.ctx.model.Label.findAndCountAll({
                 where: {
                     labelName: {
                         [Op.like]:'%' +labelName + '%'
@@ -45,7 +45,7 @@ class Label extends Service {
                 raw: true
             })
         }else{
-            labelInfo = await this.ctx.model.Label.findAll({
+            labelInfo = await this.ctx.model.Label.findAndCountAll({
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
                 raw: true

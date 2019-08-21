@@ -23,7 +23,7 @@ class Article extends Service {
                 raw: true
             })
             console.log('------',labelId);
-            articleInfo = await this.ctx.model.Article.findAll({
+            articleInfo = await this.ctx.model.Article.findAndCountAll({
                 where:{
                     tags:{
                         [Op.like]:'%' +labelId.id + '%'
@@ -36,7 +36,7 @@ class Article extends Service {
             })
             // console.log('======article====',articleInfo);
         }else{
-            articleInfo = await this.ctx.model.Article.findAll({
+            articleInfo = await this.ctx.model.Article.findAndCountAll({
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
                 order: Sequelize.literal('createdAt DESC'),
@@ -54,7 +54,7 @@ class Article extends Service {
      */
     async findAllarticle(inputParam, page, skip) {
         console.log('----查询文章input---', inputParam, page, skip);
-        let articleInfo = await this.ctx.model.Article.findAll({
+        let articleInfo = await this.ctx.model.Article.findAndCountAll({
             where: inputParam,
             limit: 1 * skip,
             offset: skip * (page - 1),

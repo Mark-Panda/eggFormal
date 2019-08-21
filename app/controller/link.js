@@ -125,13 +125,13 @@ module.exports = app => {
             try {
                 this.paramsValidate(methodParm.topLogo.findAlllink.param);
                 console.log('---- 查询链接 ----', this.params);
-                const labelInfo = await this.ctx.service.link.findAllLink(this.params);
-                const count = await this.ctx.service.link.findCount()
-                let result = {
-                    labelInfo,
-                    count
-                }
-                console.log('----result----',result);
+                const linkInfo = await this.ctx.service.link.findAllLink(this.params);
+                console.log('----- 结果 ---',labelInfo);
+                // const count = await this.ctx.service.link.findCount()
+                // let result = {
+                //     labelInfo
+                // }
+                console.log('----result----',linkInfo);
                 this.success('查询成功', result)
             } catch (error) {
                 console.log(error);

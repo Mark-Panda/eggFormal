@@ -410,10 +410,13 @@ module.exports = app => {
                 let result = []
                 const articleInfo = await this.ctx.service.article.findArticle(this.params);
                 console.log('----文章消息----',articleInfo);
-                const count = await this.ctx.service.article.findCount()
+                console.log('----11111----',articleInfo.count);
+                console.log('----22222----',articleInfo.rows[0]);
+                // const count = await this.ctx.service.article.findCount()
                 
-                if (articleInfo instanceof Array) {
-                    for (let item of articleInfo) {
+                
+                if (articleInfo.rows instanceof Array) {
+                    for (let item of articleInfo.rows) {
                         let classificationInfo = []
                         let tagsInfo = []
                         let classificationId = _.split(item.classificationId,',')
@@ -431,8 +434,8 @@ module.exports = app => {
                         result.push(item);
                     }
                 } else {
-                    articleInfo = [articleInfo]
-                    for (let item of articleInfo) {
+                    articleInfo.rows = [articleInfo.rows]
+                    for (let item of articleInfo.rows) {
                         let classificationInfo = []
                         let tagsInfo = []
                         let classificationId = _.split(item.classificationId,',')
@@ -451,7 +454,7 @@ module.exports = app => {
                     }
                 }
                 let articleInfos = {
-                    count,
+                    count:articleInfo.count,
                     result
                 }
                 console.log('==== 文章 ====',articleInfos);

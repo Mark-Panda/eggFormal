@@ -108,14 +108,14 @@ module.exports = app => {
                 this.paramsValidate(methodParm.topLogo.findAllclass.param);
                 console.log('---- 查询分类 ----', this.params);
                 const classificationInfo = await this.ctx.service.classification.findAllclassification(this.params);
-                const count = await this.ctx.service.classification.findCount();
-                console.log('----result----',classificationInfo);
-                console.log('----resultNum----',count);
-                let result = {
-                    classificationInfo,
-                    count
-                }
-                this.success('查询成功', result)
+                // const count = await this.ctx.service.classification.findCount();
+                // console.log('----result----',classificationInfo);
+                // console.log('----resultNum----',count);
+                // let result = {
+                //     classificationInfo,
+                //     count
+                // }
+                this.success('查询成功', classificationInfo)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

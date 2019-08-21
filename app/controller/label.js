@@ -108,12 +108,12 @@ module.exports = app => {
                 this.paramsValidate(methodParm.topLogo.findAlllabel.param);
                 console.log('---- 查询标签 ----', this.params);
                 const labelInfo = await this.ctx.service.label.findAllLabel(this.params);
-                const count = await this.ctx.service.label.findCount()
-                let result = {
-                    labelInfo,
-                    count
-                }
-                console.log('----result----',result);
+                // const count = await this.ctx.service.label.findCount()
+                // let result = {
+                //     labelInfo,
+                //     count
+                // }
+                console.log('----result----',labelInfo);
                 this.success('查询成功', result)
             } catch (error) {
                 console.log(error);

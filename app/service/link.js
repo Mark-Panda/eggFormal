@@ -30,20 +30,20 @@ class Link extends Service {
     async findAllLink(inputParam) {
         console.log('----查询所有链接---');
         if(!inputParam){
-            let linkInfo = await this.ctx.model.Link.findAll({force: true,raw: true});
+            let linkInfo = await this.ctx.model.Link.findAndCountAll({force: true,raw: true});
             return linkInfo;
         }
         let { pageSize, pageNum, linkName, linkType} = inputParam;
         let linksInfo;
         if (!linkName && !linkType){
-            linksInfo = await this.ctx.model.Link.findAll({
+            linksInfo = await this.ctx.model.Link.findAndCountAll({
                 limit: 1 * pageSize,
                 offset: pageSize * (pageNum - 1),
                 raw: true
             })
         }
         if(linkName && !linkType){
-            linksInfo = await this.ctx.model.Link.findAll({
+            linksInfo = await this.ctx.model.Link.findAndCountAll({
                 where: {
                     linkName: {
                         [Op.like]:'%' +linkName + '%'
@@ -54,7 +54,7 @@ class Link extends Service {
                 raw: true
             })
         }else if (!linkName && linkType){
-            linksInfo = await this.ctx.model.Link.findAll({
+            linksInfo = await this.ctx.model.Link.findAndCountAll({
                 where: {
                     linkType: {
                         [Op.like]:'%' +linkType + '%'
@@ -65,7 +65,7 @@ class Link extends Service {
                 raw: true
             })
         }else if(linkName && linkType){
-            linksInfo = await this.ctx.model.Link.findAll({
+            linksInfo = await this.ctx.model.Link.findAndCountAll({
                 where: {
                     linkName: {
                         [Op.like]:'%' +linkName + '%'
