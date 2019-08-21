@@ -89,7 +89,7 @@ module.exports = app => {
                         type: 'string',
                         optional: true
                     },
-                    icro: {
+                    icon: {
                         type: 'string',
                         optional: true
                     }

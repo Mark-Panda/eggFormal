@@ -28,7 +28,7 @@ module.exports = app => {
         linkAddress: STRING , //链接地址
         linkType: STRING,     //链接类型
         desc: STRING,    //描述
-        icro: STRING    //图标
+        icon: STRING    //图标
     }, {
         freezeTableName: true, // Model 对应的表名将与model名相同
         tableName: 'link',
