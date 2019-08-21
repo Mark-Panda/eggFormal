@@ -109,12 +109,12 @@ module.exports = app => {
                 console.log('---- 查询标签 ----', this.params);
                 const labelInfo = await this.ctx.service.label.findAllLabel(this.params);
                 // const count = await this.ctx.service.label.findCount()
-                // let result = {
-                //     labelInfo,
-                //     count
-                // }
-                console.log('----result----',labelInfo);
-                this.success('查询成功', labelInfo)
+                let result = {
+                    labelInfo: labelInfo.rows,
+                    count:labelInfo.count
+                }
+                console.log('----result----',result);
+                this.success('查询成功', result)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

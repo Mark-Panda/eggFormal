@@ -111,11 +111,11 @@ module.exports = app => {
                 // const count = await this.ctx.service.classification.findCount();
                 // console.log('----result----',classificationInfo);
                 // console.log('----resultNum----',count);
-                // let result = {
-                //     classificationInfo,
-                //     count
-                // }
-                this.success('查询成功', classificationInfo)
+                let result = {
+                    classificationInfo: classificationInfo.rows,
+                    count: classificationInfo.count
+                }
+                this.success('查询成功', result)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

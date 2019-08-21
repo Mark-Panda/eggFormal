@@ -126,7 +126,7 @@ module.exports = app => {
                 this.paramsValidate(methodParm.topLogo.findAlllink.param);
                 console.log('---- 查询链接 ----', this.params);
                 const linkInfo = await this.ctx.service.link.findAllLink(this.params);
-                console.log('----- 结果 ---',labelInfo);
+                console.log('----- 结果 ---',linkInfo);
                 // const count = await this.ctx.service.link.findCount()
                 let result = {
                     count: linkInfo.count,
