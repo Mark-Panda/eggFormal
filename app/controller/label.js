@@ -135,7 +135,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('删除标签失败',error);
+                this.fail('删除标签失败'+error);
             }
         }
 
@@ -148,7 +148,7 @@ module.exports = app => {
             } catch (error) {
                 console.log('??????????????',error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('添加标签失败',error);
+                this.fail('添加标签失败'+error);
             }
         }
     }

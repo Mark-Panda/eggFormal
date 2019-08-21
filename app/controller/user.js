@@ -243,14 +243,14 @@ module.exports = app => {
                 console.log('findJson', findJson);
                 let data = await this.ctx.service.user.findWithJson(findJson);
                 if (data) {
-                    this.fail('用户已存在', data);
+                    this.fail('用户已存在'+data);
                     return;
                 }
                 data = await this.ctx.service.user.createUser(this.params);
                 this.success('注册成功', data);
             } catch (e) {
                 this.ctx.logger.error('注册异常: ', e);
-                this.fail('注册失败', e);
+                this.fail('注册失败'+e);
             }
 
         }

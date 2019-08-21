@@ -476,7 +476,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('查询失败',error)
+                this.fail('查询失败'+error)
             }
         }
 
@@ -582,7 +582,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('update error: ', error);
-                this.fail('修改文章失败',error)
+                this.fail('修改文章失败'+error)
             }
         }
 
@@ -603,7 +603,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('destroy error: ', error);
-                this.fail('删除文章失败',error)
+                this.fail('删除文章失败'+error)
             }
         }
     }

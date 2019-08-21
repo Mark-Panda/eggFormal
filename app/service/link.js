@@ -8,7 +8,7 @@ class Link extends Service {
      * 增加链接
      */
     async createLink(inputParam) {
-        console.log('----增加分类----', inputParam);
+        console.log('----增加链接----', inputParam);
         let linksInfo = await this.ctx.model.Link.findOne({
             where: {
                 linkAddress: inputParam.linkAddress

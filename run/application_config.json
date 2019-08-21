@@ -2328,9 +2328,9 @@
                         "type": "string",
                         "description": " 入参desc"
                       },
-                      "icro": {
+                      "icon": {
                         "type": "string",
-                        "description": " 入参icro"
+                        "description": " 入参icon"
                       }
                     }
                   }

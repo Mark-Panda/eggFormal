@@ -64,7 +64,7 @@ module.exports = app => {
                 this.success('注册成功', weatherInfo)
             } catch (e) {
                 this.ctx.logger.error('获取天气异常: ', e);
-                this.fail('获取天气失败', e);
+                this.fail('获取天气失败'+e);
             }
         }
     }

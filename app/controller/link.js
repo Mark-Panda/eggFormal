@@ -153,7 +153,7 @@ module.exports = app => {
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('删除链接失败',error);
+                this.fail('删除链接失败'+error);
             }
         }
 
@@ -166,7 +166,7 @@ module.exports = app => {
             } catch (error) {
                 console.log('??????????????',error);
                 this.ctx.logger.error('find error: ', error);
-                this.fail('添加链接失败',error);
+                this.fail('添加链接失败'+error);
             }
         }
     }
