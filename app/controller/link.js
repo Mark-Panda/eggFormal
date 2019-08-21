@@ -132,7 +132,7 @@ module.exports = app => {
                 //     labelInfo
                 // }
                 console.log('----result----',linkInfo);
-                this.success('查询成功', result)
+                this.success('查询成功', linkInfo)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

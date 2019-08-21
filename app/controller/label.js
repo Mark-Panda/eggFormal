@@ -114,7 +114,7 @@ module.exports = app => {
                 //     count
                 // }
                 console.log('----result----',labelInfo);
-                this.success('查询成功', result)
+                this.success('查询成功', labelInfo)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
