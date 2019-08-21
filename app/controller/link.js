@@ -128,11 +128,12 @@ module.exports = app => {
                 const linkInfo = await this.ctx.service.link.findAllLink(this.params);
                 console.log('----- 结果 ---',labelInfo);
                 // const count = await this.ctx.service.link.findCount()
-                // let result = {
-                //     labelInfo
-                // }
-                console.log('----result----',linkInfo);
-                this.success('查询成功', linkInfo)
+                let result = {
+                    count: linkInfo.count,
+                    linkInfo:linkInfo.rows
+                }
+                console.log('----result----',result);
+                this.success('查询成功', result)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);
