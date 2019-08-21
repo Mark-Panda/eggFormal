@@ -17,12 +17,11 @@ module.exports = app => {
 
     const ComHasArt = app.model.define('comHasArt', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         commentId: STRING,  //评论ID
         articleId: STRING,  //文章ID

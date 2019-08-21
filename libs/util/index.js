@@ -137,6 +137,12 @@ var S4 = function () {
 exports.generateGuid = function () {
     return (S4() + S4() + S4() + S4() + S4() + S4() + S4() + S4());
 }
+/**
+ * 16为随机数
+ */
+exports.generateGuid_16 = function () {
+    return (S4() + S4() + S4() + S4());
+}
 
 /*
  从request肿获取用户ip地址

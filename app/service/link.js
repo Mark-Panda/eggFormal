@@ -3,6 +3,7 @@
 const Service = require('egg').Service;
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+const {generateGuid_16} = require('../../libs/util')
 class Link extends Service {
     /**
      * 增加链接
@@ -20,6 +21,7 @@ class Link extends Service {
         if (linksInfo) {
             this.ctx.throw(404, '已有该链接');
         }
+        inputParam.id = generateGuid_16()
         let linkInfo = await this.ctx.model.Link.create(inputParam);
         return linkInfo;
     }

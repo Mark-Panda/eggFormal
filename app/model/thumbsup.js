@@ -17,12 +17,11 @@ module.exports = app => {
 
     const Thumbsup = app.model.define('thumbsup', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         commentId: STRING,
         userId: STRING,

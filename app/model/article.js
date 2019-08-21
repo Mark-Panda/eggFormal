@@ -9,12 +9,11 @@ module.exports = app => {
 
     const Article = app.model.define('article', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         title: STRING, //标题
         content: TEXT, //文章内容

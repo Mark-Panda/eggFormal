@@ -17,12 +17,11 @@ module.exports = app => {
 
     const Admin = app.model.define('admin', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         roleid: STRING, //角色 ID
         userid: {

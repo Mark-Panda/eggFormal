@@ -3,6 +3,7 @@
 const Service = require('egg').Service;
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+const {generateGuid_16} = require('../../libs/util')
 
 class Article extends Service {
     /**
@@ -128,6 +129,7 @@ class Article extends Service {
         }
         inputParam.tags = resultTag
         inputParam.classificationId = resultTags
+        inputParam.id = generateGuid_16()
         console.log('---- 文章录入11111 ----', inputParam);
         let data = await this.ctx.model.Article.create(inputParam);
         return data;

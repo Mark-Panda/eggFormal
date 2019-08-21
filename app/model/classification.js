@@ -17,12 +17,11 @@ module.exports = app => {
 
     const Classification = app.model.define('classification', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         classificationName: STRING, //分类名
 

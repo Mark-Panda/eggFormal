@@ -1,7 +1,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-
+const {generateGuid_16} = require('../../libs/util')
 class Thumbsup extends Service {
     /**
      * 增加点赞
@@ -9,6 +9,7 @@ class Thumbsup extends Service {
      */
     async insertThumbsup(inputparm) {
         console.log('----点赞入参----', inputparm);
+        inputparm.id = generateGuid_16()
         let commentInfo = await this.ctx.model.Thumbsup.create(inputparm);
         return commentInfo;
     }

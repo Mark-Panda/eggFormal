@@ -17,12 +17,11 @@ module.exports = app => {
 
     const Comment = app.model.define('comment', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         userId: STRING,
         articleId: STRING,

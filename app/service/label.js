@@ -3,6 +3,7 @@
 const Service = require('egg').Service;
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+const {generateGuid_16} = require('../../libs/util')
 class Label extends Service {
     /**
      * 增加分类
@@ -18,6 +19,7 @@ class Label extends Service {
         if (labelsInfo) {
             this.ctx.throw(404, '已有该标签');
         }
+        inputParam.id = generateGuid_16()
         let labelInfo = await this.ctx.model.Label.create(inputParam);
         return labelInfo;
     }

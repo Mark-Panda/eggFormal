@@ -9,12 +9,11 @@ module.exports = app => {
 
     const User = app.model.define('user', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         userid: {
             type: STRING, //用户ID

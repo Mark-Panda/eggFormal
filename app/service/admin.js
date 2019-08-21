@@ -1,7 +1,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-
+const {generateGuid_16} = require('../../libs/util')
 class Admin extends Service {
 
     /**
@@ -24,6 +24,7 @@ class Admin extends Service {
             admin.password = this.ctx.helper.encrypt(admin.password)
         }
         console.log('admin', admin);
+        admin.id = generateGuid_16()
         let data = await this.ctx.model.Admin.create(admin);
         return data;
     }

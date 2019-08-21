@@ -3,6 +3,7 @@
 const Service = require('egg').Service;
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+const {generateGuid_16} = require('../../libs/util')
 class Classification extends Service {
     /**
      * 增加分类
@@ -18,6 +19,7 @@ class Classification extends Service {
         if (classInfo) {
             this.ctx.throw(404, '已有该分类');
         }
+        inputParam.id = generateGuid_16()
         let classificationInfo = await this.ctx.model.Classification.create(inputParam);
         return classificationInfo;
     }

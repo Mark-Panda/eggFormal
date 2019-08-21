@@ -17,12 +17,11 @@ module.exports = app => {
 
     const Link = app.model.define('link', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         linkName: STRING , //链接名
         linkAddress: STRING , //链接地址

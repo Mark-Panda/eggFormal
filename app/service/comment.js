@@ -1,7 +1,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-
+const {generateGuid_16} = require('../../libs/util')
 class Comment extends Service {
     /**
      * 插入评论
@@ -9,6 +9,7 @@ class Comment extends Service {
      */
     async insertComment(inputparm) {
         console.log('----增加分类----', inputparm);
+        inputparm.id = generateGuid_16()
         let commentInfo = await this.ctx.model.Comment.create(inputparm);
         return commentInfo;
     }

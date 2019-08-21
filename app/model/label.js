@@ -17,12 +17,11 @@ module.exports = app => {
 
     const Label = app.model.define('label', {
         id: {
-            type: INTEGER,
+            type: STRING(100),
             field: 'id',
             unique: true,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         labelName: {type:STRING.BINARY} , //标签名
 
