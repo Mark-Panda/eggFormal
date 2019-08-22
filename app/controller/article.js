@@ -392,6 +392,48 @@ module.exports = app => {
                     middwareMethod: '',
                     method: 'findArticleById'
                 }
+            },
+            headerFindArticle: {
+                param: {
+                    likes: {
+                        type: 'any',
+                        optional: true
+                    },
+                    tag_id: {
+                        type: 'any',
+                        optional: true
+                    },
+                    category_id: {
+                        type: 'any',
+                        optional: true
+                    },
+                    pageNum: {
+                        type: 'any'
+                    },
+                    pageSize: {
+                        type: 'any'
+                    }
+                },
+                ginseng: {
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        type: 'int'
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
+                },
+                rule: {
+                    desc: '首页查询文章',
+                    url: '',
+                    middwareMethod: '',
+                    method: 'headerFindArticle'
+                }
             }
         }
     }
@@ -460,6 +502,35 @@ module.exports = app => {
                 console.log('==== 文章 ====',articleInfos);
                 this.success('查询成功', articleInfos)
 
+            } catch (error) {
+                console.log(error);
+                this.ctx.logger.error('find error: ', error);
+                this.fail(error)
+            }
+        }
+
+        /**
+         * 首页查询文章
+         */
+        async headerFindArticle() {
+            try {
+                this.paramsValidate(methodParm.topLogo.headerFindArticle.param); //状态码  201 参数错误
+                console.log('--- 首页查询文章 ---', this.params);
+                let result = []
+                const articleInfo = await this.ctx.service.article.headerFindArticle(this.params);
+                console.log('--- 几篇文章 ---',articleInfo);
+                const classificationInfo = await this.ctx.service.classification.findAllclassification()
+                const labelInfo = await this.ctx.service.label.findAllLabel()
+                const linkInfo = await this.ctx.service.link.findAllLink()
+
+                result = {
+                    articleInfo,
+                    classificationInfo,
+                    labelInfo,
+                    linkInfo
+                }
+                console.log('==== 首页文章 ====',result);
+                this.success('查询成功', result)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

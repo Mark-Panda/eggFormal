@@ -51,6 +51,56 @@ class Article extends Service {
 
     /**
      * 
+     * 首页查询文章
+     */
+    async headerFindArticle(inputParam) {
+        console.log('----首页查询文章inputserver---', inputParam);
+        let { pageSize, pageNum, likes, tag_id, category_id } = inputParam;
+        let articleInfo;
+        if(!likes && !tag_id && !category_id){
+            articleInfo = await this.ctx.model.Article.findAndCountAll({
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                order: Sequelize.literal('createdAt DESC'),
+                raw: true
+            });
+        }else if(likes){
+            articleInfo = await this.ctx.model.Article.findAndCountAll({
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                order: [Sequelize.literal('createdAt DESC'),Sequelize.literal('viewCounts DESC')],
+                raw: true
+            });
+        }else if(tag_id){
+            articleInfo = await this.ctx.model.Article.findAndCountAll({
+                where:{
+                    tags:{
+                        [Op.like]:'%' + tag_id + '%'
+                    }
+                },
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                order: Sequelize.literal('createdAt DESC'),
+                raw: true
+            });
+        }else if(category_id){
+            articleInfo = await this.ctx.model.Article.findAndCountAll({
+                where:{
+                    classificationId:{
+                        [Op.like]:'%' + category_id + '%'
+                    }
+                },
+                limit: 1 * pageSize,
+                offset: pageSize * (pageNum - 1),
+                order: Sequelize.literal('createdAt DESC'),
+                raw: true
+            });
+        }
+        return articleInfo;
+    }
+
+    /**
+     * 
      * @param {查询某一分类所有文章} inputParam 
      */
     async findAllarticle(inputParam, page, skip) {

@@ -1430,6 +1430,84 @@
               }
             }
           },
+          "/headerFindArticle": {
+            "post": {
+              "tags": [
+                "article"
+              ],
+              "summary": "首页查询文章",
+              "description": "首页查询文章",
+              "parameters": [
+                {
+                  "in": "body",
+                  "name": "body",
+                  "description": "请求的入参参数",
+                  "required": true,
+                  "schema": {
+                    "type": "object",
+                    "required": [
+                      "username",
+                      "password"
+                    ],
+                    "properties": {
+                      "likes": {
+                        "type": "string",
+                        "description": " 入参likes"
+                      },
+                      "tag_id": {
+                        "type": "string",
+                        "description": " 入参tag_id"
+                      },
+                      "category_id": {
+                        "type": "string",
+                        "description": " 入参category_id"
+                      },
+                      "pageNum": {
+                        "type": "string",
+                        "description": " 入参pageNum"
+                      },
+                      "pageSize": {
+                        "type": "string",
+                        "description": " 入参pageSize"
+                      }
+                    }
+                  }
+                }
+              ],
+              "responses": {
+                "success": {
+                  "description": "请求成功后返回的信息",
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "data": {
+                        "type": "object",
+                        "description": "data",
+                        "properties": {
+                          "msg": {
+                            "type": "string",
+                            "description": "接口出参参数msg"
+                          },
+                          "data": {
+                            "type": "string",
+                            "description": "接口出参参数data"
+                          },
+                          "status": {
+                            "type": "string",
+                            "description": "接口出参参数status"
+                          },
+                          "code": {
+                            "type": "string",
+                            "description": "接口出参参数code"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "/findAllclass": {
             "post": {
               "tags": [

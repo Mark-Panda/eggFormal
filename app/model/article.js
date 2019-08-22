@@ -25,6 +25,7 @@ module.exports = app => {
         type: STRING, // 文章类型 => 1: 普通文章，2: 简历，3: 管理员介绍
         classificationId: STRING, //分类ID
         count: INTEGER, //点赞次数
+        viewCounts: INTEGER, //浏览次数
         commentId: STRING, //评论ID
         thumbsupId: STRING, //点赞ID
         userid: STRING, //用户ID
