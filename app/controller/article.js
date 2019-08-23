@@ -117,6 +117,10 @@ module.exports = app => {
                         type: 'any',
                         optional: true
                     },
+                    desc: {
+                        type: 'any',
+                        optional: true
+                    },
                     img_url: {
                         type: 'string',
                         optional: true

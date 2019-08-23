@@ -19,6 +19,7 @@ module.exports = app => {
         content: TEXT, //文章内容
         author: STRING, //作者
         tags: STRING, //标签
+        desc: STRING,  //描述
         img_url: STRING, //封面链接（后台上传一个链接，前端根据这个地址展示文章的封面）
         origin: STRING, //创作模式   0 原创，1 转载，2 混合
         state: STRING, //文章发布状态 => 0 草稿，1 已发布

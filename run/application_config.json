@@ -1084,6 +1084,10 @@
                         "type": "string",
                         "description": " 入参tags"
                       },
+                      "desc": {
+                        "type": "string",
+                        "description": " 入参desc"
+                      },
                       "img_url": {
                         "type": "string",
                         "description": " 入参img_url"
