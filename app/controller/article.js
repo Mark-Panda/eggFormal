@@ -193,6 +193,10 @@ module.exports = app => {
                     title: {
                         type: 'string'
                     },
+                    desc: {
+                        type: 'any',
+                        optional: true
+                    },
                     tags: {
                         type: 'any',
                         optional: true
@@ -651,8 +655,8 @@ module.exports = app => {
             try {
                 this.paramsValidate(methodParm.topLogo.updateArticle.param)
                 console.log('---- 修改文章所需信息 ----', this.params);
-                let { articleId, classificationId, content, author, title, tags, img_url, origin, state, type} = this.params;
-                let updateInfo = {classificationId, content, author, title, tags, img_url, origin, state, type}
+                let { articleId, classificationId, content, author, title, tags, img_url, origin, state, type, desc} = this.params;
+                let updateInfo = {classificationId, content, author, title, tags, img_url, origin, state, type, desc}
                 const updateArticleInfo = await this.ctx.service.article.updateArticleById(articleId, updateInfo);
                 console.log('--------',updateArticleInfo[0]);
                 this.success('修改成功', updateArticleInfo[0])
