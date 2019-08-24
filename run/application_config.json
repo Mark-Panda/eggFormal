@@ -1182,6 +1182,10 @@
                         "type": "string",
                         "description": " 入参title"
                       },
+                      "desc": {
+                        "type": "string",
+                        "description": " 入参desc"
+                      },
                       "tags": {
                         "type": "string",
                         "description": " 入参tags"

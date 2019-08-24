@@ -554,7 +554,30 @@ module.exports = app => {
                 this.paramsValidate(methodParm.topLogo.findArticleById.param); //状态码  201 参数错误
                 console.log('---- 文章ID ----',this.params);
                 const articleInfo = await this.ctx.service.article.findArticleById(this.params)
-                this.success('查询成功',articleInfo)
+                const commentInfo = await this.ctx.service.comment.findCommentByIds({articleId:articleInfo.id})
+
+                let classificationInfo = []
+                let tagsInfo = []
+                let classificationId = _.split(articleInfo.classificationId,',')
+                let labelId = _.split(articleInfo.tags,',')
+                for (const iter of classificationId) {
+                    let Info = await this.ctx.service.classification.findOneById(iter)
+                    classificationInfo.push(Info)
+                }
+                for (const iter of labelId) {
+                    let Info = await this.ctx.service.label.findOneById(iter)
+                    tagsInfo.push(Info)
+                }
+                articleInfo['classificationInfo'] = classificationInfo
+                articleInfo['tagsInfo'] = tagsInfo
+                articleInfo['wordNum'] = articleInfo.content.length
+
+                let result = {
+                    articleInfo,
+                    commentInfo
+                }
+                console.log('---- 文章详情 ---',result);
+                this.success('查询成功',result)
             } catch (error) {
                 console.log(error);
                 this.ctx.logger.error('find error: ', error);

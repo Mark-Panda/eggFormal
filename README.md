@@ -1,6 +1,6 @@
 # formalEgg
 
-一个属于自己构思的项目
+简单的博客项目, 基于egg.js
 
 ## QuickStart
 

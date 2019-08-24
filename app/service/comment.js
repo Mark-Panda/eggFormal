@@ -45,13 +45,24 @@ class Comment extends Service {
             userId,
             articleId
         } = inputparm;
-        let commentInfo = await this.ctx.model.Comment.findAll({
-            where: {
-                userId,
-                articleId
-            },
-            force: true
-        });
+        let commentInfo;
+        if(!userId){
+            commentInfo = await this.ctx.model.Comment.findAll({
+                where: {
+                    articleId
+                },
+                force: true,
+                raw: true
+            });
+        }else{
+            commentInfo = await this.ctx.model.Comment.findAll({
+                where: {
+                    userId,
+                    articleId
+                },
+                force: true
+            });
+        }
         return commentInfo;
     }
 }
