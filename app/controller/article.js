@@ -182,16 +182,20 @@ module.exports = app => {
                         type: 'any'
                     },
                     classificationId: {
-                        type: 'any'
+                        type: 'any',
+                        optional: true
                     },
                     content: {
-                        type: 'string'
+                        type: 'string',
+                        optional: true
                     },
                     author: {
-                        type: 'string'
+                        type: 'string',
+                        optional: true
                     },
                     title: {
-                        type: 'string'
+                        type: 'string',
+                        optional: true
                     },
                     desc: {
                         type: 'any',
@@ -206,13 +210,24 @@ module.exports = app => {
                         optional: true
                     },
                     origin: {
-                        type: 'any'
+                        type: 'any',
+                        optional: true
                     },
                     state: {
-                        type: 'any'
+                        type: 'any',
+                        optional: true
                     },
                     type: {
-                        type: 'any'
+                        type: 'any',
+                        optional: true
+                    },
+                    viewCounts: {
+                        type: 'any',
+                        optional: true
+                    },
+                    count: {
+                        type: 'any',
+                        optional: true
                     }
                 },
                 ginseng: {
@@ -678,9 +693,18 @@ module.exports = app => {
             try {
                 this.paramsValidate(methodParm.topLogo.updateArticle.param)
                 console.log('---- 修改文章所需信息 ----', this.params);
-                let { articleId, classificationId, content, author, title, tags, img_url, origin, state, type, desc} = this.params;
-                let updateInfo = {classificationId, content, author, title, tags, img_url, origin, state, type, desc}
-                const updateArticleInfo = await this.ctx.service.article.updateArticleById(articleId, updateInfo);
+                let { articleId, classificationId, content, author, title, tags, img_url, origin, state, type, desc, viewCounts, count} = this.params;
+                let updateArticleInfo;
+                if(viewCounts){
+                    let updateInfo = {viewCounts}
+                    updateArticleInfo = await this.ctx.service.article.updateArticleById(articleId, updateInfo);
+                }else if(count){
+                    let updateInfo = {count}
+                    updateArticleInfo = await this.ctx.service.article.updateArticleById(articleId, updateInfo);
+                }else{
+                    let updateInfo = {classificationId, content, author, title, tags, img_url, origin, state, type, desc}
+                    updateArticleInfo = await this.ctx.service.article.updateArticleById(articleId, updateInfo);
+                }
                 console.log('--------',updateArticleInfo[0]);
                 this.success('修改成功', updateArticleInfo[0])
 
@@ -690,6 +714,8 @@ module.exports = app => {
                 this.fail('修改文章失败'+error)
             }
         }
+
+        
 
         /**
          * 删除文章

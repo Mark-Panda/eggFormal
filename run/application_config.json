@@ -1205,6 +1205,14 @@
                       "type": {
                         "type": "string",
                         "description": " 入参type"
+                      },
+                      "viewCounts": {
+                        "type": "string",
+                        "description": " 入参viewCounts"
+                      },
+                      "count": {
+                        "type": "string",
+                        "description": " 入参count"
                       }
                     }
                   }
