@@ -58,14 +58,8 @@ module.exports = app => {
             },
             destryComment: {
                 param: {
-                    userId: {
-                        type: 'string'
-                    },
-                    articleId: {
-                        type: 'string'
-                    },
                     commentId: {
-                        type: 'string'
+                        type: 'any'
                     },
                 },
                 ginseng: {
@@ -92,10 +86,11 @@ module.exports = app => {
             selectComment: {
                 param: {
                     userId: {
-                        type: 'string'
+                        type: 'any',
+                        optional: true
                     },
                     articleId: {
-                        type: 'string'
+                        type: 'any',
                     },
                 },
                 ginseng: {
@@ -133,12 +128,53 @@ module.exports = app => {
                     },
                 },
                 rule: {
-                    desc: '查询评论接口',
+                    desc: '查询某一文章评论接口',
                     url: '',
                     middwareMethod: '',
                     method: 'selectComment'
                 }
-            }
+            },
+            selectAllComment: {
+                param: {
+                },
+                ginseng: {
+                    msg: {
+                        type: 'string'
+                    },
+                    data: {
+                        id: {
+                            type: 'int'
+                        },
+                        userId: {
+                            type: 'string'
+                        },
+                        articleId: {
+                            type: 'string'
+                        },
+                        message: {
+                            type: 'string'
+                        },
+                        updatedAt: {
+                            type: 'string'
+                        },
+                        deletedAt: {
+                            type: 'string'
+                        },
+                    },
+                    status: {
+                        type: 'int'
+                    },
+                    code: {
+                        type: 'int'
+                    },
+                },
+                rule: {
+                    desc: '查询所有评论',
+                    url: '',
+                    middwareMethod: '',
+                    method: 'selectAllComment'
+                }
+            },
         }
     }
     app.loadApiswagger(methodParm);
@@ -181,6 +217,19 @@ module.exports = app => {
                 console.log('查询评论入参:', this.params);
 
                 let data = await this.ctx.service.comment.findCommentByIds(this.params);
+                this.success('查询评论成功', data)
+            } catch (error) {
+                console.log('-----错误-----', error);
+                this.ctx.logger.error('select error: ', error);
+                this.fail('查询评论失败');
+            }
+        }
+
+        //查询所有评论
+        async selectAllComment() {
+            this.paramsValidate(methodParm.topLogo.selectAllComment.param);
+            try {
+                let data = await this.ctx.service.comment.findAllComment();
                 this.success('查询评论成功', data)
             } catch (error) {
                 console.log('-----错误-----', error);

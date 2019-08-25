@@ -34,6 +34,9 @@ module.exports = app => {
         realName: STRING, //昵称
         isLocked: BOOLEAN, //是否锁定  0 锁定  1 正常
         mechanismId: STRING, //二级机构ID
+        avatar: STRING,  //头像
+        introduction: STRING,  //简介
+        email: STRING,    //邮箱
         //last_sign_in_at: DATE, //最后登录时间
 
     }, {

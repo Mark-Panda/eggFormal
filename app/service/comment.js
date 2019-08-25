@@ -21,15 +21,11 @@ class Comment extends Service {
     async removeComment(inputparm) {
         console.log('-----评论参数-----', inputparm);
         let {
-            userId,
-            articleId,
             commentId
         } = inputparm;
         let commentInfo = await this.ctx.model.Comment.destroy({
             where: {
                 id: commentId,
-                userId,
-                articleId
             },
             force: true
         });
@@ -63,6 +59,17 @@ class Comment extends Service {
                 force: true
             });
         }
+        return commentInfo;
+    }
+
+    /**
+     * 查询所有评论
+     */
+    async findAllComment() {
+        let commentInfo = await this.ctx.model.Comment.findAll({
+            force: true,
+            raw: true
+        })
         return commentInfo;
     }
 }

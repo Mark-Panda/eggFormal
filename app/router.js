@@ -26,7 +26,7 @@ let nameSpaceList = {
             method: ['findAllclass', 'deleteClassById', 'insertClass']
         },
         comment: {
-            method: ['insertComment', 'destryComment', 'selectComment']
+            method: ['insertComment', 'destryComment', 'selectComment', 'selectAllComment']
         },
         thumbsup: {
             method: ['articleThumbsup', 'articleNothumbsup']
@@ -36,6 +36,9 @@ let nameSpaceList = {
         },
         link: {
             method: ['findAlllink', 'deleteLinkById', 'insertLink']
+        },
+        projects: {
+            method: ['findAllProject', 'deleteProjectById', 'insertProject']
         }
     }
 };
