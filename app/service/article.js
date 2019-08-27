@@ -64,6 +64,21 @@ class Article extends Service {
                 order: Sequelize.literal('createdAt DESC'),
                 raw: true
             });
+            console.log('---- articleInfo ---',articleInfo);
+            for(let item of articleInfo.rows){
+                item['commectCount'] = await this.ctx.model.Comment.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+                item['thumbsupCount'] = await this.ctx.model.Thumbsup.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+            }
         }else if(likes){
             articleInfo = await this.ctx.model.Article.findAndCountAll({
                 limit: 1 * pageSize,
@@ -71,6 +86,20 @@ class Article extends Service {
                 order: [Sequelize.literal('createdAt DESC'),Sequelize.literal('viewCounts DESC')],
                 raw: true
             });
+            for(let item of articleInfo.rows){
+                item['commectCount'] = await this.ctx.model.Comment.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+                item['thumbsupCount'] = await this.ctx.model.Thumbsup.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+            }
         }else if(tag_id){
             articleInfo = await this.ctx.model.Article.findAndCountAll({
                 where:{
@@ -83,6 +112,20 @@ class Article extends Service {
                 order: Sequelize.literal('createdAt DESC'),
                 raw: true
             });
+            for(let item of articleInfo.rows){
+                item['commectCount'] = await this.ctx.model.Comment.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+                item['thumbsupCount'] = await this.ctx.model.Thumbsup.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+            }
         }else if(category_id){
             articleInfo = await this.ctx.model.Article.findAndCountAll({
                 where:{
@@ -95,6 +138,20 @@ class Article extends Service {
                 order: Sequelize.literal('createdAt DESC'),
                 raw: true
             });
+            for(let item of articleInfo.rows){
+                item['commectCount'] = await this.ctx.model.Comment.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+                item['thumbsupCount'] = await this.ctx.model.Thumbsup.count({
+                    where:{
+                        articleId:item.id
+                    },
+                    raw: true
+                })
+            }
         }
         return articleInfo;
     }
