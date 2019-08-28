@@ -255,6 +255,18 @@ class Article extends Service {
             force: true,
             raw: true
         });
+        articleInfo['commectCount'] = await this.ctx.model.Comment.count({
+            where:{
+                articleId:articleId
+            },
+            raw: true
+        })
+        articleInfo['thumbsupCount'] = await this.ctx.model.Thumbsup.count({
+            where:{
+                articleId:articleId
+            },
+            raw: true
+        })
         console.log('---- 文章详情 ----', articleInfo);
         return articleInfo;
     }
