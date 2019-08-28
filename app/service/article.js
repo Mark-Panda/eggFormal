@@ -257,13 +257,13 @@ class Article extends Service {
         });
         articleInfo['commectCount'] = await this.ctx.model.Comment.count({
             where:{
-                articleId:articleId
+                articleId
             },
             raw: true
         })
         articleInfo['thumbsupCount'] = await this.ctx.model.Thumbsup.count({
             where:{
-                articleId:articleId
+                articleId
             },
             raw: true
         })
