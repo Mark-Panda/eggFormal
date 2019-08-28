@@ -569,6 +569,8 @@ module.exports = app => {
                 this.paramsValidate(methodParm.topLogo.findArticleById.param); //状态码  201 参数错误
                 console.log('---- 文章ID ----',this.params);
                 const articleInfo = await this.ctx.service.article.findArticleById(this.params)
+                articleInfo.viewCounts = articleInfo.viewCounts + 1
+                await this.ctx.service.article.updateArticleById(articleInfo.id, {viewCounts:articleInfo.viewCounts}) 
                 const commentInfo = await this.ctx.service.comment.findCommentByIds({articleId:articleInfo.id})
 
                 let classificationInfo = []
