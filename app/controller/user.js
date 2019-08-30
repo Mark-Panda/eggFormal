@@ -238,7 +238,7 @@ module.exports = app => {
                 console.log('注册管理员入参:', this.params);
                 let findJson = {
                     where: {
-                        userName: this.params.userName
+                        email: this.params.email
                     }
                 }
                 console.log('findJson', findJson);
