@@ -78,7 +78,7 @@ module.exports = app => {
             },
             login: {
                 param: {
-                    userName: {
+                    email: {
                         type: 'string'
                     },
                     password: {
@@ -265,7 +265,7 @@ module.exports = app => {
             try {
                 console.log(this.params);
                 let {
-                    userName,
+                    email,
                     password
                 } = this.params;
                 let {
@@ -274,7 +274,7 @@ module.exports = app => {
 
                 let findJson = {
                     where: {
-                        userName: userName
+                        email: email
                     }
                 }
                 const user = await this.ctx.service.user.findWithJson(findJson);
