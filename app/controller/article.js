@@ -393,6 +393,10 @@ module.exports = app => {
                 param: {
                     articleId: {
                         type: 'any'
+                    },
+                    userId: {
+                        type: 'any',
+                        optional: true
                     }
                 },
                 ginseng: {
@@ -568,7 +572,15 @@ module.exports = app => {
             try {
                 this.paramsValidate(methodParm.topLogo.findArticleById.param); //状态码  201 参数错误
                 console.log('---- 文章ID ----',this.params);
-                const articleInfo = await this.ctx.service.article.findArticleById(this.params)
+                let thumbsupStatus;
+                if(this.params.userId){
+                    thumbsupStatus = await this.ctx.service.thumbsup.findThumbsups(this.params);
+                    console.log('---- 文章点赞状态 ---',thumbsupStatus);
+                }
+                let articledId = {
+                    articleId: this.params.articleId
+                }
+                const articleInfo = await this.ctx.service.article.findArticleById(articledId)
                 articleInfo.viewCounts = articleInfo.viewCounts + 1
                 await this.ctx.service.article.updateArticleById(articleInfo.id, {viewCounts:articleInfo.viewCounts}) 
                 const commentInfo = await this.ctx.service.comment.findCommentByIds({articleId:articleInfo.id})
@@ -588,10 +600,10 @@ module.exports = app => {
                 articleInfo['classificationInfo'] = classificationInfo
                 articleInfo['tagsInfo'] = tagsInfo
                 articleInfo['wordNum'] = articleInfo.content.length
-
                 let result = {
                     articleInfo,
-                    commentInfo
+                    commentInfo,
+                    thumbsupStatus
                 }
                 console.log('---- 文章详情 ---',result);
                 this.success('查询成功',result)
