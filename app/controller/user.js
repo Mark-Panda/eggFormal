@@ -229,10 +229,11 @@ module.exports = app => {
         // 注册
         async register() {
             this.paramsValidate(methodParm.topLogo.register.param); //状态码  201 参数错误
-
+            console.log('--- 注册 ---');
             const userid = util.onlyId();
+            console.log('--333---');
             this.params.userid = userid;
-
+            console.log('=======');
             try {
                 console.log('注册管理员入参:', this.params);
                 let findJson = {
