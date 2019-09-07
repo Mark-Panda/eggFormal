@@ -64,7 +64,8 @@ class Thumbsup extends Service {
                     articleId,
                     commentId
                 },
-                force: true
+                force: true,
+                raw: true
             });
         } else {
             commentInfo = await this.ctx.model.Thumbsup.findOne({
@@ -72,7 +73,8 @@ class Thumbsup extends Service {
                     userId,
                     articleId
                 },
-                force: true
+                force: true,
+                raw: true
             });
         }
 

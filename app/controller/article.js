@@ -572,10 +572,15 @@ module.exports = app => {
             try {
                 this.paramsValidate(methodParm.topLogo.findArticleById.param); //状态码  201 参数错误
                 console.log('---- 文章ID ----',this.params);
-                let thumbsupStatus;
+                let thumbsupStatus = {};
                 if(this.params.userId){
-                    thumbsupStatus = await this.ctx.service.thumbsup.findThumbsups(this.params);
-                    console.log('---- 文章点赞状态 ---',thumbsupStatus);
+                    let thumbsupIdStatus = await this.ctx.service.thumbsup.findThumbsups(this.params);
+                    console.log('---- 文章点赞状态 ---',thumbsupIdStatus);
+                    if(thumbsupIdStatus) {
+                        thumbsupStatus = thumbsupIdStatus.status
+                    }else{
+                        thumbsupStatus = 0
+                    }
                 }
                 let articledId = {
                     articleId: this.params.articleId
