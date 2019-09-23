@@ -85,7 +85,7 @@ module.exports = app => {
 
     class ThumbsupController extends Controller {
 
-        //文章点赞
+        //文章点赞及取消点赞
         async articleThumbsup() {
             this.paramsValidate(methodParm.topLogo.articleThumbsup.param);
 
@@ -132,17 +132,7 @@ module.exports = app => {
                         }
                         
                     }
-                    // counts = await this.ctx.service.article.findArticleById({
-                    //     where: {
-                    //         id: articleId
-                    //     }
-                    // });
-                    // result = {
-                    //     status: data.status,
-                    //     count: counts.count
-                    // }
                 }
-                // console.log('----end---',result);
                 
             } catch (error) {
                 console.log('-----错误-----', error);
