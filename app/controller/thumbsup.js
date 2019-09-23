@@ -103,7 +103,7 @@ module.exports = app => {
                     userId,
                     articleId
                 }
-                if (data === null || data.status === false) {
+                if (data === null || data.status === 0) {
                     inputPam['status'] = true;
                     data = await this.ctx.service.thumbsup.insertThumbsup(inputPam);
                     counts = await this.ctx.service.article.articleThumbinsert(articleId);
@@ -117,7 +117,7 @@ module.exports = app => {
                         count: counts.count
                     }
                     this.success('文章点赞成功', result)
-                } else if (data.status === true) {   //若状态为true表示目前处于点赞状态，需要被取消点赞
+                } else if (data.status === 1) {   //若状态为true表示目前处于点赞状态，需要被取消点赞
                     let result = await this.ctx.service.thumbsup.removeThumbsup(this.params);
                     if(result === 1){
                         counts = await this.ctx.service.article.articleThumbdel(articleId);
