@@ -121,6 +121,7 @@ module.exports = app => {
                     let result = await this.ctx.service.thumbsup.removeThumbsup(this.params);
                     if(result === 1){
                         counts = await this.ctx.service.article.articleThumbdel(articleId);
+                        console.log('---- wensss ---',counts)
                         if(counts[0] === 1){
                             counts = await this.ctx.model.Article.findOne({
                                 id: articleId

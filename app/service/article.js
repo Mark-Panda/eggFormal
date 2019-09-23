@@ -344,6 +344,7 @@ class Article extends Service {
             articleInfo.count -= 1;
             result = await this.ctx.model.Article.update(articleInfo,{where:{id: articleId}});
         }else{
+            console.log('conme in')
             articleInfo.count === 0;
             result = await this.ctx.model.Article.update(articleInfo,{where:{id: articleId}});
         }
