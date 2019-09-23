@@ -102,7 +102,7 @@ module.exports = app => {
                     userId,
                     articleId
                 }
-                if (data === null) {
+                if (data === null || data.status === false) {
                     inputPam['status'] = true;
                     data = await this.ctx.service.thumbsup.insertThumbsup(inputPam);
                     counts = await this.ctx.service.article.articleThumbinsert(articleId);
@@ -115,23 +115,39 @@ module.exports = app => {
                         status: data.status,
                         count: counts.count
                     }
-                } else if (data.status === true) {
-                    counts = await this.ctx.service.article.findArticleById({
-                        where: {
-                            id: articleId
+                    this.success('文章点赞成功', result)
+                } else if (data.status === true) {   //若状态为true表示目前处于点赞状态，需要被取消点赞
+                    let result = await this.ctx.service.thumbsup.removeThumbsup(this.params);
+                    if(result === 1){
+                        counts = await this.ctx.service.article.articleThumbdel(articleId);
+                        if(counts[0] === 1){
+                            counts = await this.ctx.model.Article.findOne({
+                                id: articleId
+                            });
+                            result = {
+                                status: false,
+                                count: counts.count
+                            }
+                            this.success('文章取消点赞成功', result)
                         }
-                    });
-                    result = {
-                        status: data.status,
-                        count: counts.count
+                        
                     }
+                    // counts = await this.ctx.service.article.findArticleById({
+                    //     where: {
+                    //         id: articleId
+                    //     }
+                    // });
+                    // result = {
+                    //     status: data.status,
+                    //     count: counts.count
+                    // }
                 }
                 // console.log('----end---',result);
-                this.success('文章点赞成功', result)
+                
             } catch (error) {
                 console.log('-----错误-----', error);
-                this.ctx.logger.error('insert error: ', error);
-                this.fail('文章点赞失败');
+                this.ctx.logger.error('insertORdel error: ', error);
+                this.fail('文章点赞或取消点赞失败');
             }
         }
 
@@ -157,7 +173,7 @@ module.exports = app => {
                                 status: false,
                                 count: counts.count
                             }
-                            this.success('文章点赞成功', results)
+                            this.success('文章取消点赞成功', results)
                         }
                         
                     }
