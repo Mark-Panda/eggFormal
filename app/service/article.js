@@ -321,6 +321,7 @@ class Article extends Service {
         if (!articleInfo) {
             this.ctx.throw(404, '没有该文章');
         }
+        console.log('-- 文章点赞 ---',articleInfo)
         articleInfo.dataValues.count += 1;
         let result = await this.ctx.model.Article.update(articleInfo.dataValues,{where:{id: articleId}});
         return result;
