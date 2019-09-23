@@ -322,8 +322,8 @@ class Article extends Service {
             this.ctx.throw(404, '没有该文章');
         }
         console.log('-- 文章点赞 ---',articleInfo)
-        articleInfo.dataValues.count += 1;
-        let result = await this.ctx.model.Article.update(articleInfo.dataValues,{where:{id: articleId}});
+        articleInfo.count += 1;
+        let result = await this.ctx.model.Article.update(articleInfo,{where:{id: articleId}});
         return result;
     }
 
@@ -340,9 +340,9 @@ class Article extends Service {
         }
         let result = 0;
         console.log('-- 文章点赞11 ---',articleInfo)
-        if(articleInfo.dataValues.count > 0){
-            articleInfo.dataValues.count -= 1;
-            result = await this.ctx.model.Article.update(articleInfo.dataValues,{where:{id: articleId}});
+        if(articleInfo.count > 0){
+            articleInfo.count -= 1;
+            result = await this.ctx.model.Article.update(articleInfo,{where:{id: articleId}});
         }
         
         
