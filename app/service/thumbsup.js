@@ -31,7 +31,7 @@ class Thumbsup extends Service {
      * @inputparm  取消点赞参数
      */
     async removeThumbsup(inputparm) {
-        console.log('-----评论参数-----', inputparm);
+        console.log('-----取消点赞参数-----', inputparm);
         let {
             userId,
             articleId,
