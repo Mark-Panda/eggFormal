@@ -343,6 +343,9 @@ class Article extends Service {
         if(articleInfo.count > 0){
             articleInfo.count -= 1;
             result = await this.ctx.model.Article.update(articleInfo,{where:{id: articleId}});
+        }else{
+            articleInfo.count === 0;
+            result = await this.ctx.model.Article.update(articleInfo,{where:{id: articleId}});
         }
         
         
