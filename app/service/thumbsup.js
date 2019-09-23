@@ -50,7 +50,7 @@ class Thumbsup extends Service {
      * 查询点赞数量
      */
     async findThumbsups(inputparm) {
-        console.log('----查询评论参数----', inputparm);
+        console.log('----查询点赞参数----', inputparm);
         let {
             userId,
             articleId,

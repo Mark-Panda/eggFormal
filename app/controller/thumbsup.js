@@ -94,6 +94,7 @@ module.exports = app => {
                 let counts;
                 let result;
                 let data = await this.ctx.service.thumbsup.findThumbsups(this.params);
+                console.log('--- 点赞信息 ---',data)
                 let {
                     userId,
                     articleId
