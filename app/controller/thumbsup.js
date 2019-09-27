@@ -122,7 +122,7 @@ module.exports = app => {
                     if(result === 1){
                         counts = await this.ctx.service.article.articleThumbdel(articleId);
                         console.log('---- wensss ---',counts)
-                        if(counts[0] === 0){
+                        if(counts[0] === 1){
                             counts = await this.ctx.model.Article.findOne({
                                 id: articleId
                             });
